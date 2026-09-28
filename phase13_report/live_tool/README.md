@@ -19,6 +19,6 @@ python phase13_report/live_tool/build_site.py    # สร้าง phase13_repor
 
 แก้หน้าตาเว็บที่ `live_template.html` แล้วรัน `build_site.py` อย่าแก้ `site/live.html` ตรง ๆ เพราะจะถูกเขียนทับ
 
-ต้องมี `phase9_baseline_comparison/iteration_02/logs/` และ `.../datasets/*_world42_day9101/` อยู่ครบก่อน (ไม่ได้ commit เข้า git เพราะเป็นไฟล์ผลการรันจำนวนมาก — ดู `phase9_baseline_comparison/iteration_02/notes.md` วิธีรันใหม่)
+อ่านจาก `phase9_baseline_comparison/iteration_02/logs/` และ `.../datasets/*_world42_day9101/` ซึ่งอยู่ใน git แล้ว ไม่ต้องรันการทดลองใหม่
 
 Output: `sim_data.json` (~400 KB) — ไฟล์นี้คือไฟล์เดียวกับที่ publish คู่กับหน้าเว็บ [PourReady Live](https://claude.ai/artifact/9X7TpxptKBL7oB6GvC74pm)
