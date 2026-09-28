@@ -15,7 +15,8 @@
 | — | Loop 0 Regression Lock | ✅ | [phase6_readymix_simulation/loop_00_regression_lock/](phase6_readymix_simulation/loop_00_regression_lock/notes.md) · A/B/P-n40/P-n19 Gap 0.00% · route ตรง snapshot ทั้งการรันซ้ำและ process ใหม่ · gate จับการแก้ cost/route ได้ |
 | 6 | Ready-Mix Problem & Simulation | ✅ | [phase6_readymix_simulation/](phase6_readymix_simulation/PHASE6.md) · Loop 1 simulator 9 scenario ผ่าน validator สร้างซ้ำได้ Core รับได้ · Loop 2 baseline A/R ผ่าน validator ทุกรอบ ตรงวันที่คำนวณด้วยมือ ไม่ใช้ข้อมูลอนาคต · 38 tests · **ข้อค้นพบ: ระยะทางตายตัว; ไม่มีการทำนายต้องเลือกรถรอหรือไซต์รอ; CO₂ จากเวลารอเป็นแค่ ≤5% ของน้ำมัน** |
 | 7 | AI Site Readiness | ✅ Loop 3–4 PASS | [phase7_ai_readiness/PHASE7.md](phase7_ai_readiness/PHASE7.md) · site_ready_v3 · แก้ readiness revision ที่บวก history ซ้ำ · Fresh S8 MAE 10.006 → 9.248 นาที; normal mix 8.268 → 8.539 นาที · 88 tests PASS, runtime checks 46,819 predictions PASS, Core regression PASS |
-| 8 | Predictive Dynamic Optimizer | ⬜ ขั้นถัดไป (Loop 5) | ใช้ site_ready_v3 ใน application layer; frozen Core ไม่เปลี่ยน |
-| 9–13 | Baseline → Impact → Dashboard → Stress Test → Slide/Video | ⬜ | |
+| 8 | Predictive Dynamic Optimizer | ✅ (ยังไม่มีรายงาน) | [phase8_dynamic_optimizer/](phase8_dynamic_optimizer/) · Loop 5–6 · gates.json ผ่าน 5/5 · pytest 100 ผ่าน · Core regression PASS · **ยังไม่ได้เขียน PHASE8.md** |
+| 9 | Baseline Comparison (Loop 7) | ✅ | [phase9_baseline_comparison/PHASE9.md](phase9_baseline_comparison/PHASE9.md) · iteration 01 FAIL → เพิ่ม safety buffer → iteration 02 PASS 5/5 บน fresh days 9101–9110 · C(AI) ดีกว่า B(no-AI) 218 นาที/วัน-scenario CI95 [117, 346] · ไม่นับ S6 ดีกว่าแผน static 15.2%; นับ S6 **เสมอ** · 104 tests · ⚠ freeze_id บน Linux ไม่ตรง แต่ route ตรง snapshot ต้องยืนยันบน Windows |
+| 10–13 | Carbon/Business → Dashboard → Stress Test → Slide/Video | ⬜ ขั้นถัดไป: Phase 10 | |
 
 Phase 6–7 รอบก่อน (หัวข้อ PrecastFlow) เก็บไว้ที่ [_archive/after_phase5_2026-09-28/](_archive/after_phase5_2026-09-28/) แผนใหม่มาจาก [idea.md](idea.md) · spec ระบบ [skill.md](skill.md) · วิธีทำงานแบบ loop และ gate [loop.md](loop.md) · โค้ดใหม่อยู่ใน `readymix/`

@@ -1,0 +1,15 @@
+# pytest (Linux, 2026-09-28)
+104 passed in 4.66s
+
+# Core regression, freeze_id check bypassed (behavioural check only)
+Loop 0 Regression Lock  CORE-CVRP 1.1  freeze_id=91a1a0dbb3bf  pyvrp 0.14.0
+machine: x86_64 | 4 threads | Python 3.11.15
+
+   A-n32-k5   cost=784 bks=784 gap=0.00% vehicles=5 iters=5021 fp=2b402097367d t=1.674/1.686s
+   B-n31-k5   cost=672 bks=672 gap=0.00% vehicles=5 iters=5033 fp=5b982d6b66b6 t=1.603/1.59s
+   P-n40-k5   cost=458 bks=458 gap=0.00% vehicles=5 iters=5011 fp=a06c3cb461cc t=2.138/2.182s
+   P-n19-k2   cost=212 bks=212 gap=0.00% vehicles=2 iters=5005 fp=53f733cfddcd t=0.76/0.672s
+wrote regression_metrics.csv
+   - freeze_id 91a1a0dbb3bf != locked bf63a542f2de
+
+LOOP 0 REGRESSION LOCK: FAIL

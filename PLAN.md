@@ -286,6 +286,8 @@ simulation.py
 
 ## Phase 9 — Baseline Comparison
 
+สถานะ (2026-09-28): **PASS** · ผลและข้อจำกัดใน [PHASE9.md](phase9_baseline_comparison/PHASE9.md) · ใน V1 route ของทุกวิธีเหมือนกัน (Phase 6) จึงเทียบที่เวลาปล่อยรถ A static / B dynamic / C AI
+
 ห้ามโชว์ตัวเลขเดี่ยวๆ ที่ไม่มี context ต้องเทียบกับ baseline อย่างน้อย 3 ตัว:
 
 1. Naive / current planning (planned time, ไม่ re-optimize)
@@ -366,7 +368,9 @@ business_simulation.csv
 1. ~~Phase 1–5: Solver Foundation~~ ✅ (CORE-CVRP v1.1, freeze_id `bf63a542f2de`)
 2. ~~Loop 0 Regression Lock~~ ✅ ([notes](phase6_readymix_simulation/loop_00_regression_lock/notes.md))
 3. ~~Phase 6 Ready-Mix Problem & Simulation~~ ✅ ([PHASE6.md](phase6_readymix_simulation/PHASE6.md): Loop 1 Simulation, Loop 2 Non-AI Baseline)
-4. **Phase 7 AI Site Readiness (Loop 3–4)** ← ขั้นถัดไป · ต้องสร้างสัญญาณก่อนเทคอนกรีตที่ไม่ทำให้ข้อมูลรั่ว และข้อมูลหลายวันที่แยก seed train/test ก่อน
-5. Phase 8 Predictive Dynamic Optimizer
+4. ~~Phase 7 AI Site Readiness (Loop 3–4)~~ ✅ ([PHASE7.md](phase7_ai_readiness/PHASE7.md))
+5. ~~Phase 8 Predictive Dynamic Optimizer (Loop 5–6)~~ ✅ ([gates](phase8_dynamic_optimizer/gates.json), ยังไม่มี PHASE8.md)
+6. ~~Phase 9 Baseline Comparison (Loop 7)~~ ✅ ([PHASE9.md](phase9_baseline_comparison/PHASE9.md): iteration 02 PASS)
+7. **Phase 10 Carbon + Business Impact (Loop 8)** ← ขั้นถัดไป
 
 **ไม่ย้อนกลับไปแก้ Core และไม่รื้อ Phase เก่า**
