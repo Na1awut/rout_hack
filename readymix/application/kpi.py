@@ -87,9 +87,9 @@ def compute_kpis(result, dataset_root) -> dict:
         "pour_gap_max_min": gap_max,
         "pour_gaps_over_30": gaps_over_30,
         "late_arrivals": late,
-        "on_time_rate": round(1 - late / n, 3),
+        "on_time_rate": round(1 - late / n, 3) if n else math.nan,
         "release_delay_min": rel_delay,
-        "fleet_utilization": round(busy / have, 3),
+        "fleet_utilization": round(busy / have, 3) if have else 0.0,   # no truck on shift (Loop 9)
         "trucks_used": len(used),
         "trips_per_vehicle": round(len(delivered) / len(used), 2) if used else 0,
         "fuel_liters": round(fuel, 1),

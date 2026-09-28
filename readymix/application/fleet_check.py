@@ -30,6 +30,8 @@ MAX_EXTRA = 60
 
 def _forecast(p, starts):
     pid = p.plant["plant_id"]
+    if not starts:
+        return len(p.trips), 0
     trucks = [(s, i) for i, s in enumerate(sorted(starts))]
     heapq.heapify(trucks)
     bays = [p.open_min] * p.bays

@@ -23,7 +23,7 @@ from .kpi import compute_kpis
 
 def run_safely(root, use_ai=True, model="site_ready_v3.joblib", first_buffer_min=5, next_buffer_min=15,
                predictor=None, step_min=5, **dispatch_kw):
-    out = dict(status=None, messages=[], preflight=None, kpi=None, result=None, policy=None)
+    out = dict(status=None, messages=[], preflight=None, kpi=None, result=None, policy=None, predictor_failures=0)
     try:
         problems = validate_dataset(root)
         if problems:
@@ -31,7 +31,7 @@ def run_safely(root, use_ai=True, model="site_ready_v3.joblib", first_buffer_min
             return out
         out["preflight"] = check_fleet(root)
         if out["preflight"]["status"] != "OK":
-            out["messages"].append(out["preflight"]["message"])
+            out["messages"].append("ก่อนเริ่มวัน: " + out["preflight"]["message"])
         if out["preflight"]["status"] == "NO_ORDERS":
             out["status"] = "OK"
             return out
@@ -54,6 +54,7 @@ def run_safely(root, use_ai=True, model="site_ready_v3.joblib", first_buffer_min
             return out
         k = compute_kpis(result, root)
         out["kpi"] = k
+        out["predictor_failures"] = policy.failures
         degraded = k["unserved_trips"] > 0 or (use_ai and predictor is None) or policy.failures > 0
         if k["unserved_trips"]:
             out["messages"].append(f"ส่งไม่ได้ {k['unserved_trips']} เที่ยว ({k['unserved_volume_m3']} m³)")
