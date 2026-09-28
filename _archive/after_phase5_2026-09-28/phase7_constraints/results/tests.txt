@@ -1,0 +1,52 @@
+test_arrival_recomputed (test_contract.ContractTests.test_arrival_recomputed) ... ok
+test_asymmetric_distance_and_duration (test_contract.ContractTests.test_asymmetric_distance_and_duration) ... ok
+test_batch_sequence_gap (test_contract.ContractTests.test_batch_sequence_gap) ... ok
+test_component_assigned_twice (test_contract.ContractTests.test_component_assigned_twice) ... ok
+test_component_order_within_batches (test_contract.ContractTests.test_component_order_within_batches) ... ok
+test_component_wrong_site (test_contract.ContractTests.test_component_wrong_site) ... ok
+test_cross_vehicle_crane_and_sequence (test_contract.ContractTests.test_cross_vehicle_crane_and_sequence) ... ok
+test_deferral_must_be_reported (test_contract.ContractTests.test_deferral_must_be_reported) ... ok
+test_derive_mass_and_release_from_components (test_contract.ContractTests.test_derive_mass_and_release_from_components) ... ok
+test_duplicate_batch_id (test_contract.ContractTests.test_duplicate_batch_id) ... ok
+test_duplicate_batch_visit (test_contract.ContractTests.test_duplicate_batch_visit) ... ok
+test_duplicate_component_id (test_contract.ContractTests.test_duplicate_component_id) ... ok
+test_duration_upper_bound_is_conservative (test_contract.ContractTests.test_duration_upper_bound_is_conservative) ... ok
+test_failure_report_does_not_claim_feasibility_or_zero_cost (test_contract.ContractTests.test_failure_report_does_not_claim_feasibility_or_zero_cost) ... ok
+test_false_empty_success (test_contract.ContractTests.test_false_empty_success) ... ok
+test_fifo_speed_boundary_and_day_end (test_contract.ContractTests.test_fifo_speed_boundary_and_day_end) ... ok
+test_fully_empty_request (test_contract.ContractTests.test_fully_empty_request) ... ok
+test_hand_derived_route_and_metrics (test_contract.ContractTests.test_hand_derived_route_and_metrics) ... ok
+test_incomplete_speed_profile (test_contract.ContractTests.test_incomplete_speed_profile) ... ok
+test_matrix_diagonal (test_contract.ContractTests.test_matrix_diagonal) ... ok
+test_matrix_size_and_location_mapping (test_contract.ContractTests.test_matrix_size_and_location_mapping) ... ok
+test_missing_batch (test_contract.ContractTests.test_missing_batch) ... ok
+test_missing_source_reference (test_contract.ContractTests.test_missing_source_reference) ... ok
+test_overlapping_slots_are_unsupported_not_infeasible (test_contract.ContractTests.test_overlapping_slots_are_unsupported_not_infeasible) ... ok
+test_plan_is_bound_to_input_revision (test_contract.ContractTests.test_plan_is_bound_to_input_revision) ... ok
+test_proven_batch_overweight (test_contract.ContractTests.test_proven_batch_overweight) ... ok
+test_proven_impossible_service_interval (test_contract.ContractTests.test_proven_impossible_service_interval) ... ok
+test_proven_single_trip_fleet_shortage (test_contract.ContractTests.test_proven_single_trip_fleet_shortage) ... ok
+test_readiness_cascades_and_does_not_mutate_input (test_contract.ContractTests.test_readiness_cascades_and_does_not_mutate_input) ... ok
+test_ready_does_not_claim_feasible_bin_packing (test_contract.ContractTests.test_ready_does_not_claim_feasible_bin_packing) ... ok
+test_rejects_malformed_types_units_and_unknown_fields (test_contract.ContractTests.test_rejects_malformed_types_units_and_unknown_fields) ... ok
+test_release_applies_to_all_onboard_work (test_contract.ContractTests.test_release_applies_to_all_onboard_work) ... ok
+test_return_leg_recomputed (test_contract.ContractTests.test_return_leg_recomputed) ... ok
+test_return_must_fit_shift (test_contract.ContractTests.test_return_must_fit_shift) ... ok
+test_saved_phase6_examples (test_contract.ContractTests.test_saved_phase6_examples) ... ok
+test_service_duration_recomputed (test_contract.ContractTests.test_service_duration_recomputed) ... ok
+test_service_end_not_only_start_inside_slot (test_contract.ContractTests.test_service_end_not_only_start_inside_slot) ... ok
+test_shared_crane_is_unsupported (test_contract.ContractTests.test_shared_crane_is_unsupported) ... ok
+test_site_ready_time (test_contract.ContractTests.test_site_ready_time) ... ok
+test_strict_json_reader (test_contract.ContractTests.test_strict_json_reader) ... ok
+test_synthetic_not_mislabeled_measured (test_contract.ContractTests.test_synthetic_not_mislabeled_measured) ... ok
+test_total_distance_and_metrics_recomputed (test_contract.ContractTests.test_total_distance_and_metrics_recomputed) ... ok
+test_unapproved_load_plan (test_contract.ContractTests.test_unapproved_load_plan) ... ok
+test_unknown_component_reference (test_contract.ContractTests.test_unknown_component_reference) ... ok
+test_unknown_vehicle (test_contract.ContractTests.test_unknown_vehicle) ... ok
+test_vehicle_capacity_for_whole_route (test_contract.ContractTests.test_vehicle_capacity_for_whole_route) ... ok
+test_vehicle_used_twice (test_contract.ContractTests.test_vehicle_used_twice) ... ok
+
+----------------------------------------------------------------------
+Ran 47 tests in 0.101s
+
+OK

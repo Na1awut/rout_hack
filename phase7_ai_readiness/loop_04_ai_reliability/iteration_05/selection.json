@@ -1,0 +1,11 @@
+{
+  "rule": "event_history",
+  "config_sha256": "5f68f12229c93aba7fd013e1d6b8fa5b187fd528eee9860836fe06f83479da32",
+  "bundle_sha256": "4b3d4b10b6ec8a4878c451f3c8c70942901473d55cf5dc6bed9e2d34fd390dda",
+  "source_sha256": {
+    "phase7_ai_readiness\\loop_04_ai_reliability\\run_loop04_v3.py": "e03d99aaf1be9ca5f8fd88e6851291fe5ccee446b146b89bcc1ce8d192ab9cea",
+    "readymix\\ai\\fallback.py": "4c6bd3612577c881e084609b4214e090b64fee60d4867b28a93dc43425ccb1c3",
+    "readymix\\ai\\features.py": "e98a53fda192122f4f20dc52866159cbffb48328607eb72139316ab34f21bf3c"
+  },
+  "status": "LOCKED_BEFORE_FRESH_EVALUATION"
+}

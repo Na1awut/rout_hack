@@ -1,0 +1,13 @@
+job_id,site,coord_m,component_ids,weight_kg,sequence,service_min,slot_start,slot_end,release_min,site_ready_min,production_ready,site_ready,load_plan_approved_assumption
+S1-B1,S1,"(10000, 4000)","['S1-B1-C1', 'S1-B1-C2', 'S1-B1-C3']",4263,1,24,540,576,420,420,True,True,True
+S1-B2,S1,"(10000, 4000)","['S1-B2-C1', 'S1-B2-C2', 'S1-B2-C3']",4263,2,24,660,696,420,420,True,True,True
+S1-B3,S1,"(10000, 4000)","['S1-B3-C1', 'S1-B3-C2', 'S1-B3-C3']",4263,3,24,780,816,420,420,True,True,True
+S2-B1,S2,"(16000, 6000)","['S2-B1-C1', 'S2-B1-C2', 'S2-B1-C3']",4263,1,24,580,616,420,420,True,True,True
+S2-B2,S2,"(16000, 6000)","['S2-B2-C1', 'S2-B2-C2', 'S2-B2-C3']",4263,2,24,700,736,420,420,True,True,True
+S2-B3,S2,"(16000, 6000)","['S2-B3-C1', 'S2-B3-C2', 'S2-B3-C3']",4263,3,24,820,856,420,420,True,True,True
+S3-B1,S3,"(-10000, 5000)","['S3-B1-C1', 'S3-B1-C2', 'S3-B1-C3']",4263,1,24,540,576,420,420,True,True,True
+S3-B2,S3,"(-10000, 5000)","['S3-B2-C1', 'S3-B2-C2', 'S3-B2-C3']",4263,2,24,660,696,420,420,True,True,True
+S3-B3,S3,"(-10000, 5000)","['S3-B3-C1', 'S3-B3-C2', 'S3-B3-C3']",4263,3,24,780,816,420,420,True,True,True
+S4-B1,S4,"(-16000, 8000)","['S4-B1-C1', 'S4-B1-C2', 'S4-B1-C3']",4263,1,24,580,616,420,420,True,True,True
+S4-B2,S4,"(-16000, 8000)","['S4-B2-C1', 'S4-B2-C2', 'S4-B2-C3']",4263,2,24,700,736,420,420,True,True,True
+S4-B3,S4,"(-16000, 8000)","['S4-B3-C1', 'S4-B3-C2', 'S4-B3-C3']",4263,3,24,820,856,420,420,True,True,True

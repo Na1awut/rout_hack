@@ -1,0 +1,113 @@
+{
+  "checked_date": "2026-09-28",
+  "files": [
+    {
+      "file": "cpac_extra_precast.pdf",
+      "bytes": 12850164,
+      "sha256": "121d384dae5e8823a3907b951519d70498832f44d848bbb41c60e5f27b2c89ea",
+      "source": "https://cdn.cpac.co.th/uploads/Leaflet_CPAC_Extra_Precast_Concrete_System_965ac22a05.pdf"
+    },
+    {
+      "file": "cpac_extra_precast_1.png",
+      "bytes": 478350,
+      "sha256": "7b3370c66cd1ca7203bd59c5a83cce0424b9c25310019168bb89794379ea992e",
+      "source": "https://cdn.cpac.co.th/uploads/Leaflet_CPAC_Extra_Precast_Concrete_System_965ac22a05.pdf"
+    },
+    {
+      "file": "cpac_extra_precast_2.png",
+      "bytes": 257116,
+      "sha256": "95e6179ffd83921d92170e18ff6809faecf7e571136fe930cfd99cf6b8e902fd",
+      "source": "https://cdn.cpac.co.th/uploads/Leaflet_CPAC_Extra_Precast_Concrete_System_965ac22a05.pdf"
+    },
+    {
+      "file": "cpac_extra_precast_3.png",
+      "bytes": 253677,
+      "sha256": "ea08466f672875eebcc7b45d6261042942c2d86d678b9785d9371497a957ed5d",
+      "source": "https://cdn.cpac.co.th/uploads/Leaflet_CPAC_Extra_Precast_Concrete_System_965ac22a05.pdf"
+    },
+    {
+      "file": "cpac_extra_precast_4.png",
+      "bytes": 375334,
+      "sha256": "df8cd4193ec1a06e5590b53a1ecc15b96a2e090954ea171f1a5675de45197d13",
+      "source": "https://cdn.cpac.co.th/uploads/Leaflet_CPAC_Extra_Precast_Concrete_System_965ac22a05.pdf"
+    },
+    {
+      "file": "installed_pyvrp_solve.txt",
+      "bytes": 2172,
+      "sha256": "655a3fc6d35170741a06588769eab66734f3dfbc929ed7ab0b0767410cb8963d",
+      "source": "installed pyvrp 0.14.0: pyvrp.solve.solve (captured with inspect.getsource)"
+    },
+    {
+      "file": "organizer_index_0.png",
+      "bytes": 1265756,
+      "sha256": "463312e88e484b35d2d9072216096bdc07d4d898b1f0ef065e5eae6f192501d9",
+      "source": "../../src/03_Slide ??????????????????????.pdf"
+    },
+    {
+      "file": "organizer_index_16.png",
+      "bytes": 995716,
+      "sha256": "918f51f442e56ad3891a4d4f75d8fbf695c682e4c89f0afd3600c96d5381603e",
+      "source": "../../src/03_Slide ??????????????????????.pdf"
+    },
+    {
+      "file": "organizer_index_32.png",
+      "bytes": 945076,
+      "sha256": "04bcf5aea29153e74638a103c7c93132b48265c1037114f1a3be4f3a54b57d9f",
+      "source": "../../src/03_Slide ??????????????????????.pdf"
+    },
+    {
+      "file": "organizer_index_48.png",
+      "bytes": 150649,
+      "sha256": "86a73d6e5ad74639f28884825a3df73c95090e1740b2700c35617f7afeafb2ab",
+      "source": "../../src/03_Slide ??????????????????????.pdf"
+    },
+    {
+      "file": "organizer_page_27.png",
+      "bytes": 1079067,
+      "sha256": "2083a1501580405705ab3c000053fb04b61dc6b65a1eeddc10d3e9fd3afe0d02",
+      "source": "../../src/03_Slide ??????????????????????.pdf"
+    },
+    {
+      "file": "organizer_page_28.png",
+      "bytes": 1015082,
+      "sha256": "3ef3f210fa5ff803b38cfd9485f8ef0c67ed6130cfeceb3ea21afe41422a7837",
+      "source": "../../src/03_Slide ??????????????????????.pdf"
+    },
+    {
+      "file": "organizer_page_29.png",
+      "bytes": 927384,
+      "sha256": "1f50798ef92015c63c76b816d7a64de849599ca8df1f5776493845598cc551fb",
+      "source": "../../src/03_Slide ??????????????????????.pdf"
+    },
+    {
+      "file": "organizer_page_30.png",
+      "bytes": 1078668,
+      "sha256": "ad57816312dca9f7a9462c47c2e9680d0db0b9cfd10a688dcc2a9d11437af9f7",
+      "source": "../../src/03_Slide ??????????????????????.pdf"
+    },
+    {
+      "file": "organizer_page_40.png",
+      "bytes": 1235010,
+      "sha256": "23e301ceda5b588019b7833c285a1914c46bbac1b3169b9ea542295991ae330b",
+      "source": "../../src/03_Slide ??????????????????????.pdf"
+    },
+    {
+      "file": "organizer_page_41.png",
+      "bytes": 1662047,
+      "sha256": "30785826f8d7d31f882c98181a800368a877cd7926067a40992c82fce919032c",
+      "source": "../../src/03_Slide ??????????????????????.pdf"
+    },
+    {
+      "file": "organizer_page_42.png",
+      "bytes": 1455629,
+      "sha256": "5d37880b40df504a3f61277d68f24ec7b9d05f9c88ff29363ed46476aaa76949",
+      "source": "../../src/03_Slide ??????????????????????.pdf"
+    },
+    {
+      "file": "organizer_page_43.png",
+      "bytes": 1303272,
+      "sha256": "93d81a09ba54809d8fe40ff4596198b8518f37e2f532e8dfe35d7d2ba51bed5e",
+      "source": "../../src/03_Slide ??????????????????????.pdf"
+    }
+  ]
+}

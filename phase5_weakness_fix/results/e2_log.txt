@@ -1,0 +1,44 @@
+-- X-n344-k43 (n=343, k=43, bks=42056)
+   PATH_CHEAPEST_ARC            feasible=False gap=       - t= 30.07s
+   SAVINGS                      feasible=False gap=       - t=  0.83s
+   PARALLEL_CHEAPEST_INSERTION  feasible=False gap=       - t=  0.60s
+   LOCAL_CHEAPEST_INSERTION     feasible=False gap=       - t=  0.54s
+   CHRISTOFIDES                 feasible=False gap=       - t=  0.08s
+   AUTOMATIC                    feasible=False gap=       - t= 30.05s
+-- X-n393-k38 (n=392, k=38, bks=38260)
+   PATH_CHEAPEST_ARC            feasible=False gap=       - t= 30.06s
+   SAVINGS                      feasible=False gap=       - t=  1.07s
+   PARALLEL_CHEAPEST_INSERTION  feasible=False gap=       - t=  0.86s
+   LOCAL_CHEAPEST_INSERTION     feasible=False gap=       - t=  0.75s
+   CHRISTOFIDES                 feasible=False gap=       - t=  0.10s
+   AUTOMATIC                    feasible=False gap=       - t= 30.06s
+-- X-n599-k92 (n=598, k=93, bks=108490)
+   PATH_CHEAPEST_ARC            feasible=False gap=       - t= 30.15s
+   SAVINGS                      feasible=False gap=       - t=  3.36s
+   PARALLEL_CHEAPEST_INSERTION  feasible=False gap=       - t=  2.62s
+   LOCAL_CHEAPEST_INSERTION     feasible=False gap=       - t=  2.46s
+   CHRISTOFIDES                 feasible=False gap=       - t=  0.23s
+   AUTOMATIC                    feasible=False gap=       - t= 30.16s
+-- X-n936-k151 (n=935, k=157, bks=132926)
+   PATH_CHEAPEST_ARC            feasible=False gap=       - t= 30.41s
+   SAVINGS                      feasible=False gap=       - t= 11.04s
+   PARALLEL_CHEAPEST_INSERTION  feasible=False gap=       - t= 11.18s
+   LOCAL_CHEAPEST_INSERTION     feasible=False gap=       - t= 10.79s
+   CHRISTOFIDES                 feasible=True  gap=  48.464 t=  0.64s
+   AUTOMATIC                    feasible=False gap=       - t= 30.45s
+-- X-n214-k11 (n=213, k=11, bks=10856)
+   PATH_CHEAPEST_ARC            feasible=True  gap=  31.614 t=  0.03s
+   SAVINGS                      feasible=True  gap=  27.008 t=  0.07s
+   PARALLEL_CHEAPEST_INSERTION  feasible=True  gap=  41.793 t=  0.08s
+   LOCAL_CHEAPEST_INSERTION     feasible=False gap=       - t=  0.16s
+   CHRISTOFIDES                 feasible=True  gap=  35.814 t=  0.03s
+   AUTOMATIC                    feasible=True  gap=  31.614 t=  0.03s
+-- X-n298-k31 (n=297, k=31, bks=34231)
+   PATH_CHEAPEST_ARC            feasible=True  gap=  42.818 t=  0.07s
+   SAVINGS                      feasible=True  gap=  12.445 t=  0.13s
+   PARALLEL_CHEAPEST_INSERTION  feasible=True  gap=  28.942 t=  0.13s
+   LOCAL_CHEAPEST_INSERTION     feasible=True  gap=  84.526 t=  0.09s
+   CHRISTOFIDES                 feasible=True  gap=  34.758 t=  0.06s
+   AUTOMATIC                    feasible=True  gap=  42.818 t=  0.07s
+
+wrote C:\Users\Lenovo\Downloads\rout_hack\05_core_development\phase5_weakness_fix\results\e2_first_solution.csv

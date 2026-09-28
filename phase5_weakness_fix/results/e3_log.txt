@@ -1,0 +1,20 @@
+-- X-n344-k43 (n=343, bks routes=43, bks=42056)
+   ortools_PCA_elastic        feasible=True  gap=   6.68% vehicles=44 (bks 43) t= 30.0s
+   ortools_SAVINGS_elastic    feasible=True  gap=   7.96% vehicles=44 (bks 43) t= 30.0s
+   pyvrp_fixed_fleet          feasible=True  gap=   0.86% vehicles=43 (bks 43) t= 30.1s
+   pyvrp_elastic              feasible=True  gap=   0.66% vehicles=44 (bks 43) t= 30.1s
+-- X-n393-k38 (n=392, bks routes=38, bks=38260)
+   ortools_PCA_elastic        feasible=True  gap=   7.74% vehicles=38 (bks 38) t= 30.0s
+   ortools_SAVINGS_elastic    feasible=True  gap=   7.92% vehicles=38 (bks 38) t= 30.0s
+   pyvrp_fixed_fleet          feasible=True  gap=   1.12% vehicles=38 (bks 38) t= 30.2s
+   pyvrp_elastic              feasible=True  gap=   0.61% vehicles=38 (bks 38) t= 30.1s
+-- X-n599-k92 (n=598, bks routes=93, bks=108490)
+   ortools_PCA_elastic        feasible=True  gap=   4.63% vehicles=96 (bks 93) t= 30.1s
+   ortools_SAVINGS_elastic    feasible=True  gap=   5.18% vehicles=96 (bks 93) t= 30.1s
+   pyvrp_fixed_fleet          feasible=True  gap=   3.97% vehicles=93 (bks 93) t= 30.2s
+   pyvrp_elastic              feasible=True  gap=   0.91% vehicles=94 (bks 93) t= 30.2s
+-- X-n936-k151 (n=935, bks routes=157, bks=132926)
+   ortools_PCA_elastic        feasible=True  gap=  13.67% vehicles=162 (bks 157) t= 30.0s
+   ortools_SAVINGS_elastic    feasible=True  gap=   7.89% vehicles=173 (bks 157) t= 30.0s
+   pyvrp_fixed_fleet          feasible=True  gap=   1.78% vehicles=157 (bks 157) t= 30.6s
+   pyvrp_elastic              feasible=True  gap=   3.38% vehicles=168 (bks 157) t= 30.4s

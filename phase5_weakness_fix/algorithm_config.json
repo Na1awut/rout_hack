@@ -1,0 +1,26 @@
+{
+  "algorithm_name": "CORE-CVRP",
+  "algorithm_version": "1.1",
+  "supersedes": "1.0 (phase1_freeze, OR-Tools GLS) -- kept frozen and runnable as a baseline",
+  "engine": "PyVRP Hybrid Genetic Search",
+  "engine_version_required": "0.14.0",
+  "search": {
+    "seed": 1,
+    "randomness": "seeded -- identical routes for the same input, seed and stop rule on any machine (E5)"
+  },
+  "stopping": {
+    "rule": "no_improvement with iteration cap",
+    "no_improvement_iterations": 5000,
+    "max_iterations": 50000,
+    "note": "Both limits count iterations, not seconds, so the result does not depend on machine speed. Chosen in E6: best gap on all 5 test instances (50-800 customers) among six deterministic rules."
+  },
+  "distance_convention": {
+    "edge_weight_type": "EUC_2D",
+    "formula": "floor(sqrt(dx^2 + dy^2) + 0.5)",
+    "scaling": "none (factor 1)",
+    "note": "Unchanged from v1.0. Every edge given to PyVRP comes from distance.build_distance_matrix; pyvrp.read() and its own rounding are not used."
+  },
+  "objective": "minimize total rounded EUC_2D distance",
+  "fleet_rule": "max_vehicles is supplied by the caller per run, never inferred from the file name. If no feasible plan exists for that fleet, the result stays INFEASIBLE and carries a fleet_diagnosis (vehicles actually needed).",
+  "language": "Python"
+}

@@ -1,0 +1,22 @@
+NAME : CLUSTER-n4-k2
+COMMENT : (Sanity, hand-enumerated optimal over all 3 pairings, No of trucks: 2, Optimal value: 2024)
+TYPE : CVRP
+DIMENSION : 5
+EDGE_WEIGHT_TYPE : EUC_2D
+CAPACITY : 20
+NODE_COORD_SECTION
+ 1 0 0
+ 2 10 0
+ 3 11 0
+ 4 1000 0
+ 5 1001 0
+DEMAND_SECTION
+ 1 0
+ 2 10
+ 3 10
+ 4 10
+ 5 10
+DEPOT_SECTION
+ 1
+ -1
+EOF

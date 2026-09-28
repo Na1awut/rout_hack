@@ -1,0 +1,6 @@
+# CORE-CVRP v1.1 -- pinned, not >=: the HGS search path depends on the
+# engine version, and freeze.load_config() refuses any other version.
+pyvrp==0.14.0
+
+# v1.0 baseline (phase1_freeze) is still runnable side by side:
+ortools==9.15.6755

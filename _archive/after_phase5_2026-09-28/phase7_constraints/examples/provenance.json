@@ -1,0 +1,21 @@
+{
+  "note": "Converted from saved Phase 6 evidence; no new solver runs. no_work is a contract edge case.",
+  "sources": [
+    {
+      "path": "phase6_topic_selection/data/synthetic_case.json",
+      "sha256": "a208a94c57d4639629788ab64b81c309d67371d11cc6ebde8cbe218bfcc86f4a"
+    },
+    {
+      "path": "phase6_topic_selection/results/departure_probe.json",
+      "sha256": "b8434341d4537233e2fa571b424885b2aa11aeef39d39e3884cac0ff279a736f"
+    },
+    {
+      "path": "phase6_topic_selection/results/fixed_slots_seed1.json",
+      "sha256": "ec808cbb10132003c7be6184f89e30ada42c4a12abc4cda3a6b514ebbc929aa2"
+    },
+    {
+      "path": "phase6_topic_selection/results/readiness_probe.json",
+      "sha256": "3558947e02453e024424d277e7ef318a1aafd394eeb356c796bc0660002ae679"
+    }
+  ]
+}

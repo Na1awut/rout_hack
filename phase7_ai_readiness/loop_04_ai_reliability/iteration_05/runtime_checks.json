@@ -1,0 +1,7 @@
+{
+  "predictions_checked": 46819,
+  "fallbacks": 5512,
+  "uncached_comparisons": 120,
+  "inference": "real models batch-cached per day; production predictor logic called for every row",
+  "G5_contract_and_parity": true
+}

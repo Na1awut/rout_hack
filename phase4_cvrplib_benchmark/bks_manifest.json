@@ -1,0 +1,198 @@
+{
+  "source": "https://github.com/VROOM-Project/vroom-scripts (benchmarks/CVRP/BKS.json), fetched 2026-09-28",
+  "note": "vehicles and best_known_cost come from this external file, not from this project's own parsing of the .vrp filename or COMMENT line. proven_optimal is carried through unchanged from the source -- most X-instances are best-known, not proven.",
+  "instances": {
+    "E-n51-k5.vrp": {
+      "tier": "small",
+      "customers": 50,
+      "max_vehicles": 5,
+      "capacity": 160,
+      "best_known_cost": 521,
+      "proven_optimal": true
+    },
+    "E-n76-k7.vrp": {
+      "tier": "small",
+      "customers": 75,
+      "max_vehicles": 7,
+      "capacity": 220,
+      "best_known_cost": 682,
+      "proven_optimal": true
+    },
+    "E-n76-k10.vrp": {
+      "tier": "small",
+      "customers": 75,
+      "max_vehicles": 10,
+      "capacity": 140,
+      "best_known_cost": 830,
+      "proven_optimal": true
+    },
+    "X-n106-k14.vrp": {
+      "tier": "medium",
+      "customers": 105,
+      "max_vehicles": 14,
+      "capacity": 600,
+      "best_known_cost": 26362,
+      "proven_optimal": true
+    },
+    "X-n120-k6.vrp": {
+      "tier": "medium",
+      "customers": 119,
+      "max_vehicles": 6,
+      "capacity": 21,
+      "best_known_cost": 13332,
+      "proven_optimal": true
+    },
+    "X-n143-k7.vrp": {
+      "tier": "medium",
+      "customers": 142,
+      "max_vehicles": 7,
+      "capacity": 1190,
+      "best_known_cost": 15700,
+      "proven_optimal": true
+    },
+    "X-n162-k11.vrp": {
+      "tier": "medium",
+      "customers": 161,
+      "max_vehicles": 11,
+      "capacity": 1174,
+      "best_known_cost": 14138,
+      "proven_optimal": true
+    },
+    "X-n186-k15.vrp": {
+      "tier": "medium",
+      "customers": 185,
+      "max_vehicles": 15,
+      "capacity": 974,
+      "best_known_cost": 24145,
+      "proven_optimal": true
+    },
+    "X-n214-k11.vrp": {
+      "tier": "medium",
+      "customers": 213,
+      "max_vehicles": 11,
+      "capacity": 944,
+      "best_known_cost": 10856,
+      "proven_optimal": true
+    },
+    "X-n237-k14.vrp": {
+      "tier": "medium",
+      "customers": 236,
+      "max_vehicles": 14,
+      "capacity": 18,
+      "best_known_cost": 27042,
+      "proven_optimal": true
+    },
+    "X-n261-k13.vrp": {
+      "tier": "large",
+      "customers": 260,
+      "max_vehicles": 13,
+      "capacity": 1081,
+      "best_known_cost": 26558,
+      "proven_optimal": false
+    },
+    "X-n298-k31.vrp": {
+      "tier": "large",
+      "customers": 297,
+      "max_vehicles": 31,
+      "capacity": 55,
+      "best_known_cost": 34231,
+      "proven_optimal": true
+    },
+    "X-n344-k43.vrp": {
+      "tier": "large",
+      "customers": 343,
+      "max_vehicles": 43,
+      "capacity": 61,
+      "best_known_cost": 42056,
+      "proven_optimal": false
+    },
+    "X-n393-k38.vrp": {
+      "tier": "large",
+      "customers": 392,
+      "max_vehicles": 38,
+      "capacity": 78,
+      "best_known_cost": 38260,
+      "proven_optimal": false
+    },
+    "X-n459-k26.vrp": {
+      "tier": "large",
+      "customers": 458,
+      "max_vehicles": 26,
+      "capacity": 1106,
+      "best_known_cost": 24145,
+      "proven_optimal": false
+    },
+    "X-n513-k21.vrp": {
+      "tier": "stress",
+      "customers": 512,
+      "max_vehicles": 21,
+      "capacity": 142,
+      "best_known_cost": 24201,
+      "proven_optimal": false
+    },
+    "X-n599-k92.vrp": {
+      "tier": "stress",
+      "customers": 598,
+      "max_vehicles": 93,
+      "capacity": 487,
+      "best_known_cost": 108490,
+      "proven_optimal": false
+    },
+    "X-n701-k44.vrp": {
+      "tier": "stress",
+      "customers": 700,
+      "max_vehicles": 44,
+      "capacity": 87,
+      "best_known_cost": 81934,
+      "proven_optimal": false
+    },
+    "X-n801-k40.vrp": {
+      "tier": "stress",
+      "customers": 800,
+      "max_vehicles": 40,
+      "capacity": 20,
+      "best_known_cost": 73331,
+      "proven_optimal": false
+    },
+    "X-n936-k151.vrp": {
+      "tier": "stress",
+      "customers": 935,
+      "max_vehicles": 157,
+      "capacity": 138,
+      "best_known_cost": 132926,
+      "proven_optimal": false
+    },
+    "E-n22-k4.vrp": {
+      "tier": "extra_tiny_for_continuity",
+      "customers": 21,
+      "max_vehicles": 4,
+      "capacity": 6000,
+      "best_known_cost": 375,
+      "proven_optimal": true
+    },
+    "E-n23-k3.vrp": {
+      "tier": "extra_tiny_for_continuity",
+      "customers": 22,
+      "max_vehicles": 3,
+      "capacity": 4500,
+      "best_known_cost": 569,
+      "proven_optimal": true
+    },
+    "E-n30-k3.vrp": {
+      "tier": "extra_tiny_for_continuity",
+      "customers": 29,
+      "max_vehicles": 3,
+      "capacity": 4500,
+      "best_known_cost": 534,
+      "proven_optimal": true
+    },
+    "E-n33-k4.vrp": {
+      "tier": "extra_tiny_for_continuity",
+      "customers": 32,
+      "max_vehicles": 4,
+      "capacity": 8000,
+      "best_known_cost": 835,
+      "proven_optimal": true
+    }
+  }
+}

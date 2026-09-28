@@ -1,0 +1,220 @@
+{
+  "technical_probe_pass": true,
+  "topic_decision": "APPROVED",
+  "topic_decision_source": "decision.json",
+  "core_freeze_id": "bf63a542f2de",
+  "pyvrp_version": "0.14.0",
+  "engine_observed": "IteratedLocalSearch",
+  "python": "3.14.6",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "dataset_sha256": "a208a94c57d4639629788ab64b81c309d67371d11cc6ebde8cbe218bfcc86f4a",
+  "probe_sha256": "fa49c9de21a2bbc9dfac9ce0b1c1d4421909b4f3f3765ecc1b65325f37237eaf",
+  "core_projection_feasible": true,
+  "capacity_baseline_operational_valid": false,
+  "seed_results": [
+    {
+      "seed": 1,
+      "status": "FEASIBLE",
+      "independent_valid": true,
+      "distance_m": 183814,
+      "vehicles": 6,
+      "runtime_s": 0.2061,
+      "iterations": 2000,
+      "fingerprint": "83ae1541c420"
+    },
+    {
+      "seed": 2,
+      "status": "FEASIBLE",
+      "independent_valid": true,
+      "distance_m": 183814,
+      "vehicles": 6,
+      "runtime_s": 0.2087,
+      "iterations": 2000,
+      "fingerprint": "6d6d0b441031"
+    },
+    {
+      "seed": 3,
+      "status": "FEASIBLE",
+      "independent_valid": true,
+      "distance_m": 183814,
+      "vehicles": 6,
+      "runtime_s": 0.202,
+      "iterations": 2000,
+      "fingerprint": "a6a2102ae93f"
+    }
+  ],
+  "same_seed_repeat": true,
+  "departure_probe": {
+    "distance_m": 183814,
+    "vehicles": 6,
+    "early_travel_min": 401,
+    "selected_travel_min": 291,
+    "early_wait_min": 1675,
+    "selected_wait_min": 803,
+    "static_schedule_travel_min": 304,
+    "static_schedule_wait_min": 900
+  },
+  "readiness": {
+    "eligible_jobs": 10,
+    "deferred_jobs": 2,
+    "valid": true
+  },
+  "checks": [
+    {
+      "name": "36_components_two_families",
+      "pass": true,
+      "detail": "12 batches, 4 sites"
+    },
+    {
+      "name": "frozen_core_capacity_projection",
+      "pass": true,
+      "detail": 183814
+    },
+    {
+      "name": "fixed_slots_three_seeds",
+      "pass": true,
+      "detail": [
+        {
+          "seed": 1,
+          "status": "FEASIBLE",
+          "independent_valid": true,
+          "distance_m": 183814,
+          "vehicles": 6,
+          "runtime_s": 0.2061,
+          "iterations": 2000,
+          "fingerprint": "83ae1541c420"
+        },
+        {
+          "seed": 2,
+          "status": "FEASIBLE",
+          "independent_valid": true,
+          "distance_m": 183814,
+          "vehicles": 6,
+          "runtime_s": 0.2087,
+          "iterations": 2000,
+          "fingerprint": "6d6d0b441031"
+        },
+        {
+          "seed": 3,
+          "status": "FEASIBLE",
+          "independent_valid": true,
+          "distance_m": 183814,
+          "vehicles": 6,
+          "runtime_s": 0.202,
+          "iterations": 2000,
+          "fingerprint": "a6a2102ae93f"
+        }
+      ]
+    },
+    {
+      "name": "same_seed_repeated",
+      "pass": true,
+      "detail": "83ae1541c420"
+    },
+    {
+      "name": "departure_probe_feasible",
+      "pass": true,
+      "detail": "same routes, FIFO travel per leg"
+    },
+    {
+      "name": "departure_objective_nonworsening",
+      "pass": true,
+      "detail": "duty time excluding service"
+    },
+    {
+      "name": "departure_vs_static_schedule",
+      "pass": true,
+      "detail": "comparison against existing solver departures, not only all-at-07:00"
+    },
+    {
+      "name": "readiness_cascade",
+      "pass": true,
+      "detail": [
+        {
+          "job_id": "S2-B2",
+          "reasons": [
+            "site_not_ready"
+          ],
+          "components": 3
+        },
+        {
+          "job_id": "S2-B3",
+          "reasons": [
+            "predecessor_deferred"
+          ],
+          "components": 3
+        }
+      ]
+    },
+    {
+      "name": "later_production_release",
+      "pass": true,
+      "detail": "S1-B3 cannot leave the plant before 10:00"
+    },
+    {
+      "name": "overweight_batch",
+      "pass": true,
+      "detail": "PROVEN_INFEASIBLE_BATCH_CAPACITY"
+    },
+    {
+      "name": "insufficient_fleet",
+      "pass": true,
+      "detail": "PROVEN_INFEASIBLE_FLEET_CAPACITY_SINGLE_TRIP"
+    },
+    {
+      "name": "slot_shorter_than_service",
+      "pass": true,
+      "detail": "PROVEN_INFEASIBLE_SERVICE_SLOT"
+    },
+    {
+      "name": "overlapping_slots",
+      "pass": true,
+      "detail": "UNSUPPORTED_OVERLAPPING_SEQUENCE_SLOTS"
+    },
+    {
+      "name": "unapproved_loading",
+      "pass": true,
+      "detail": "INPUT_REQUIRES_LOAD_PLAN"
+    },
+    {
+      "name": "validator_rejects_missing_job",
+      "pass": true,
+      "detail": "mutated plan"
+    },
+    {
+      "name": "validator_rejects_duplicate_job",
+      "pass": true,
+      "detail": "mutated plan"
+    },
+    {
+      "name": "validator_rejects_late_plan",
+      "pass": true,
+      "detail": "mutated plan"
+    },
+    {
+      "name": "validator_rejects_cross_route_crane_overlap",
+      "pass": true,
+      "detail": [
+        "sequence_or_crane_overlap:S1-B1:S1-B2"
+      ]
+    },
+    {
+      "name": "traffic_model_fifo_boundary",
+      "pass": true,
+      "detail": "30 km at 08:00-09:30"
+    },
+    {
+      "name": "solver_failure_not_proof",
+      "pass": true,
+      "detail": "NO_FEASIBLE_SOLUTION_FOUND"
+    },
+    {
+      "name": "core_unchanged",
+      "pass": true,
+      "detail": {
+        "before": "bf63a542f2de",
+        "after": "bf63a542f2de"
+      }
+    }
+  ]
+}

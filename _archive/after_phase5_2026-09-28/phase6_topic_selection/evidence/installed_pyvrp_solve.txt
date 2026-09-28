@@ -1,0 +1,60 @@
+def solve(
+    data: ProblemData,
+    stop: StoppingCriterion,
+    seed: int = 0,
+    collect_stats: bool = True,
+    display: bool = False,
+    params: SolveParams = SolveParams(),
+    initial_solution: Solution | None = None,
+) -> Result:
+    """
+    Solves the given problem data instance.
+
+    Parameters
+    ----------
+    data
+        Problem data instance to solve.
+    stop
+        Stopping criterion to use.
+    seed
+        Seed value to use for the random number stream. Default 0.
+    collect_stats
+        Whether to collect statistics about the solver's progress. Default
+        ``True``.
+    display
+        Whether to display information about the solver progress. Default
+        ``False``. Progress information is only available when
+        ``collect_stats`` is also set, which it is by default.
+    params
+        Solver parameters to use. If not provided, a default will be used.
+    initial_solution
+        Optional solution to use as a warm start. The solver constructs a
+        (possibly poor) initial solution if this argument is not provided.
+
+    Returns
+    -------
+    Result
+        A Result object, containing statistics (if collected) and the best
+        found solution.
+    """
+    rng = RandomNumberGenerator(seed=seed)
+    neighbours = compute_neighbours(data, params.neighbourhood)
+    perturbation = PerturbationManager(params.perturbation)
+    ls = LocalSearch(data, rng, neighbours, perturbation)
+
+    for op in params.operators:
+        if op.supports(data):
+            ls.add_operator(op(data))
+
+    penalties = params.penalty.midpoint_penalties(data)
+    pm = PenaltyManager(penalties, params.penalty)
+
+    init = initial_solution
+    if init is None:
+        # Start from a random initial solution to ensure it's not completely
+        # empty (because starting from empty solutions can be a bit difficult).
+        random = Solution.make_random(data, rng)
+        init = ls(random, pm.max_cost_evaluator(), exhaustive=True)
+
+    algo = IteratedLocalSearch(data, pm, ls, init, params.ils)
+    return algo.run(stop, collect_stats, display, params.display_interval)

@@ -1,0 +1,6 @@
+{
+  "rule": "rule_hist",
+  "config_sha256": "a07c7714a7951dea46ae30248d05eee0d4369cf38d36527255b8c1dd65eb3831",
+  "bundle_sha256": "a93d1da006dbd477cef2e41f2a0e6206a9866b8c2da63bbab7eb6f24c92e399f",
+  "status": "LOCKED_BEFORE_FRESH_EVALUATION"
+}

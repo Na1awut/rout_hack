@@ -1,0 +1,6 @@
+freeze_id,instance,customers,max_vehicles,vehicles_used,bks,cost,gap_pct,anytime_score,first_solution_cost,solution_index_of_best,feasible,rerun_identical,stop_reason,runtime_s_run1,runtime_s_run2,route_fingerprint,condition,machine
+80b726c457a8,A-n32-k5,31,5,5,784,784,0.0,0.006861,1145,475,True,True,solution_limit,8.487,8.384,28e85b2568a7,idle,"AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD | 12 threads | Python 3.14.6"
+80b726c457a8,B-n31-k5,30,5,5,672,672,0.0,0.001087,955,22,True,True,solution_limit,8.102,8.018,70c5c26b6a6b,idle,"AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD | 12 threads | Python 3.14.6"
+80b726c457a8,P-n40-k5,39,5,5,458,458,0.0,0.014443,614,1066,True,True,solution_limit,13.677,13.619,9079fe5d78d9,idle,"AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD | 12 threads | Python 3.14.6"
+80b726c457a8,P-n19-k2,18,2,2,212,212,0.0,0.02646,253,1317,True,True,solution_limit,4.12,4.235,4cb5978c8518,idle,"AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD | 12 threads | Python 3.14.6"
+80b726c457a8,P-n40-k5,39,5,5,458,458,0.0,0.014444,614,1067,True,True,solution_limit,36.451,,9079fe5d78d9,loaded (24 busy processes),"AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD | 12 threads | Python 3.14.6"

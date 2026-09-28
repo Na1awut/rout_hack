@@ -1,0 +1,9 @@
+part,instance,customers,iterations,seconds,ms_per_iteration,ms_per_iteration_per_customer,gap_percent,note
+calibration,E-n51-k5,50,1000,0.31,0.312,0.00625,0.0,
+calibration,X-n106-k14,105,1000,0.68,0.678,0.00645,1.271,
+calibration,X-n214-k11,213,1000,1.11,1.113,0.00522,17.161,
+calibration,X-n459-k26,458,1000,1.97,1.974,0.00431,8.147,
+calibration,X-n801-k40,800,1000,1.75,1.755,0.00219,5.118,
+determinism,X-n459-k26,458,3000,5.58,,,5.749,idle run 1; same_routes_as_run1=True
+determinism,X-n459-k26,458,3000,6.12,,,5.749,idle run 2; same_routes_as_run1=True
+determinism,X-n459-k26,458,3000,11.62,,,5.749,loaded CPU; same_routes_as_run1=True

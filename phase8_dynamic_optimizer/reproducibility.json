@@ -1,0 +1,26 @@
+[
+  {
+    "scenario": "S0_normal",
+    "policy": "B_dynamic",
+    "reproduced": true,
+    "valid": true
+  },
+  {
+    "scenario": "S0_normal",
+    "policy": "C_ai_rolling",
+    "reproduced": true,
+    "valid": true
+  },
+  {
+    "scenario": "S7_mixed_disruption",
+    "policy": "B_dynamic",
+    "reproduced": true,
+    "valid": true
+  },
+  {
+    "scenario": "S7_mixed_disruption",
+    "policy": "C_ai_rolling",
+    "reproduced": true,
+    "valid": true
+  }
+]

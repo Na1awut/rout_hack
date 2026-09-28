@@ -1,0 +1,12 @@
+{
+  "world_seed": 42,
+  "seed": 42,
+  "step_min": 5,
+  "refresh_min": 15,
+  "waiting_weight": 1,
+  "late_weight": 1,
+  "model": "site_ready_v3.joblib",
+  "question_loop5": "Do predicted readiness inputs change release timing while execution remains feasible?",
+  "question_loop6": "Can uncommitted loads be revised after observed updates without changing committed trips?",
+  "limits": "Single plant, identical trucks, one site per trip. Exact single-job release cost; greedy current-slot assignment. No claim of global optimality or future traffic knowledge."
+}

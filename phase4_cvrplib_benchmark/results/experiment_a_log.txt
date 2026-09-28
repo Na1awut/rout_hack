@@ -1,0 +1,28 @@
+Experiment A: fixed 30s budget per instance, solution_limit=2000
+
+E-n22-k4       n=  21 tier=extra_tiny_for_continuity cost=    375 bks=    375 gap=  0.00% feasible=True stop=solution_limit t=  3.8s
+E-n23-k3       n=  22 tier=extra_tiny_for_continuity cost=    569 bks=    569 gap=  0.00% feasible=True stop=solution_limit t=  3.6s
+E-n30-k3       n=  29 tier=extra_tiny_for_continuity cost=    537 bks=    534 gap=  0.56% feasible=True stop=solution_limit t=  5.2s
+E-n33-k4       n=  32 tier=extra_tiny_for_continuity cost=    857 bks=    835 gap=  2.63% feasible=True stop=solution_limit t=  6.7s
+E-n51-k5       n=  50 tier=small  cost=    541 bks=    521 gap=  3.84% feasible=True stop=solution_limit t= 14.9s
+E-n76-k7       n=  75 tier=small  cost=    706 bks=    682 gap=  3.52% feasible=True stop=time_cap       t= 29.9s
+E-n76-k10      n=  75 tier=small  cost=    863 bks=    830 gap=  3.98% feasible=True stop=time_cap       t= 30.0s
+X-n106-k14     n= 105 tier=medium cost=  26919 bks=  26362 gap=  2.11% feasible=True stop=time_cap       t= 30.0s
+X-n120-k6      n= 119 tier=medium cost=  13679 bks=  13332 gap=  2.60% feasible=True stop=time_cap       t= 30.0s
+X-n143-k7      n= 142 tier=medium cost=  16265 bks=  15700 gap=  3.60% feasible=True stop=time_cap       t= 30.0s
+X-n162-k11     n= 161 tier=medium cost=  14638 bks=  14138 gap=  3.54% feasible=True stop=time_cap       t= 30.0s
+X-n186-k15     n= 185 tier=medium cost=  25798 bks=  24145 gap=  6.85% feasible=True stop=time_cap       t= 30.0s
+X-n214-k11     n= 213 tier=medium cost=  12753 bks=  10856 gap= 17.47% feasible=True stop=time_cap       t= 30.0s
+X-n237-k14     n= 236 tier=medium cost=  28908 bks=  27042 gap=  6.90% feasible=True stop=time_cap       t= 30.0s
+X-n261-k13     n= 260 tier=large  cost=  28921 bks=  26558 gap=  8.90% feasible=True stop=time_cap       t= 30.0s
+X-n298-k31     n= 297 tier=large  cost=  39802 bks=  34231 gap= 16.27% feasible=True stop=time_cap       t= 30.0s
+X-n344-k43     n= 343 tier=large  cost=      0 bks=  42056 gap=  N/A  feasible=False stop=no_solution    t= 30.0s
+X-n393-k38     n= 392 tier=large  cost=      0 bks=  38260 gap=  N/A  feasible=False stop=no_solution    t= 30.1s
+X-n459-k26     n= 458 tier=large  cost=  27582 bks=  24145 gap= 14.23% feasible=True stop=time_cap       t= 30.1s
+X-n513-k21     n= 512 tier=stress cost=  27247 bks=  24201 gap= 12.59% feasible=True stop=time_cap       t= 30.1s
+X-n599-k92     n= 598 tier=stress cost=      0 bks= 108490 gap=  N/A  feasible=False stop=no_solution    t= 30.1s
+X-n701-k44     n= 700 tier=stress cost=  89250 bks=  81934 gap=  8.93% feasible=True stop=time_cap       t= 30.2s
+X-n801-k40     n= 800 tier=stress cost=  76302 bks=  73331 gap=  4.05% feasible=True stop=time_cap       t= 30.2s
+X-n936-k151    n= 935 tier=stress cost=      0 bks= 132926 gap=  N/A  feasible=False stop=no_solution    t= 30.3s
+
+wrote C:\Users\Lenovo\Downloads\rout_hack\05_core_development\phase4_cvrplib_benchmark\results\experiment_a_breadth.csv

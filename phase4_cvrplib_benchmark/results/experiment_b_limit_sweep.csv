@@ -1,0 +1,13 @@
+instance,customers,solution_limit,gap_percent,runtime_sec,reached_limit,stop_reason
+E-n51-k5,50,200,10.365,1.33,True,solution_limit
+E-n51-k5,50,500,5.566,3.68,True,solution_limit
+E-n51-k5,50,1000,5.182,8.31,True,solution_limit
+E-n51-k5,50,2000,3.839,15.46,True,solution_limit
+X-n162-k11,161,200,3.805,5.15,True,solution_limit
+X-n162-k11,161,500,3.537,20.89,True,solution_limit
+X-n162-k11,161,1000,3.48,44.63,True,solution_limit
+X-n162-k11,161,2000,3.049,90.01,False,time_cap
+X-n459-k26,458,200,15.109,2.5,False,search_exhausted
+X-n459-k26,458,500,13.44,90.08,False,time_cap
+X-n459-k26,458,1000,13.44,90.08,False,time_cap
+X-n459-k26,458,2000,13.44,90.08,False,time_cap

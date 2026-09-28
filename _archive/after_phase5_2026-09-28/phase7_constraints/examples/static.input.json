@@ -1,0 +1,674 @@
+{
+  "schema_version": "1.0",
+  "case_id": "PrecastFlow-P6-static-v1",
+  "data_kind": "synthetic",
+  "units": {
+    "mass": "kg",
+    "distance": "m",
+    "time": "minute_after_midnight"
+  },
+  "sources": [
+    {
+      "source_id": "P6-SIM",
+      "kind": "assumption",
+      "reference": "phase6_topic_selection/data/synthetic_case.json; operational data are simulated"
+    }
+  ],
+  "depot": {
+    "location_id": "DEPOT"
+  },
+  "sites": [
+    {
+      "site_id": "S1",
+      "location_id": "S1",
+      "crane_id": "CRANE-S1"
+    },
+    {
+      "site_id": "S2",
+      "location_id": "S2",
+      "crane_id": "CRANE-S2"
+    },
+    {
+      "site_id": "S3",
+      "location_id": "S3",
+      "crane_id": "CRANE-S3"
+    },
+    {
+      "site_id": "S4",
+      "location_id": "S4",
+      "crane_id": "CRANE-S4"
+    }
+  ],
+  "fleet": {
+    "vehicle_ids": [
+      "V01",
+      "V02",
+      "V03",
+      "V04",
+      "V05",
+      "V06"
+    ],
+    "capacity_kg": 9000,
+    "shift_start_min": 420,
+    "shift_end_min": 1020,
+    "source_id": "P6-SIM"
+  },
+  "components": [
+    {
+      "component_id": "S1-B1-C1",
+      "site_id": "S1",
+      "weight_kg": 1613,
+      "installation_rank": 1,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S1-B1-C2",
+      "site_id": "S1",
+      "weight_kg": 1037,
+      "installation_rank": 2,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S1-B1-C3",
+      "site_id": "S1",
+      "weight_kg": 1613,
+      "installation_rank": 3,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S1-B2-C1",
+      "site_id": "S1",
+      "weight_kg": 1037,
+      "installation_rank": 4,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S1-B2-C2",
+      "site_id": "S1",
+      "weight_kg": 1613,
+      "installation_rank": 5,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S1-B2-C3",
+      "site_id": "S1",
+      "weight_kg": 1613,
+      "installation_rank": 6,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S1-B3-C1",
+      "site_id": "S1",
+      "weight_kg": 1613,
+      "installation_rank": 7,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S1-B3-C2",
+      "site_id": "S1",
+      "weight_kg": 1613,
+      "installation_rank": 8,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S1-B3-C3",
+      "site_id": "S1",
+      "weight_kg": 1037,
+      "installation_rank": 9,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S2-B1-C1",
+      "site_id": "S2",
+      "weight_kg": 1613,
+      "installation_rank": 1,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S2-B1-C2",
+      "site_id": "S2",
+      "weight_kg": 1037,
+      "installation_rank": 2,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S2-B1-C3",
+      "site_id": "S2",
+      "weight_kg": 1613,
+      "installation_rank": 3,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S2-B2-C1",
+      "site_id": "S2",
+      "weight_kg": 1037,
+      "installation_rank": 4,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S2-B2-C2",
+      "site_id": "S2",
+      "weight_kg": 1613,
+      "installation_rank": 5,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S2-B2-C3",
+      "site_id": "S2",
+      "weight_kg": 1613,
+      "installation_rank": 6,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S2-B3-C1",
+      "site_id": "S2",
+      "weight_kg": 1613,
+      "installation_rank": 7,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S2-B3-C2",
+      "site_id": "S2",
+      "weight_kg": 1613,
+      "installation_rank": 8,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S2-B3-C3",
+      "site_id": "S2",
+      "weight_kg": 1037,
+      "installation_rank": 9,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S3-B1-C1",
+      "site_id": "S3",
+      "weight_kg": 1613,
+      "installation_rank": 1,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S3-B1-C2",
+      "site_id": "S3",
+      "weight_kg": 1037,
+      "installation_rank": 2,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S3-B1-C3",
+      "site_id": "S3",
+      "weight_kg": 1613,
+      "installation_rank": 3,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S3-B2-C1",
+      "site_id": "S3",
+      "weight_kg": 1037,
+      "installation_rank": 4,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S3-B2-C2",
+      "site_id": "S3",
+      "weight_kg": 1613,
+      "installation_rank": 5,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S3-B2-C3",
+      "site_id": "S3",
+      "weight_kg": 1613,
+      "installation_rank": 6,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S3-B3-C1",
+      "site_id": "S3",
+      "weight_kg": 1613,
+      "installation_rank": 7,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S3-B3-C2",
+      "site_id": "S3",
+      "weight_kg": 1613,
+      "installation_rank": 8,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S3-B3-C3",
+      "site_id": "S3",
+      "weight_kg": 1037,
+      "installation_rank": 9,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S4-B1-C1",
+      "site_id": "S4",
+      "weight_kg": 1613,
+      "installation_rank": 1,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S4-B1-C2",
+      "site_id": "S4",
+      "weight_kg": 1037,
+      "installation_rank": 2,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S4-B1-C3",
+      "site_id": "S4",
+      "weight_kg": 1613,
+      "installation_rank": 3,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S4-B2-C1",
+      "site_id": "S4",
+      "weight_kg": 1037,
+      "installation_rank": 4,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S4-B2-C2",
+      "site_id": "S4",
+      "weight_kg": 1613,
+      "installation_rank": 5,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S4-B2-C3",
+      "site_id": "S4",
+      "weight_kg": 1613,
+      "installation_rank": 6,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S4-B3-C1",
+      "site_id": "S4",
+      "weight_kg": 1613,
+      "installation_rank": 7,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S4-B3-C2",
+      "site_id": "S4",
+      "weight_kg": 1613,
+      "installation_rank": 8,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    },
+    {
+      "component_id": "S4-B3-C3",
+      "site_id": "S4",
+      "weight_kg": 1037,
+      "installation_rank": 9,
+      "production_ready": true,
+      "release_min": 420,
+      "source_id": "P6-SIM"
+    }
+  ],
+  "batches": [
+    {
+      "batch_id": "S1-B1",
+      "site_id": "S1",
+      "component_ids": [
+        "S1-B1-C1",
+        "S1-B1-C2",
+        "S1-B1-C3"
+      ],
+      "sequence": 1,
+      "service_min": 24,
+      "slot_start_min": 540,
+      "slot_end_min": 576,
+      "site_ready": true,
+      "site_ready_min": 420,
+      "load_plan_approved": true,
+      "source_id": "P6-SIM"
+    },
+    {
+      "batch_id": "S1-B2",
+      "site_id": "S1",
+      "component_ids": [
+        "S1-B2-C1",
+        "S1-B2-C2",
+        "S1-B2-C3"
+      ],
+      "sequence": 2,
+      "service_min": 24,
+      "slot_start_min": 660,
+      "slot_end_min": 696,
+      "site_ready": true,
+      "site_ready_min": 420,
+      "load_plan_approved": true,
+      "source_id": "P6-SIM"
+    },
+    {
+      "batch_id": "S1-B3",
+      "site_id": "S1",
+      "component_ids": [
+        "S1-B3-C1",
+        "S1-B3-C2",
+        "S1-B3-C3"
+      ],
+      "sequence": 3,
+      "service_min": 24,
+      "slot_start_min": 780,
+      "slot_end_min": 816,
+      "site_ready": true,
+      "site_ready_min": 420,
+      "load_plan_approved": true,
+      "source_id": "P6-SIM"
+    },
+    {
+      "batch_id": "S2-B1",
+      "site_id": "S2",
+      "component_ids": [
+        "S2-B1-C1",
+        "S2-B1-C2",
+        "S2-B1-C3"
+      ],
+      "sequence": 1,
+      "service_min": 24,
+      "slot_start_min": 580,
+      "slot_end_min": 616,
+      "site_ready": true,
+      "site_ready_min": 420,
+      "load_plan_approved": true,
+      "source_id": "P6-SIM"
+    },
+    {
+      "batch_id": "S2-B2",
+      "site_id": "S2",
+      "component_ids": [
+        "S2-B2-C1",
+        "S2-B2-C2",
+        "S2-B2-C3"
+      ],
+      "sequence": 2,
+      "service_min": 24,
+      "slot_start_min": 700,
+      "slot_end_min": 736,
+      "site_ready": true,
+      "site_ready_min": 420,
+      "load_plan_approved": true,
+      "source_id": "P6-SIM"
+    },
+    {
+      "batch_id": "S2-B3",
+      "site_id": "S2",
+      "component_ids": [
+        "S2-B3-C1",
+        "S2-B3-C2",
+        "S2-B3-C3"
+      ],
+      "sequence": 3,
+      "service_min": 24,
+      "slot_start_min": 820,
+      "slot_end_min": 856,
+      "site_ready": true,
+      "site_ready_min": 420,
+      "load_plan_approved": true,
+      "source_id": "P6-SIM"
+    },
+    {
+      "batch_id": "S3-B1",
+      "site_id": "S3",
+      "component_ids": [
+        "S3-B1-C1",
+        "S3-B1-C2",
+        "S3-B1-C3"
+      ],
+      "sequence": 1,
+      "service_min": 24,
+      "slot_start_min": 540,
+      "slot_end_min": 576,
+      "site_ready": true,
+      "site_ready_min": 420,
+      "load_plan_approved": true,
+      "source_id": "P6-SIM"
+    },
+    {
+      "batch_id": "S3-B2",
+      "site_id": "S3",
+      "component_ids": [
+        "S3-B2-C1",
+        "S3-B2-C2",
+        "S3-B2-C3"
+      ],
+      "sequence": 2,
+      "service_min": 24,
+      "slot_start_min": 660,
+      "slot_end_min": 696,
+      "site_ready": true,
+      "site_ready_min": 420,
+      "load_plan_approved": true,
+      "source_id": "P6-SIM"
+    },
+    {
+      "batch_id": "S3-B3",
+      "site_id": "S3",
+      "component_ids": [
+        "S3-B3-C1",
+        "S3-B3-C2",
+        "S3-B3-C3"
+      ],
+      "sequence": 3,
+      "service_min": 24,
+      "slot_start_min": 780,
+      "slot_end_min": 816,
+      "site_ready": true,
+      "site_ready_min": 420,
+      "load_plan_approved": true,
+      "source_id": "P6-SIM"
+    },
+    {
+      "batch_id": "S4-B1",
+      "site_id": "S4",
+      "component_ids": [
+        "S4-B1-C1",
+        "S4-B1-C2",
+        "S4-B1-C3"
+      ],
+      "sequence": 1,
+      "service_min": 24,
+      "slot_start_min": 580,
+      "slot_end_min": 616,
+      "site_ready": true,
+      "site_ready_min": 420,
+      "load_plan_approved": true,
+      "source_id": "P6-SIM"
+    },
+    {
+      "batch_id": "S4-B2",
+      "site_id": "S4",
+      "component_ids": [
+        "S4-B2-C1",
+        "S4-B2-C2",
+        "S4-B2-C3"
+      ],
+      "sequence": 2,
+      "service_min": 24,
+      "slot_start_min": 700,
+      "slot_end_min": 736,
+      "site_ready": true,
+      "site_ready_min": 420,
+      "load_plan_approved": true,
+      "source_id": "P6-SIM"
+    },
+    {
+      "batch_id": "S4-B3",
+      "site_id": "S4",
+      "component_ids": [
+        "S4-B3-C1",
+        "S4-B3-C2",
+        "S4-B3-C3"
+      ],
+      "sequence": 3,
+      "service_min": 24,
+      "slot_start_min": 820,
+      "slot_end_min": 856,
+      "site_ready": true,
+      "site_ready_min": 420,
+      "load_plan_approved": true,
+      "source_id": "P6-SIM"
+    }
+  ],
+  "travel": {
+    "location_ids": [
+      "DEPOT",
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+    ],
+    "distance_m": [
+      [
+        0,
+        10770,
+        17088,
+        11180,
+        17889
+      ],
+      [
+        10770,
+        0,
+        6325,
+        20025,
+        26306
+      ],
+      [
+        17088,
+        6325,
+        0,
+        26019,
+        32062
+      ],
+      [
+        11180,
+        20025,
+        26019,
+        0,
+        6708
+      ],
+      [
+        17889,
+        26306,
+        32062,
+        6708,
+        0
+      ]
+    ],
+    "duration_upper_min": [
+      [
+        0,
+        33,
+        52,
+        34,
+        54
+      ],
+      [
+        33,
+        0,
+        19,
+        61,
+        79
+      ],
+      [
+        52,
+        19,
+        0,
+        79,
+        97
+      ],
+      [
+        34,
+        61,
+        79,
+        0,
+        21
+      ],
+      [
+        54,
+        79,
+        97,
+        21,
+        0
+      ]
+    ],
+    "mode": "STATIC_MATRIX",
+    "speed_bands": [],
+    "source_id": "P6-SIM"
+  }
+}

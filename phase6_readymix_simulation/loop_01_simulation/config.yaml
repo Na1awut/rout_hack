@@ -1,0 +1,24 @@
+# Loop 1 -- Ready-Mix Simulation (loop.md)
+loop: 1
+name: readymix_simulation
+question: >
+  Can we generate a reproducible Ready-Mix day, in the skill.md schemas,
+  that the frozen core accepts and that each scenario changes the way it
+  claims to?
+
+seed: 42
+scenarios: all                  # every scenario in readymix/config/scenarios.yaml
+simulation_config: readymix/config/simulation.yaml
+scenario_config: readymix/config/scenarios.yaml
+output: readymix/data/simulation
+
+gate:
+  G1_validates: every dataset passes application/data_validator with 0 problems
+  G2_reproducible: regenerating with the same seed gives identical sha256 for every file
+  G3_shared_world: plants/vehicles identical in all scenarios; sites and orders identical except S6
+  G4_core_accepts: projection FEASIBLE, core validator PASS, one trip per route, distance == closed form
+  G5_labelled: no REAL / PUBLIC_SOURCE claims in Loop 1; every ASSUMED field has a note
+  G6_plausible_load: S0 fleet_load_ratio within simulation.yaml plausibility band
+  G7_scenario_effects: S1 < S0 < S2 traffic; S3,S4,S5,S7 mean delay > S0; S6 trips > S0; S8 has surprises
+  G8_regression: Loop 0 regression lock still PASS (run separately)
+  G9_unit_tests: python -m pytest readymix/tests (run separately)

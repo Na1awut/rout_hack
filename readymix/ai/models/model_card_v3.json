@@ -1,0 +1,99 @@
+{
+  "model_version": "site_ready_v3",
+  "trained_on": {
+    "ai_yaml_sha256": "1e94e1a4a8731ed8e33d45b378c1d7f829adbaf10acba03841b3a83594be5cbd",
+    "world_seed": 42,
+    "splits": {
+      "train": [
+        1001,
+        1100
+      ],
+      "val": [
+        1101,
+        1120
+      ],
+      "test": [
+        2001,
+        2040
+      ],
+      "robust_s8": [
+        3001,
+        3020
+      ]
+    },
+    "files": {
+      "ready_train.csv": "0226d7cc5c26ff20529ef3d275de4f1c7a8318384fd4b59f0e19ab0e514e133e",
+      "service_train.csv": "d3aac273da8fafd68c94691f0877f56b82890621f433dd5f19d093cea230843b",
+      "ready_val.csv": "c86b4891dd359104d112602fbcc651c32625a946617d929dfcc90c922782b5f3",
+      "service_val.csv": "5326f3eb17652f12b7ef102189f4b26ef01222701d4e99200d903246c599cae6",
+      "ready_test.csv": "ea0faea8481902bfdef4173f7da5f6510f68aa1e9daa5115119e326497f24c33",
+      "service_test.csv": "4b9d7aa4ac95053c09ecb04da8f618bb9e47760b1c038bc7ca5cce60b6973404",
+      "ready_robust_s8.csv": "afae4a2338210a06398c16e78a62ee8366c67c9b1f2ff2724345793037b868b0",
+      "service_robust_s8.csv": "9a1cad4be9e4080118f0bf685dfc691b0b13ea711217a21a09ab4053989d6175"
+    }
+  },
+  "regressor": "hgb_l1",
+  "baseline_to_beat": "rule_hist",
+  "service_choice": "estimate",
+  "features": [
+    "t_rel_min",
+    "planned_hour",
+    "site_code",
+    "hist_delay_mean",
+    "hist_delay_std",
+    "pump_available",
+    "crew_size",
+    "site_priority",
+    "order_volume_m3",
+    "concrete_code",
+    "order_priority",
+    "crew_ready",
+    "prep_progress_pct",
+    "minutes_since_report",
+    "pump_down",
+    "status_code",
+    "delay_so_far_min",
+    "rain",
+    "announced_delay_min",
+    "has_announcement"
+  ],
+  "sklearn": "1.9.0",
+  "test_prediction_sha256_12": "d0a0b51bbfbc",
+  "data": "SIMULATED -- accuracy shows the pipeline works on this simulator, not real-world accuracy",
+  "conformal_margin_min": 1.3,
+  "confidence_threshold": 0.6,
+  "confidence": "Raw AI P(abs(error)<=15 minutes). Fallback output confidence=0, interval is a point placeholder, NOT calibrated.",
+  "fallback_variant": "mandatory_low_confidence_or_ood_or_observed_dry_readiness_revision",
+  "fallback": "event_history: dry SITE_READY_LATE/EARLY replaces historical base delay; additive events retained; otherwise rule_hist",
+  "status": "LOOP_4_PASS",
+  "point_model": "Unchanged v1 hgb_l1; intervals/classifier/confidence reused from v2",
+  "evaluation_splits": {
+    "fresh_test": [
+      7001,
+      7040
+    ],
+    "fresh_s8": [
+      8001,
+      8020
+    ]
+  },
+  "development_stress_seeds": [
+    4001,
+    4020
+  ],
+  "limitations": [
+    "SIMULATED only; no business/carbon value claim",
+    "Normal mix MAE increases 8.2680 to 8.5392 minutes",
+    "S8 improvement is correct use of current event semantics, not better ML",
+    "Raw AI S8 interval coverage 0.7478 and ECE 0.0790 are worse than normal mix"
+  ],
+  "gates": {
+    "G1_interval_coverage": true,
+    "G2_confidence_calibrated": true,
+    "G3_confidence_ranks_error": true,
+    "G4_fallback_safe": true,
+    "G5_contract": true,
+    "G6_regression": true
+  },
+  "bundle_sha256": "4b3d4b10b6ec8a4878c451f3c8c70942901473d55cf5dc6bed9e2d34fd390dda"
+}

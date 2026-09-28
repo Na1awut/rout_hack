@@ -1,0 +1,11 @@
+Part 1: seconds per HGS iteration vs n (MaxIterations 1000)
+   E-n51-k5     n=  50 t=  0.31s    0.312 ms/iter  0.00625 ms/iter/customer  gap=0.0%
+   X-n106-k14   n= 105 t=  0.68s    0.678 ms/iter  0.00645 ms/iter/customer  gap=1.271%
+   X-n214-k11   n= 213 t=  1.11s    1.113 ms/iter  0.00522 ms/iter/customer  gap=17.161%
+   X-n459-k26   n= 458 t=  1.97s    1.974 ms/iter  0.00431 ms/iter/customer  gap=8.147%
+   X-n801-k40   n= 800 t=  1.75s    1.755 ms/iter  0.00219 ms/iter/customer  gap=5.118%
+
+Part 2: determinism on X-n459-k26, MaxIterations 3000, seed 1
+   idle run 1  cost=25533 same_routes_as_run1=True t=5.6s
+   idle run 2  cost=25533 same_routes_as_run1=True t=6.1s
+   loaded CPU  cost=25533 same_routes_as_run1=True t=11.6s

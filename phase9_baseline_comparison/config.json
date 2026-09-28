@@ -1,0 +1,13 @@
+{
+  "world_seed": 42,
+  "day_seeds": [9001, 9002, 9003, 9004, 9005],
+  "step_min": 5,
+  "refresh_min": 15,
+  "waiting_weight": 1,
+  "late_weight": 1,
+  "model": "site_ready_v3.joblib",
+  "policies": ["A_static_planned", "B_dynamic", "C_ai_rolling"],
+  "score": {"waiting": 1, "site_idle": 1, "unserved_trip_penalty_min": 1000},
+  "gate": {"paired_day_bootstrap_resamples": 2000, "bootstrap_seed": 0, "minimum_ci95_gain_min": 0, "on_time_tolerance": 0.02},
+  "assumptions": "Score is an experimental operational proxy in equivalent minutes, NOT financial cost. 1000-minute missing-load penalty and 2 percentage-point on-time tolerance registered before evaluation. All 9 scenarios reported, including overload. CVRP/nearest distance routes coincide in single-site-per-load V1; routing comparison is already locked in Phase6, so dispatch comparison is A/B/C."
+}

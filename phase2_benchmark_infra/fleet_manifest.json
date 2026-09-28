@@ -1,0 +1,9 @@
+{
+  "policy": "max_vehicles is external, per-instance data -- never inferred by code from a filename or from DIMENSION. Extending the benchmark set means adding a line here, not editing batch_runner.py.",
+  "instances": {
+    "A-n32-k5.vrp": {"max_vehicles": 5, "source": "comment (No of trucks: 5)"},
+    "B-n31-k5.vrp": {"max_vehicles": 5, "source": "comment (No of trucks: 5)"},
+    "P-n40-k5.vrp": {"max_vehicles": 5, "source": "comment (No of trucks: 5)"},
+    "P-n19-k2.vrp": {"max_vehicles": 2, "source": "comment (No of trucks: 2)"}
+  }
+}

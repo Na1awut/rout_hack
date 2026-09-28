@@ -1,0 +1,5 @@
+# Pinned, not >=, on purpose: Phase 1 found CP-SAT/OR-Tools routing
+# search results are not guaranteed stable across engine versions.
+# A result produced with a different ortools build is not a frozen
+# result -- freeze.load_config() also checks this at runtime.
+ortools==9.15.6755

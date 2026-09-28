@@ -1,0 +1,44 @@
+{
+  "feasible": [
+    {
+      "file": "LINE-n5-k1.vrp",
+      "max_vehicles": 1,
+      "expected_cost": 100,
+      "derivation": "2 * max(x) = 2 * 50 = 100 (single-vehicle line TSP: drive to the farthest point and back)"
+    },
+    {
+      "file": "LINE-n10-k1.vrp",
+      "max_vehicles": 1,
+      "expected_cost": 200,
+      "derivation": "2 * max(x) = 2 * 100 = 200 (single-vehicle line TSP: drive to the farthest point and back)"
+    },
+    {
+      "file": "LINE-n20-k1.vrp",
+      "max_vehicles": 1,
+      "expected_cost": 400,
+      "derivation": "2 * max(x) = 2 * 200 = 400 (single-vehicle line TSP: drive to the farthest point and back)"
+    },
+    {
+      "file": "LINE-n30-k1.vrp",
+      "max_vehicles": 1,
+      "expected_cost": 600,
+      "derivation": "2 * max(x) = 2 * 300 = 600 (single-vehicle line TSP: drive to the farthest point and back)"
+    },
+    {
+      "file": "CLUSTER-n4-k2.vrp",
+      "max_vehicles": 2,
+      "expected_cost": 2024,
+      "derivation": "enumerated all 3 pairings of {10,11,1000,1001} into two pairs of 2: near+near/far+far=2024, near+far/near+far (two ways)=4002 each. Minimum is 2024."
+    }
+  ],
+  "infeasible": [
+    {
+      "file": "INFEASIBLE-single-overweight.vrp",
+      "max_vehicles": 3
+    },
+    {
+      "file": "INFEASIBLE-fleet-capacity.vrp",
+      "max_vehicles": 2
+    }
+  ]
+}

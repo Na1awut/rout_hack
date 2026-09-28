@@ -1,0 +1,11 @@
+scenario,seed,policy,execution_problems,reproducible,trips,delivered_trips,unserved_trips,delivered_volume_m3,unserved_volume_m3,total_distance_km,total_travel_min,total_waiting_min,average_waiting_min,site_idle_min,pour_gap_max_min,pour_gaps_over_30,late_arrivals,on_time_rate,release_delay_min,fleet_utilization,trucks_used,trips_per_vehicle,fuel_liters,co2_kg,last_truck_free,solver_runtime_ms
+S0_normal,42,A_static_planned,0,True,63,63,0,292.5,0,2148.1,4100,551,8.7,236,40,1,6,0.905,290,0.641,15,4.2,757.0,,16:35,1.1
+S0_normal,42,R_reactive_rule,0,True,63,63,0,292.5,0,2148.1,4137,371,5.9,384,35,2,7,0.889,185,0.645,15,4.2,742.7,,16:59,6.0
+S0_normal,1,A_static_planned,0,True,72,72,0,346.5,0,1898.6,3534,438,6.1,529,41,1,16,0.778,544,0.593,15,4.8,695.8,,16:50,0.9
+S0_normal,1,R_reactive_rule,0,True,72,72,0,346.5,0,1898.6,3544,313,4.3,685,34,1,19,0.736,386,0.594,15,4.8,692.3,,17:00,5.0
+S0_normal,2,A_static_planned,0,True,64,64,0,317.0,0,1908.1,3693,422,6.6,313,31,1,8,0.875,355,0.582,15,4.27,683.1,,17:08,0.8
+S0_normal,2,R_reactive_rule,0,True,64,64,0,317.0,0,1908.1,3696,236,3.7,483,44,2,7,0.891,259,0.582,15,4.27,674.3,,17:18,5.0
+S0_normal,3,A_static_planned,0,True,69,69,0,341.0,0,2202.6,4185,516,7.5,563,43,5,22,0.681,910,0.672,15,4.6,744.8,,16:13,0.8
+S0_normal,3,R_reactive_rule,0,True,69,69,0,341.0,0,2202.6,4186,302,4.4,578,41,3,17,0.754,386,0.672,15,4.6,731.8,,16:19,4.9
+S0_normal,4,A_static_planned,0,True,66,66,0,317.0,0,1915.5,3771,329,5.0,463,33,1,16,0.758,727,0.585,15,4.4,644.0,,16:30,0.9
+S0_normal,4,R_reactive_rule,0,True,66,66,0,317.0,0,1915.5,3774,220,3.3,574,39,2,14,0.788,437,0.585,15,4.4,639.4,,16:41,4.9

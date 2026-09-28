@@ -1,0 +1,33 @@
+{
+  "ai_yaml_sha256": "1e94e1a4a8731ed8e33d45b378c1d7f829adbaf10acba03841b3a83594be5cbd",
+  "source_sha256": "9091ba27667e5aa65529339c12567fc0c1d66844e71079898128b76b371821fc",
+  "world_seed": 42,
+  "splits": {
+    "train": [
+      1001,
+      1100
+    ],
+    "val": [
+      1101,
+      1120
+    ],
+    "test": [
+      2001,
+      2040
+    ],
+    "robust_s8": [
+      3001,
+      3020
+    ]
+  },
+  "files": {
+    "ready_train.csv": "8243c0598eb433dad14ccd14769d219854fd7506d9284d0a94daf3897efcac41",
+    "service_train.csv": "cd58b414e571485f37469a99ed2c4b767f6eeed4757934565428df5d34feb9f0",
+    "ready_val.csv": "62fe8b528383ae74d641c05f0055dc249ee3b7ff7ca832a491e6b6f0618dc759",
+    "service_val.csv": "b1ed6a4b3de0e994cbab0b4ef0fe8d92d3186d581411859cd0c5f91a1a2c996f",
+    "ready_test.csv": "5dfa3282c3a1cc0beb96db1ab9afb5d1c292620a1f17108ac6e6a715648804d2",
+    "service_test.csv": "787c2fd8032f27dda8c72659795ef1daa5a2a62a64532660f388165347a3efe9",
+    "ready_robust_s8.csv": "aedbc312472dde46ae148155db04dbbe8701935db080e16ce68a28e4a1275cdd",
+    "service_robust_s8.csv": "023bac2f412af2afc0b38586c9cdeb4aeccfa864d1b201d877a7061e84683254"
+  }
+}

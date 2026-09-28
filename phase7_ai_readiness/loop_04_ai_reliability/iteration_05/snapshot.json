@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "model_version": "site_ready_v3",
+  "frozen_core_id": "bf63a542f2de",
+  "gates": {
+    "G1_interval_coverage": true,
+    "G2_confidence_calibrated": true,
+    "G3_confidence_ranks_error": true,
+    "G4_fallback_safe": true,
+    "G5_contract": true,
+    "G6_regression": true
+  },
+  "tests_passed": 88,
+  "runtime": {
+    "predictions_checked": 46819,
+    "fallbacks": 5512,
+    "uncached_comparisons": 120,
+    "inference": "real models batch-cached per day; production predictor logic called for every row",
+    "G5_contract_and_parity": true
+  },
+  "versions": {
+    "python": "3.14.6",
+    "numpy": "2.5.2",
+    "sklearn": "1.9.0",
+    "joblib": "1.5.3"
+  },
+  "files": {
+    "phase7_ai_readiness/core_regression.log": "1857159425093b6aded11eed26cf446aa3d42e5cb7671587d7ca5fae5eaaf04a",
+    "phase7_ai_readiness/loop_03_ai_prediction/verification.log": "c2a453da6bffd4165746262f9ccc79f8582e266ba2144eca590ee77041a995be",
+    "phase7_ai_readiness/loop_04_ai_reliability/iteration_05/config.json": "5f68f12229c93aba7fd013e1d6b8fa5b187fd528eee9860836fe06f83479da32",
+    "phase7_ai_readiness/loop_04_ai_reliability/iteration_05/gates.json": "0e7183b6c8aa7ae0c0749948dbcbcdd6131c0c1d96fe29ae46503d40f4889a21",
+    "phase7_ai_readiness/loop_04_ai_reliability/iteration_05/metrics.csv": "b9611437594e6788849f620c480f74478b65113e9b893b43314ac3d1fd0f25cc",
+    "phase7_ai_readiness/loop_04_ai_reliability/iteration_05/pytest.log": "8eeef55ba49fddb4b4df31f4c74cc6d2b066d7b9d823b1cb13a2822eac74be7c",
+    "phase7_ai_readiness/loop_04_ai_reliability/iteration_05/runtime_checks.json": "ce5209645c24617e6e5109b4a4d0bdedb71898a5b743d277d2356a036f3ebbf6",
+    "phase7_ai_readiness/loop_04_ai_reliability/iteration_05/selection.json": "fc14d354ec2503c38eda87844461a669ad7fdf84e2a37a216efb7d8831d02a20",
+    "phase7_ai_readiness/loop_04_ai_reliability/run_loop04_v3.py": "e03d99aaf1be9ca5f8fd88e6851291fe5ccee446b146b89bcc1ce8d192ab9cea",
+    "phase7_ai_readiness/loop_04_ai_reliability/verify_runtime_v3.py": "275d6b2f31a089f13f97a4efd0700587280f0687588210803720c5d442205ea3",
+    "readymix/ai/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "readymix/ai/calibration.py": "4c8262bbb3cd1b09de132a6c6efd242da017599a6b13383a53c83be0fd508173",
+    "readymix/ai/evaluation.py": "5a87c5d911a6dffd561c4d2b7728b0871361e37febaea3520f7b3371f8565f25",
+    "readymix/ai/fallback.py": "4c6bd3612577c881e084609b4214e090b64fee60d4867b28a93dc43425ccb1c3",
+    "readymix/ai/features.py": "e98a53fda192122f4f20dc52866159cbffb48328607eb72139316ab34f21bf3c",
+    "readymix/ai/models/model_card_v3.json": "87b419f958c0d8cca0c102dc3bd5e9c813ec9a24086899fb99b3a176a88b88b3",
+    "readymix/ai/models/site_ready_v3.joblib": "4b3d4b10b6ec8a4878c451f3c8c70942901473d55cf5dc6bed9e2d34fd390dda",
+    "readymix/ai/predictor.py": "d0cb5a7632d63c9cf99d1bc92a616a6aeb2df0e04dc3ad2a3a306ac52e032694",
+    "readymix/ai/train_ready_model.py": "0a339026598c2fc2590322f0e7fdf8ac358ac34981b02bc26439509bb41853ad",
+    "readymix/ai/training_data.py": "5565fac0e9486509f06842b9cc3f3f5dc0022ea66d66ebfebd7c0333bc548917",
+    "readymix/data/training/manifest.json": "860ed912ed39e1be162e3ea8648f39c07fc0226c25c9416d6d023d05b40939ce",
+    "readymix/tests/test_loop03_ai.py": "e55b62d83f616d6b3faacadc88949aa561df15008b74414cd4c88334d9730d1e",
+    "readymix/tests/test_loop04_contract.py": "32b2c15ed9a41f1474f94f767066d1f3d232636a39a23b519a48ef9909ffb744",
+    "readymix/tests/test_loop04_revision.py": "103b96eac2dbac95b360a98b152898fefeae52ccbcce0384d8bf9dc32bd8aa18",
+    "readymix/tests/test_loop04_runtime.py": "862d03dfe7b654f7eb564a5565556a29d14afd97be4446d40d0e61a62f91ea79"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "threshold": 0.6,
+  "fallback_candidates": ["planned", "hist", "rule_hist", "conditional_history"],
+  "selection": "minimum mean MAE across normal validation and stress validation; mandatory low confidence or OOD trigger",
+  "splits": {"stress_val": [4001, 4020], "fresh_test": [5001, 5040], "fresh_s8": [6001, 6020]},
+  "gates": {"coverage_min": 0.75, "coverage_max": 0.85, "ece_max": 0.05},
+  "note": "Old test/S8 are diagnostic only. Select and lock before generating fresh evaluation. No threshold search."
+}

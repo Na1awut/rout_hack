@@ -1,0 +1,271 @@
+{
+  "schema_version": "1.0",
+  "status": "READY",
+  "issues": [],
+  "eligible_batches": [
+    {
+      "batch_id": "S1-B1",
+      "site_id": "S1",
+      "component_ids": [
+        "S1-B1-C1",
+        "S1-B1-C2",
+        "S1-B1-C3"
+      ],
+      "sequence": 1,
+      "service_min": 24,
+      "slot_start_min": 540,
+      "slot_end_min": 576,
+      "site_ready": true,
+      "site_ready_min": 420,
+      "load_plan_approved": true,
+      "source_id": "P6-SIM",
+      "demand_kg": 4263,
+      "release_min": 420,
+      "tw_early_min": 540,
+      "tw_late_min": 552
+    },
+    {
+      "batch_id": "S1-B2",
+      "site_id": "S1",
+      "component_ids": [
+        "S1-B2-C1",
+        "S1-B2-C2",
+        "S1-B2-C3"
+      ],
+      "sequence": 2,
+      "service_min": 24,
+      "slot_start_min": 660,
+      "slot_end_min": 696,
+      "site_ready": true,
+      "site_ready_min": 420,
+      "load_plan_approved": true,
+      "source_id": "P6-SIM",
+      "demand_kg": 4263,
+      "release_min": 420,
+      "tw_early_min": 660,
+      "tw_late_min": 672
+    },
+    {
+      "batch_id": "S1-B3",
+      "site_id": "S1",
+      "component_ids": [
+        "S1-B3-C1",
+        "S1-B3-C2",
+        "S1-B3-C3"
+      ],
+      "sequence": 3,
+      "service_min": 24,
+      "slot_start_min": 780,
+      "slot_end_min": 816,
+      "site_ready": true,
+      "site_ready_min": 420,
+      "load_plan_approved": true,
+      "source_id": "P6-SIM",
+      "demand_kg": 4263,
+      "release_min": 420,
+      "tw_early_min": 780,
+      "tw_late_min": 792
+    },
+    {
+      "batch_id": "S2-B1",
+      "site_id": "S2",
+      "component_ids": [
+        "S2-B1-C1",
+        "S2-B1-C2",
+        "S2-B1-C3"
+      ],
+      "sequence": 1,
+      "service_min": 24,
+      "slot_start_min": 580,
+      "slot_end_min": 616,
+      "site_ready": true,
+      "site_ready_min": 420,
+      "load_plan_approved": true,
+      "source_id": "P6-SIM",
+      "demand_kg": 4263,
+      "release_min": 420,
+      "tw_early_min": 580,
+      "tw_late_min": 592
+    },
+    {
+      "batch_id": "S2-B2",
+      "site_id": "S2",
+      "component_ids": [
+        "S2-B2-C1",
+        "S2-B2-C2",
+        "S2-B2-C3"
+      ],
+      "sequence": 2,
+      "service_min": 24,
+      "slot_start_min": 700,
+      "slot_end_min": 736,
+      "site_ready": true,
+      "site_ready_min": 420,
+      "load_plan_approved": true,
+      "source_id": "P6-SIM",
+      "demand_kg": 4263,
+      "release_min": 420,
+      "tw_early_min": 700,
+      "tw_late_min": 712
+    },
+    {
+      "batch_id": "S2-B3",
+      "site_id": "S2",
+      "component_ids": [
+        "S2-B3-C1",
+        "S2-B3-C2",
+        "S2-B3-C3"
+      ],
+      "sequence": 3,
+      "service_min": 24,
+      "slot_start_min": 820,
+      "slot_end_min": 856,
+      "site_ready": true,
+      "site_ready_min": 420,
+      "load_plan_approved": true,
+      "source_id": "P6-SIM",
+      "demand_kg": 4263,
+      "release_min": 420,
+      "tw_early_min": 820,
+      "tw_late_min": 832
+    },
+    {
+      "batch_id": "S3-B1",
+      "site_id": "S3",
+      "component_ids": [
+        "S3-B1-C1",
+        "S3-B1-C2",
+        "S3-B1-C3"
+      ],
+      "sequence": 1,
+      "service_min": 24,
+      "slot_start_min": 540,
+      "slot_end_min": 576,
+      "site_ready": true,
+      "site_ready_min": 420,
+      "load_plan_approved": true,
+      "source_id": "P6-SIM",
+      "demand_kg": 4263,
+      "release_min": 420,
+      "tw_early_min": 540,
+      "tw_late_min": 552
+    },
+    {
+      "batch_id": "S3-B2",
+      "site_id": "S3",
+      "component_ids": [
+        "S3-B2-C1",
+        "S3-B2-C2",
+        "S3-B2-C3"
+      ],
+      "sequence": 2,
+      "service_min": 24,
+      "slot_start_min": 660,
+      "slot_end_min": 696,
+      "site_ready": true,
+      "site_ready_min": 420,
+      "load_plan_approved": true,
+      "source_id": "P6-SIM",
+      "demand_kg": 4263,
+      "release_min": 420,
+      "tw_early_min": 660,
+      "tw_late_min": 672
+    },
+    {
+      "batch_id": "S3-B3",
+      "site_id": "S3",
+      "component_ids": [
+        "S3-B3-C1",
+        "S3-B3-C2",
+        "S3-B3-C3"
+      ],
+      "sequence": 3,
+      "service_min": 24,
+      "slot_start_min": 780,
+      "slot_end_min": 816,
+      "site_ready": true,
+      "site_ready_min": 420,
+      "load_plan_approved": true,
+      "source_id": "P6-SIM",
+      "demand_kg": 4263,
+      "release_min": 420,
+      "tw_early_min": 780,
+      "tw_late_min": 792
+    },
+    {
+      "batch_id": "S4-B1",
+      "site_id": "S4",
+      "component_ids": [
+        "S4-B1-C1",
+        "S4-B1-C2",
+        "S4-B1-C3"
+      ],
+      "sequence": 1,
+      "service_min": 24,
+      "slot_start_min": 580,
+      "slot_end_min": 616,
+      "site_ready": true,
+      "site_ready_min": 420,
+      "load_plan_approved": true,
+      "source_id": "P6-SIM",
+      "demand_kg": 4263,
+      "release_min": 420,
+      "tw_early_min": 580,
+      "tw_late_min": 592
+    },
+    {
+      "batch_id": "S4-B2",
+      "site_id": "S4",
+      "component_ids": [
+        "S4-B2-C1",
+        "S4-B2-C2",
+        "S4-B2-C3"
+      ],
+      "sequence": 2,
+      "service_min": 24,
+      "slot_start_min": 700,
+      "slot_end_min": 736,
+      "site_ready": true,
+      "site_ready_min": 420,
+      "load_plan_approved": true,
+      "source_id": "P6-SIM",
+      "demand_kg": 4263,
+      "release_min": 420,
+      "tw_early_min": 700,
+      "tw_late_min": 712
+    },
+    {
+      "batch_id": "S4-B3",
+      "site_id": "S4",
+      "component_ids": [
+        "S4-B3-C1",
+        "S4-B3-C2",
+        "S4-B3-C3"
+      ],
+      "sequence": 3,
+      "service_min": 24,
+      "slot_start_min": 820,
+      "slot_end_min": 856,
+      "site_ready": true,
+      "site_ready_min": 420,
+      "load_plan_approved": true,
+      "source_id": "P6-SIM",
+      "demand_kg": 4263,
+      "release_min": 420,
+      "tw_early_min": 820,
+      "tw_late_min": 832
+    }
+  ],
+  "deferred_batches": [],
+  "counts": {
+    "requested_batches": 12,
+    "requested_components": 36,
+    "eligible_batches": 12,
+    "eligible_components": 36,
+    "deferred_batches": 0,
+    "deferred_components": 0,
+    "eligible_demand_kg": 51156
+  },
+  "case_id": "PrecastFlow-P6-static-v1",
+  "input_sha256": "274e5e16fec672eb8373ba1eff70acd3cdf20332cca790a1dff9b7745c9cdc42"
+}

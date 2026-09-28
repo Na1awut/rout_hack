@@ -1,0 +1,5 @@
+instance,nodes,vehicles,capacity,reference_cost,reference_source,our_cost,gap_percent,status,feasible,rerun_identical,runtime_sec,solution_count_limit,random_seed,ortools_version,solver_version,run_id,machine_id,timestamp,freeze_id,notes
+A-n32-k5,32,5,100,784.0,comment,784,0.0,FEASIBLE,True,True,8.633,2000,,9.15.6755,1.0,b24efca4,"AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD | 12 threads | Python 3.14.6",2026-09-28T07:15:54+00:00,80b726c457a8,size_tier=tiny
+B-n31-k5,31,5,100,672.0,comment,672,0.0,FEASIBLE,True,True,9.38,2000,,9.15.6755,1.0,b24efca4,"AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD | 12 threads | Python 3.14.6",2026-09-28T07:16:13+00:00,80b726c457a8,size_tier=tiny
+P-n19-k2,19,2,160,212.0,comment,212,0.0,FEASIBLE,True,True,4.896,2000,,9.15.6755,1.0,b24efca4,"AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD | 12 threads | Python 3.14.6",2026-09-28T07:16:22+00:00,80b726c457a8,size_tier=tiny
+P-n40-k5,40,5,140,458.0,comment,458,0.0,FEASIBLE,True,True,16.482,2000,,9.15.6755,1.0,b24efca4,"AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD | 12 threads | Python 3.14.6",2026-09-28T07:16:57+00:00,80b726c457a8,size_tier=tiny

@@ -1,0 +1,35 @@
+-- E-n51-k5 (n=50)
+   iter_2000          iters=  2000 gap=   0.00% t=   0.6s
+   iter_5000          iters=  5000 gap=   0.00% t=   1.5s
+   iter_10000         iters= 10000 gap=   0.00% t=   3.3s
+   iter_20000         iters= 20000 gap=   0.00% t=   6.8s
+   noimp_2000_cap50k  iters=  2675 gap=   0.00% t=   1.0s
+   noimp_5000_cap50k  iters=  5675 gap=   0.00% t=   2.0s
+-- X-n106-k14 (n=105)
+   iter_2000          iters=  2000 gap=   1.27% t=   1.6s
+   iter_5000          iters=  5000 gap=   0.86% t=   3.5s
+   iter_10000         iters= 10000 gap=   0.22% t=   7.6s
+   iter_20000         iters= 20000 gap=   0.10% t=  12.8s
+   noimp_2000_cap50k  iters=  7659 gap=   0.69% t=   5.4s
+   noimp_5000_cap50k  iters= 17143 gap=   0.10% t=  11.4s
+-- X-n214-k11 (n=213)
+   iter_2000          iters=  2000 gap=  16.10% t=   2.9s
+   iter_5000          iters=  5000 gap=  10.91% t=   6.2s
+   iter_10000         iters= 10000 gap=   5.93% t=  10.7s
+   iter_20000         iters= 20000 gap=   3.07% t=  19.4s
+   noimp_2000_cap50k  iters= 14025 gap=   4.44% t=  14.8s
+   noimp_5000_cap50k  iters= 41865 gap=   1.45% t=  34.4s
+-- X-n459-k26 (n=458)
+   iter_2000          iters=  2000 gap=   6.53% t=   4.7s
+   iter_5000          iters=  5000 gap=   4.60% t=   9.3s
+   iter_10000         iters= 10000 gap=   3.84% t=  16.7s
+   iter_20000         iters= 20000 gap=   2.13% t=  32.6s
+   noimp_2000_cap50k  iters=  4389 gap=   5.75% t=  10.0s
+   noimp_5000_cap50k  iters= 33532 gap=   1.35% t=  45.5s
+-- X-n801-k40 (n=800)
+   iter_2000          iters=  2000 gap=   4.26% t=   3.0s
+   iter_5000          iters=  5000 gap=   3.20% t=   5.1s
+   iter_10000         iters= 10000 gap=   2.54% t=   8.8s
+   iter_20000         iters= 20000 gap=   1.73% t=  17.2s
+   noimp_2000_cap50k  iters=  8527 gap=   2.75% t=   8.4s
+   noimp_5000_cap50k  iters= 33777 gap=   1.30% t=  26.0s

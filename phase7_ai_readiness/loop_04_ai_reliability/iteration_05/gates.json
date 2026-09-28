@@ -1,0 +1,6 @@
+{
+  "G1_interval_coverage": true,
+  "G2_confidence_calibrated": true,
+  "G3_confidence_ranks_error": true,
+  "G4_fallback_safe": true
+}

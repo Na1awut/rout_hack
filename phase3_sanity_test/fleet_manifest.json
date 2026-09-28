@@ -1,0 +1,32 @@
+{
+  "instances": {
+    "LINE-n5-k1.vrp": {
+      "max_vehicles": 1,
+      "source": "hand-derived sanity instance (see PHASE3.md)"
+    },
+    "LINE-n10-k1.vrp": {
+      "max_vehicles": 1,
+      "source": "hand-derived sanity instance (see PHASE3.md)"
+    },
+    "LINE-n20-k1.vrp": {
+      "max_vehicles": 1,
+      "source": "hand-derived sanity instance (see PHASE3.md)"
+    },
+    "LINE-n30-k1.vrp": {
+      "max_vehicles": 1,
+      "source": "hand-derived sanity instance (see PHASE3.md)"
+    },
+    "CLUSTER-n4-k2.vrp": {
+      "max_vehicles": 2,
+      "source": "hand-derived sanity instance (see PHASE3.md)"
+    },
+    "INFEASIBLE-single-overweight.vrp": {
+      "max_vehicles": 3,
+      "source": "hand-derived sanity instance (see PHASE3.md)"
+    },
+    "INFEASIBLE-fleet-capacity.vrp": {
+      "max_vehicles": 2,
+      "source": "hand-derived sanity instance (see PHASE3.md)"
+    }
+  }
+}

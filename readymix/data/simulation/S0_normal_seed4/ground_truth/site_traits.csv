@@ -1,0 +1,11 @@
+site_id,reliability_class,p_late,late_mean_min,late_sd_min
+S001,good,0.15,12,6
+S002,average,0.35,20,10
+S003,poor,0.6,35,15
+S004,average,0.35,20,10
+S005,poor,0.6,35,15
+S006,good,0.15,12,6
+S007,average,0.35,20,10
+S008,good,0.15,12,6
+S009,average,0.35,20,10
+S010,good,0.15,12,6

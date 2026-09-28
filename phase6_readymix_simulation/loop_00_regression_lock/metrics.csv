@@ -1,0 +1,9 @@
+run_at,mode,freeze_id,engine_version,instance,run,status,cost,bks,gap_percent,vehicles_used,max_vehicles,iterations,stop_reason,fingerprint,valid,runtime_s,machine
+2026-09-28T23:04:04,verify,bf63a542f2de,0.14.0,A-n32-k5,1,FEASIBLE,784,784,0.0,5,5,5021,no_improvement,2b402097367d,True,1.264,"AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD | 12 threads | Python 3.14.6"
+2026-09-28T23:04:04,verify,bf63a542f2de,0.14.0,A-n32-k5,2,FEASIBLE,784,784,0.0,5,5,5021,no_improvement,2b402097367d,True,1.308,"AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD | 12 threads | Python 3.14.6"
+2026-09-28T23:04:04,verify,bf63a542f2de,0.14.0,B-n31-k5,1,FEASIBLE,672,672,0.0,5,5,5033,no_improvement,5b982d6b66b6,True,1.324,"AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD | 12 threads | Python 3.14.6"
+2026-09-28T23:04:04,verify,bf63a542f2de,0.14.0,B-n31-k5,2,FEASIBLE,672,672,0.0,5,5,5033,no_improvement,5b982d6b66b6,True,1.437,"AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD | 12 threads | Python 3.14.6"
+2026-09-28T23:04:04,verify,bf63a542f2de,0.14.0,P-n40-k5,1,FEASIBLE,458,458,0.0,5,5,5011,no_improvement,a06c3cb461cc,True,2.151,"AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD | 12 threads | Python 3.14.6"
+2026-09-28T23:04:04,verify,bf63a542f2de,0.14.0,P-n40-k5,2,FEASIBLE,458,458,0.0,5,5,5011,no_improvement,a06c3cb461cc,True,2.03,"AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD | 12 threads | Python 3.14.6"
+2026-09-28T23:04:04,verify,bf63a542f2de,0.14.0,P-n19-k2,1,FEASIBLE,212,212,0.0,2,2,5005,no_improvement,53f733cfddcd,True,0.756,"AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD | 12 threads | Python 3.14.6"
+2026-09-28T23:04:04,verify,bf63a542f2de,0.14.0,P-n19-k2,2,FEASIBLE,212,212,0.0,2,2,5005,no_improvement,53f733cfddcd,True,0.693,"AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD | 12 threads | Python 3.14.6"

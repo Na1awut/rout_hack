@@ -1,0 +1,4 @@
+seed,status,independent_valid,distance_m,vehicles,runtime_s,iterations,fingerprint
+1,FEASIBLE,True,183814,6,0.2061,2000,83ae1541c420
+2,FEASIBLE,True,183814,6,0.2087,2000,6d6d0b441031
+3,FEASIBLE,True,183814,6,0.202,2000,a6a2102ae93f

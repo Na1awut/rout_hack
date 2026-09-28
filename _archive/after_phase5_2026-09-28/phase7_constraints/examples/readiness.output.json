@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0",
+  "case_id": "PrecastFlow-P6-readiness-v1",
+  "input_sha256": "e8a8ce642a9fe99e1531be866260c4caa9141720ed35af3ce97000f0f46e0bcc",
+  "status": "FEASIBLE",
+  "served_batch_ids": [
+    "S4-B2",
+    "S3-B3",
+    "S1-B1",
+    "S1-B3",
+    "S2-B1",
+    "S1-B2",
+    "S3-B1",
+    "S3-B2",
+    "S4-B1",
+    "S4-B3"
+  ],
+  "deferred_batch_ids": [
+    "S2-B2",
+    "S2-B3"
+  ],
+  "unserved_eligible_batch_ids": [],
+  "routes": [
+    {
+      "vehicle_id": "V01",
+      "departure_min": 658,
+      "return_min": 838,
+      "distance_m": 35777,
+      "stops": [
+        {
+          "batch_id": "S4-B2",
+          "arrival_min": 712,
+          "start_min": 712,
+          "end_min": 736
+        },
+        {
+          "batch_id": "S3-B3",
+          "arrival_min": 757,
+          "start_min": 780,
+          "end_min": 804
+        }
+      ]
+    },
+    {
+      "vehicle_id": "V02",
+      "departure_min": 519,
+      "return_min": 837,
+      "distance_m": 21540,
+      "stops": [
+        {
+          "batch_id": "S1-B1",
+          "arrival_min": 552,
+          "start_min": 552,
+          "end_min": 576
+        },
+        {
+          "batch_id": "S1-B3",
+          "arrival_min": 576,
+          "start_min": 780,
+          "end_min": 804
+        }
+      ]
+    },
+    {
+      "vehicle_id": "V03",
+      "departure_min": 540,
+      "return_min": 717,
+      "distance_m": 34183,
+      "stops": [
+        {
+          "batch_id": "S2-B1",
+          "arrival_min": 592,
+          "start_min": 592,
+          "end_min": 616
+        },
+        {
+          "batch_id": "S1-B2",
+          "arrival_min": 635,
+          "start_min": 660,
+          "end_min": 684
+        }
+      ]
+    },
+    {
+      "vehicle_id": "V04",
+      "departure_min": 518,
+      "return_min": 718,
+      "distance_m": 22360,
+      "stops": [
+        {
+          "batch_id": "S3-B1",
+          "arrival_min": 552,
+          "start_min": 552,
+          "end_min": 576
+        },
+        {
+          "batch_id": "S3-B2",
+          "arrival_min": 576,
+          "start_min": 660,
+          "end_min": 684
+        }
+      ]
+    },
+    {
+      "vehicle_id": "V05",
+      "departure_min": 538,
+      "return_min": 898,
+      "distance_m": 35778,
+      "stops": [
+        {
+          "batch_id": "S4-B1",
+          "arrival_min": 592,
+          "start_min": 592,
+          "end_min": 616
+        },
+        {
+          "batch_id": "S4-B3",
+          "arrival_min": 616,
+          "start_min": 820,
+          "end_min": 844
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "distance_m": 149638,
+    "travel_min": 455,
+    "waiting_min": 540,
+    "vehicles_used": 5,
+    "served_components": 30,
+    "deferred_components": 6
+  }
+}

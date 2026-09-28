@@ -1,0 +1,17 @@
+instance,config,feasible,cost,gap_percent,vehicles_used,bks_routes,seconds
+X-n344-k43,ortools_PCA_elastic,True,44865,6.679,44,43,30.0
+X-n344-k43,ortools_SAVINGS_elastic,True,45405,7.963,44,43,30.0
+X-n344-k43,pyvrp_fixed_fleet,True,42418,0.861,43,43,30.07
+X-n344-k43,pyvrp_elastic,True,42334,0.661,44,43,30.06
+X-n393-k38,ortools_PCA_elastic,True,41220,7.737,38,38,30.0
+X-n393-k38,ortools_SAVINGS_elastic,True,41290,7.919,38,38,30.0
+X-n393-k38,pyvrp_fixed_fleet,True,38689,1.121,38,38,30.16
+X-n393-k38,pyvrp_elastic,True,38494,0.612,38,38,30.13
+X-n599-k92,ortools_PCA_elastic,True,113517,4.634,96,93,30.08
+X-n599-k92,ortools_SAVINGS_elastic,True,114106,5.177,96,93,30.07
+X-n599-k92,pyvrp_fixed_fleet,True,112801,3.974,93,93,30.21
+X-n599-k92,pyvrp_elastic,True,109476,0.909,94,93,30.17
+X-n936-k151,ortools_PCA_elastic,True,151098,13.671,162,157,30.02
+X-n936-k151,ortools_SAVINGS_elastic,True,143413,7.889,173,157,30.01
+X-n936-k151,pyvrp_fixed_fleet,True,135294,1.781,157,157,30.58
+X-n936-k151,pyvrp_elastic,True,137413,3.376,168,157,30.37

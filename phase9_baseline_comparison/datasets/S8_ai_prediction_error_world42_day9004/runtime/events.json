@@ -1,0 +1,34 @@
+[
+  {
+    "event_id": "E001",
+    "timestamp": "2026-10-01T06:29",
+    "event_type": "SITE_READY_EARLY",
+    "site_id": "S001",
+    "order_id": "O018",
+    "early_min": 28
+  },
+  {
+    "event_id": "E002",
+    "timestamp": "2026-10-01T07:21",
+    "event_type": "SITE_READY_LATE",
+    "site_id": "S007",
+    "order_id": "O007",
+    "delay_min": 40
+  },
+  {
+    "event_id": "E003",
+    "timestamp": "2026-10-01T07:55",
+    "event_type": "SITE_READY_EARLY",
+    "site_id": "S010",
+    "order_id": "O009",
+    "early_min": 19
+  },
+  {
+    "event_id": "E004",
+    "timestamp": "2026-10-01T09:55",
+    "event_type": "SITE_READY_LATE",
+    "site_id": "S006",
+    "order_id": "O025",
+    "delay_min": 55
+  }
+]

@@ -1,0 +1,24 @@
+# Loop 3 -- AI Prediction v1 (loop.md)
+loop: 3
+name: ai_prediction_v1
+question: >
+  Can AI predict when a site is really ready better than the planned time,
+  the site's history, or the announced-delay rule -- and does it do so
+  without leaking the answer?
+
+ai_config: readymix/config/ai.yaml       # seeds, splits, models, lead times
+selection: validation days only; test days are scored once
+
+gate:
+  G1_beats_baseline_at_headline: >
+    test MAE at the headline lead (45 min) of the chosen model < best
+    baseline (chosen on validation), and the 95% paired-bootstrap CI of
+    the improvement is above 0
+  G2_beats_baseline_all_rows: same over every observation time, bootstrap by order
+  G3_delay_probability: classifier Brier < baseline Brier and AUC > baseline AUC on test
+  G4_no_leakage: >
+    splits share no day; a model trained on permuted labels is not better
+    than the best baseline; feature_row takes no label
+  G5_reproducible: retraining with the same seed gives identical test predictions
+  G6_service_choice: service-time predictor = best of model vs baselines on validation (decision, reported)
+  G7_regression: Loop 0 regression lock and all pytest PASS (run separately)

@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0",
+  "status": "NO_ELIGIBLE_WORK",
+  "issues": [],
+  "eligible_batches": [],
+  "deferred_batches": [
+    {
+      "batch_id": "S1-B1",
+      "component_ids": [
+        "S1-B1-C1",
+        "S1-B1-C2",
+        "S1-B1-C3"
+      ],
+      "reason_codes": [
+        "PRODUCTION_NOT_READY"
+      ],
+      "blocked_by_batch_id": "S1-B1"
+    },
+    {
+      "batch_id": "S1-B2",
+      "component_ids": [
+        "S1-B2-C1",
+        "S1-B2-C2",
+        "S1-B2-C3"
+      ],
+      "reason_codes": [
+        "PRODUCTION_NOT_READY",
+        "PREDECESSOR_DEFERRED"
+      ],
+      "blocked_by_batch_id": "S1-B1"
+    },
+    {
+      "batch_id": "S1-B3",
+      "component_ids": [
+        "S1-B3-C1",
+        "S1-B3-C2",
+        "S1-B3-C3"
+      ],
+      "reason_codes": [
+        "PRODUCTION_NOT_READY",
+        "PREDECESSOR_DEFERRED"
+      ],
+      "blocked_by_batch_id": "S1-B1"
+    },
+    {
+      "batch_id": "S2-B1",
+      "component_ids": [
+        "S2-B1-C1",
+        "S2-B1-C2",
+        "S2-B1-C3"
+      ],
+      "reason_codes": [
+        "PRODUCTION_NOT_READY"
+      ],
+      "blocked_by_batch_id": "S2-B1"
+    },
+    {
+      "batch_id": "S2-B2",
+      "component_ids": [
+        "S2-B2-C1",
+        "S2-B2-C2",
+        "S2-B2-C3"
+      ],
+      "reason_codes": [
+        "PRODUCTION_NOT_READY",
+        "PREDECESSOR_DEFERRED"
+      ],
+      "blocked_by_batch_id": "S2-B1"
+    },
+    {
+      "batch_id": "S2-B3",
+      "component_ids": [
+        "S2-B3-C1",
+        "S2-B3-C2",
+        "S2-B3-C3"
+      ],
+      "reason_codes": [
+        "PRODUCTION_NOT_READY",
+        "PREDECESSOR_DEFERRED"
+      ],
+      "blocked_by_batch_id": "S2-B1"
+    },
+    {
+      "batch_id": "S3-B1",
+      "component_ids": [
+        "S3-B1-C1",
+        "S3-B1-C2",
+        "S3-B1-C3"
+      ],
+      "reason_codes": [
+        "PRODUCTION_NOT_READY"
+      ],
+      "blocked_by_batch_id": "S3-B1"
+    },
+    {
+      "batch_id": "S3-B2",
+      "component_ids": [
+        "S3-B2-C1",
+        "S3-B2-C2",
+        "S3-B2-C3"
+      ],
+      "reason_codes": [
+        "PRODUCTION_NOT_READY",
+        "PREDECESSOR_DEFERRED"
+      ],
+      "blocked_by_batch_id": "S3-B1"
+    },
+    {
+      "batch_id": "S3-B3",
+      "component_ids": [
+        "S3-B3-C1",
+        "S3-B3-C2",
+        "S3-B3-C3"
+      ],
+      "reason_codes": [
+        "PRODUCTION_NOT_READY",
+        "PREDECESSOR_DEFERRED"
+      ],
+      "blocked_by_batch_id": "S3-B1"
+    },
+    {
+      "batch_id": "S4-B1",
+      "component_ids": [
+        "S4-B1-C1",
+        "S4-B1-C2",
+        "S4-B1-C3"
+      ],
+      "reason_codes": [
+        "PRODUCTION_NOT_READY"
+      ],
+      "blocked_by_batch_id": "S4-B1"
+    },
+    {
+      "batch_id": "S4-B2",
+      "component_ids": [
+        "S4-B2-C1",
+        "S4-B2-C2",
+        "S4-B2-C3"
+      ],
+      "reason_codes": [
+        "PRODUCTION_NOT_READY",
+        "PREDECESSOR_DEFERRED"
+      ],
+      "blocked_by_batch_id": "S4-B1"
+    },
+    {
+      "batch_id": "S4-B3",
+      "component_ids": [
+        "S4-B3-C1",
+        "S4-B3-C2",
+        "S4-B3-C3"
+      ],
+      "reason_codes": [
+        "PRODUCTION_NOT_READY",
+        "PREDECESSOR_DEFERRED"
+      ],
+      "blocked_by_batch_id": "S4-B1"
+    }
+  ],
+  "counts": {
+    "requested_batches": 12,
+    "requested_components": 36,
+    "eligible_batches": 0,
+    "eligible_components": 0,
+    "deferred_batches": 12,
+    "deferred_components": 36,
+    "eligible_demand_kg": 0
+  },
+  "case_id": "PrecastFlow-no-eligible-v1",
+  "input_sha256": "60d08443e6b38715c74be0d923145274f366a407a0e81e791af87738aa94ee78"
+}

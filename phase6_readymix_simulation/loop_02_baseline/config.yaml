@@ -1,0 +1,27 @@
+# Loop 2 -- Non-AI Baseline (loop.md)
+loop: 2
+name: non_ai_baseline
+question: >
+  Without any AI, what do waiting, site idle, on-time, utilization and fuel
+  look like on each scenario -- for a plan fixed the night before (A) and
+  for a simple rule that reacts to what is already known (R)?
+
+seed: 42
+scenarios: all
+policies: [A_static_planned, R_reactive_rule]
+step_minutes: 5
+seed_panel:                      # S0 on several seeds, so no claim rests on one day
+  scenario: S0_normal
+  seeds: [42, 1, 2, 3, 4]
+
+gate:
+  G1_execution_valid: application/execution_validator finds 0 problems in every run
+  G2_reproducible: re-running gives an identical trip log (sha256)
+  G3_hand_computed: tests/test_loop02_execution.py hand-computed day matches to the minute (pytest)
+  G4_no_future_info: moving an unannounced ready time later changes no earlier release (pytest)
+  G5_complete: "every scenario x policy has every section-18 KPI (co2_kg stays empty, factor TBD_SOURCE)"
+  G6_baseline_sane: >
+    A on S0 serves every trip with on_time_rate >= 0.70 (a normal day works);
+    A on S6 is worse than S0 (unserved > 0 or lower on-time);
+    A truck waiting on S3, S4, S5, S7 >= S0 (site delays cost waiting)
+  G7_regression: Loop 0, Loop 1 and all pytest still PASS (run separately)

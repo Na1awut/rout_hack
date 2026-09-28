@@ -1,0 +1,375 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PrecastFlow case contract 1.0",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "case_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "data_kind": {
+      "type": "string",
+      "enum": [
+        "synthetic",
+        "mixed",
+        "measured"
+      ]
+    },
+    "units": {
+      "type": "object",
+      "properties": {
+        "mass": {
+          "const": "kg"
+        },
+        "distance": {
+          "const": "m"
+        },
+        "time": {
+          "const": "minute_after_midnight"
+        }
+      },
+      "required": [
+        "mass",
+        "distance",
+        "time"
+      ],
+      "additionalProperties": false
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "assumption",
+              "derived",
+              "measured",
+              "published"
+            ]
+          },
+          "reference": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "source_id",
+          "kind",
+          "reference"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "depot": {
+      "type": "object",
+      "properties": {
+        "location_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "location_id"
+      ],
+      "additionalProperties": false
+    },
+    "sites": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "site_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "location_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "crane_id": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "site_id",
+          "location_id",
+          "crane_id"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "fleet": {
+      "type": "object",
+      "properties": {
+        "vehicle_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "capacity_kg": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "shift_start_min": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1440
+        },
+        "shift_end_min": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1440
+        },
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "vehicle_ids",
+        "capacity_kg",
+        "shift_start_min",
+        "shift_end_min",
+        "source_id"
+      ],
+      "additionalProperties": false
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "component_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "site_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "weight_kg": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "installation_rank": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "production_ready": {
+            "type": "boolean"
+          },
+          "release_min": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1440
+          },
+          "source_id": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "component_id",
+          "site_id",
+          "weight_kg",
+          "installation_rank",
+          "production_ready",
+          "release_min",
+          "source_id"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "batches": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "batch_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "site_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "component_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "sequence": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "service_min": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 1440
+          },
+          "slot_start_min": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1440
+          },
+          "slot_end_min": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1440
+          },
+          "site_ready": {
+            "type": "boolean"
+          },
+          "site_ready_min": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1440
+          },
+          "load_plan_approved": {
+            "type": "boolean"
+          },
+          "source_id": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "batch_id",
+          "site_id",
+          "component_ids",
+          "sequence",
+          "service_min",
+          "slot_start_min",
+          "slot_end_min",
+          "site_ready",
+          "site_ready_min",
+          "load_plan_approved",
+          "source_id"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "travel": {
+      "type": "object",
+      "properties": {
+        "location_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "distance_m": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "minItems": 0
+          },
+          "minItems": 0
+        },
+        "duration_upper_min": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1440
+            },
+            "minItems": 0
+          },
+          "minItems": 0
+        },
+        "mode": {
+          "type": "string",
+          "enum": [
+            "STATIC_MATRIX",
+            "FIFO_SPEED_BANDS"
+          ]
+        },
+        "speed_bands": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "start_min": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 1440
+              },
+              "end_min": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 1440
+              },
+              "speed_kmh": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 200
+              }
+            },
+            "required": [
+              "start_min",
+              "end_min",
+              "speed_kmh"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        },
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "location_ids",
+        "distance_m",
+        "duration_upper_min",
+        "mode",
+        "speed_bands",
+        "source_id"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "case_id",
+    "data_kind",
+    "units",
+    "sources",
+    "depot",
+    "sites",
+    "fleet",
+    "components",
+    "batches",
+    "travel"
+  ],
+  "additionalProperties": false
+}

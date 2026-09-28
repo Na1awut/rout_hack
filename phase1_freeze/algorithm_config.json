@@ -1,0 +1,27 @@
+{
+  "algorithm_name": "CORE-CVRP",
+  "algorithm_version": "1.0",
+  "engine": "Google OR-Tools routing solver",
+  "engine_version_required": "9.15.6755",
+  "search": {
+    "first_solution_strategy": "PATH_CHEAPEST_ARC",
+    "local_search_metaheuristic": "GUIDED_LOCAL_SEARCH",
+    "randomness": "none -- search path is deterministic for a given input and stop rule"
+  },
+  "stopping": {
+    "rule": "solution_limit",
+    "solution_limit": 2000,
+    "safety_time_cap_s": 600,
+    "note": "Work-based stop: results identical on any machine. The time cap only prevents a hang; a run that reaches it is flagged stop_reason=time_cap and is not a frozen result."
+  },
+  "distance_convention": {
+    "edge_weight_type": "EUC_2D",
+    "formula": "floor(sqrt(dx^2 + dy^2) + 0.5)",
+    "scaling": "none (factor 1)",
+    "note": "TSPLIB/CVRPLIB nint rounding. Python round() is NOT used (banker's rounding differs on .5 cases)."
+  },
+  "objective": "minimize total rounded EUC_2D distance",
+  "fleet_rule": "max_vehicles is supplied by the caller per run (see reference_bks.json); never inferred by the solver from the file name",
+  "language": "Python",
+  "hardware_note": "Recorded per run in results CSV; not needed to reproduce results because stopping is work-based"
+}

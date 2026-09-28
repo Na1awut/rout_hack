@@ -1,0 +1,22 @@
+name,pass,detail
+36_components_two_families,True,"12 batches, 4 sites"
+frozen_core_capacity_projection,True,183814
+fixed_slots_three_seeds,True,"[{'seed': 1, 'status': 'FEASIBLE', 'independent_valid': True, 'distance_m': 183814, 'vehicles': 6, 'runtime_s': 0.2061, 'iterations': 2000, 'fingerprint': '83ae1541c420'}, {'seed': 2, 'status': 'FEASIBLE', 'independent_valid': True, 'distance_m': 183814, 'vehicles': 6, 'runtime_s': 0.2087, 'iterations': 2000, 'fingerprint': '6d6d0b441031'}, {'seed': 3, 'status': 'FEASIBLE', 'independent_valid': True, 'distance_m': 183814, 'vehicles': 6, 'runtime_s': 0.202, 'iterations': 2000, 'fingerprint': 'a6a2102ae93f'}]"
+same_seed_repeated,True,83ae1541c420
+departure_probe_feasible,True,"same routes, FIFO travel per leg"
+departure_objective_nonworsening,True,duty time excluding service
+departure_vs_static_schedule,True,"comparison against existing solver departures, not only all-at-07:00"
+readiness_cascade,True,"[{'job_id': 'S2-B2', 'reasons': ['site_not_ready'], 'components': 3}, {'job_id': 'S2-B3', 'reasons': ['predecessor_deferred'], 'components': 3}]"
+later_production_release,True,S1-B3 cannot leave the plant before 10:00
+overweight_batch,True,PROVEN_INFEASIBLE_BATCH_CAPACITY
+insufficient_fleet,True,PROVEN_INFEASIBLE_FLEET_CAPACITY_SINGLE_TRIP
+slot_shorter_than_service,True,PROVEN_INFEASIBLE_SERVICE_SLOT
+overlapping_slots,True,UNSUPPORTED_OVERLAPPING_SEQUENCE_SLOTS
+unapproved_loading,True,INPUT_REQUIRES_LOAD_PLAN
+validator_rejects_missing_job,True,mutated plan
+validator_rejects_duplicate_job,True,mutated plan
+validator_rejects_late_plan,True,mutated plan
+validator_rejects_cross_route_crane_overlap,True,['sequence_or_crane_overlap:S1-B1:S1-B2']
+traffic_model_fifo_boundary,True,30 km at 08:00-09:30
+solver_failure_not_proof,True,NO_FEASIBLE_SOLUTION_FOUND
+core_unchanged,True,"{'before': 'bf63a542f2de', 'after': 'bf63a542f2de'}"

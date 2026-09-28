@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0",
+  "case_id": "PrecastFlow-P6-normal-v1",
+  "input_sha256": "3be5bf81fb25111df927cbf3c5779d16abd70cd60b5249ee991243594da6113f",
+  "status": "FEASIBLE",
+  "served_batch_ids": [
+    "S3-B1",
+    "S4-B2",
+    "S1-B2",
+    "S1-B3",
+    "S3-B2",
+    "S3-B3",
+    "S1-B1",
+    "S2-B3",
+    "S2-B1",
+    "S2-B2",
+    "S4-B1",
+    "S4-B3"
+  ],
+  "deferred_batch_ids": [],
+  "unserved_eligible_batch_ids": [],
+  "routes": [
+    {
+      "vehicle_id": "V01",
+      "departure_min": 530,
+      "return_min": 751,
+      "distance_m": 35777,
+      "stops": [
+        {
+          "batch_id": "S3-B1",
+          "arrival_min": 552,
+          "start_min": 552,
+          "end_min": 576
+        },
+        {
+          "batch_id": "S4-B2",
+          "arrival_min": 587,
+          "start_min": 700,
+          "end_min": 724
+        }
+      ]
+    },
+    {
+      "vehicle_id": "V02",
+      "departure_min": 655,
+      "return_min": 821,
+      "distance_m": 21540,
+      "stops": [
+        {
+          "batch_id": "S1-B2",
+          "arrival_min": 672,
+          "start_min": 672,
+          "end_min": 696
+        },
+        {
+          "batch_id": "S1-B3",
+          "arrival_min": 696,
+          "start_min": 780,
+          "end_min": 804
+        }
+      ]
+    },
+    {
+      "vehicle_id": "V03",
+      "departure_min": 655,
+      "return_min": 821,
+      "distance_m": 22360,
+      "stops": [
+        {
+          "batch_id": "S3-B2",
+          "arrival_min": 672,
+          "start_min": 672,
+          "end_min": 696
+        },
+        {
+          "batch_id": "S3-B3",
+          "arrival_min": 696,
+          "start_min": 780,
+          "end_min": 804
+        }
+      ]
+    },
+    {
+      "vehicle_id": "V04",
+      "departure_min": 531,
+      "return_min": 870,
+      "distance_m": 34183,
+      "stops": [
+        {
+          "batch_id": "S1-B1",
+          "arrival_min": 552,
+          "start_min": 552,
+          "end_min": 576
+        },
+        {
+          "batch_id": "S2-B3",
+          "arrival_min": 586,
+          "start_min": 820,
+          "end_min": 844
+        }
+      ]
+    },
+    {
+      "vehicle_id": "V05",
+      "departure_min": 566,
+      "return_min": 750,
+      "distance_m": 34176,
+      "stops": [
+        {
+          "batch_id": "S2-B1",
+          "arrival_min": 592,
+          "start_min": 592,
+          "end_min": 616
+        },
+        {
+          "batch_id": "S2-B2",
+          "arrival_min": 616,
+          "start_min": 700,
+          "end_min": 724
+        }
+      ]
+    },
+    {
+      "vehicle_id": "V06",
+      "departure_min": 565,
+      "return_min": 871,
+      "distance_m": 35778,
+      "stops": [
+        {
+          "batch_id": "S4-B1",
+          "arrival_min": 592,
+          "start_min": 592,
+          "end_min": 616
+        },
+        {
+          "batch_id": "S4-B3",
+          "arrival_min": 616,
+          "start_min": 820,
+          "end_min": 844
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "distance_m": 183814,
+    "travel_min": 291,
+    "waiting_min": 803,
+    "vehicles_used": 6,
+    "served_components": 36,
+    "deferred_components": 0
+  }
+}

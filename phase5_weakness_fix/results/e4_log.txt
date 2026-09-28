@@ -1,0 +1,49 @@
+-- E-n51-k5 (n=50, k=5, bks=521, budget=10s)
+   ortools_v1.0     feasible=True  gap=   3.84% t= 10.0s
+   ortools_SAVINGS  feasible=True  gap=   4.42% t= 10.0s
+   pyvrp_hgs        feasible=True  gap=   0.00% t= 10.0s
+-- E-n76-k10 (n=75, k=10, bks=830, budget=10s)
+   ortools_v1.0     feasible=True  gap=   4.10% t= 10.0s
+   ortools_SAVINGS  feasible=True  gap=   7.23% t= 10.0s
+   pyvrp_hgs        feasible=True  gap=   0.00% t= 10.0s
+-- X-n106-k14 (n=105, k=14, bks=26362, budget=10s)
+   ortools_v1.0     feasible=True  gap=   3.10% t= 10.0s
+   ortools_SAVINGS  feasible=True  gap=   4.65% t= 10.0s
+   pyvrp_hgs        feasible=True  gap=   0.10% t= 10.0s
+-- X-n162-k11 (n=161, k=11, bks=14138, budget=16s)
+   ortools_v1.0     feasible=True  gap=   3.69% t= 16.0s
+   ortools_SAVINGS  feasible=True  gap=   7.96% t= 16.0s
+   pyvrp_hgs        feasible=True  gap=   0.38% t= 16.0s
+-- X-n214-k11 (n=213, k=11, bks=10856, budget=21s)
+   ortools_v1.0     feasible=True  gap=  17.55% t= 21.0s
+   ortools_SAVINGS  feasible=True  gap=  20.86% t= 21.0s
+   pyvrp_hgs        feasible=True  gap=   2.44% t= 21.0s
+-- X-n298-k31 (n=297, k=31, bks=34231, budget=30s)
+   ortools_v1.0     feasible=True  gap=  16.27% t= 30.0s
+   ortools_SAVINGS  feasible=True  gap=   8.61% t= 30.0s
+   pyvrp_hgs        feasible=True  gap=   0.80% t= 30.1s
+-- X-n344-k43 (n=343, k=43, bks=42056, budget=34s)
+   ortools_v1.0     feasible=False gap=       - t= 34.0s
+   ortools_SAVINGS  feasible=False gap=       - t=  0.8s
+   pyvrp_hgs        feasible=True  gap=   0.83% t= 34.1s
+-- X-n459-k26 (n=458, k=26, bks=24145, budget=46s)
+   ortools_v1.0     feasible=True  gap=  13.61% t= 46.0s
+   ortools_SAVINGS  feasible=True  gap=  12.52% t= 46.0s
+   pyvrp_hgs        feasible=True  gap=   1.16% t= 46.2s
+-- X-n599-k92 (n=598, k=93, bks=108490, budget=60s)
+   ortools_v1.0     feasible=False gap=       - t= 60.0s
+   ortools_SAVINGS  feasible=False gap=       - t=  3.6s
+   pyvrp_hgs        feasible=True  gap=   1.46% t= 60.2s
+-- X-n801-k40 (n=800, k=40, bks=73331, budget=80s)
+   ortools_v1.0     feasible=True  gap=   3.96% t= 80.0s
+   ortools_SAVINGS  feasible=True  gap=   8.35% t= 80.0s
+C:\Users\Lenovo\AppData\Roaming\Python\Python314\site-packages\pyvrp\PenaltyManager.py:228: PenaltyBoundWarning: 
+            A penalty parameter has reached its maximum value. This means PyVRP
+            struggles to find a feasible solution for this instance, either
+            because the instance has no feasible solution, or it is hard to
+            find one - possibly due to large data scaling differences. Check
+            the instance carefully to determine if a feasible solution exists,
+            or consider increasing PenaltyParams.max_penalty.
+            
+  warn(msg, PenaltyBoundWarning)
+   pyvrp_hgs        feasible=True  gap=   0.93% t= 80.3s

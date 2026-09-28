@@ -1,0 +1,33 @@
+# Loop 4 -- AI Reliability (loop.md)
+loop: 4
+name: ai_reliability
+active_iteration: iteration_05/config.json
+active_runner: run_loop04_v3.py
+model_version: site_ready_v3
+status: PASS
+# Settings below document the original experiment. Active selection, fresh
+# splits and the event_history policy are frozen in iteration_05/config.json.
+question: >
+  Does the AI know when it is wrong? Are its intervals and confidence
+  honest, and does falling back to the non-ML rule protect the system when
+  the world stops looking like the training days (S8)?
+
+builds_on: readymix/ai/models/site_ready_v1.joblib   # Loop 3 point model + classifier
+interval: {q_lo: 0.1, q_hi: 0.9, target_coverage: 0.80}
+confidence_tolerance_min: 15    # confidence = P(|error| <= 15 min)
+confidence_threshold: 0.6       # skill.md section 31
+fallback: rule_hist             # planned + announced + historical mean
+fallback_variants:              # iteration 2: chosen on VALIDATION (iteration 1 = low_conf_or_ood failed G4 on test)
+  ai_only: []
+  ood_only: [out_of_range]
+  low_conf_or_ood: [low_confidence, out_of_range]
+
+gate:
+  G1_interval_coverage: test coverage of the conformal interval within [0.75, 0.85]
+  G2_confidence_calibrated: confidence ECE on test <= 0.05
+  G3_confidence_ranks_error: test MAE of high-confidence rows < MAE of low-confidence rows
+  G4_fallback_safe: >
+    on test, AI+fallback still beats the fallback rule alone;
+    on S8 days, AI+fallback is no worse than the AI alone
+  G5_contract: every prediction on test and S8 validates against the section-12 contract; bad inputs fall back without raising
+  G6_regression: Loop 0, Loop 3 and all pytest PASS (run separately)

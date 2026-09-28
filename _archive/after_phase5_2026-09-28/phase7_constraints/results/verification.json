@@ -1,0 +1,119 @@
+{
+  "status": "PASS",
+  "contract_version": "1.0",
+  "python": "3.14.6",
+  "tests_run": 47,
+  "failures": 0,
+  "errors": 0,
+  "examples": [
+    {
+      "name": "normal",
+      "input_sha256": "3be5bf81fb25111df927cbf3c5779d16abd70cd60b5249ee991243594da6113f",
+      "preparation_status": "READY",
+      "validation": {
+        "valid": true,
+        "feasible_for_eligible_work": true,
+        "all_requested_served": true,
+        "issues": [],
+        "recomputed_metrics": {
+          "distance_m": 183814,
+          "travel_min": 291,
+          "waiting_min": 803,
+          "vehicles_used": 6,
+          "served_components": 36,
+          "deferred_components": 0
+        }
+      }
+    },
+    {
+      "name": "static",
+      "input_sha256": "274e5e16fec672eb8373ba1eff70acd3cdf20332cca790a1dff9b7745c9cdc42",
+      "preparation_status": "READY",
+      "validation": {
+        "valid": true,
+        "feasible_for_eligible_work": true,
+        "all_requested_served": true,
+        "issues": [],
+        "recomputed_metrics": {
+          "distance_m": 183814,
+          "travel_min": 559,
+          "waiting_min": 784,
+          "vehicles_used": 6,
+          "served_components": 36,
+          "deferred_components": 0
+        }
+      }
+    },
+    {
+      "name": "readiness",
+      "input_sha256": "e8a8ce642a9fe99e1531be866260c4caa9141720ed35af3ce97000f0f46e0bcc",
+      "preparation_status": "READY",
+      "validation": {
+        "valid": true,
+        "feasible_for_eligible_work": true,
+        "all_requested_served": false,
+        "issues": [],
+        "recomputed_metrics": {
+          "distance_m": 149638,
+          "travel_min": 455,
+          "waiting_min": 540,
+          "vehicles_used": 5,
+          "served_components": 30,
+          "deferred_components": 6
+        }
+      }
+    },
+    {
+      "name": "no_work",
+      "input_sha256": "60d08443e6b38715c74be0d923145274f366a407a0e81e791af87738aa94ee78",
+      "preparation_status": "NO_ELIGIBLE_WORK",
+      "validation": {
+        "valid": true,
+        "feasible_for_eligible_work": true,
+        "all_requested_served": false,
+        "issues": [],
+        "recomputed_metrics": {
+          "distance_m": 0,
+          "travel_min": 0,
+          "waiting_min": 0,
+          "vehicles_used": 0,
+          "served_components": 0,
+          "deferred_components": 36
+        }
+      }
+    }
+  ],
+  "core_freeze_id_before": "bf63a542f2de",
+  "core_freeze_id_after": "bf63a542f2de",
+  "expected_core_freeze_id": "bf63a542f2de",
+  "artifacts": [
+    {
+      "path": "build_examples.py",
+      "sha256": "ab6ea741cbd0771fc2695415a3b94559b6e95abad2ae5bf41a7342bae65215b9"
+    },
+    {
+      "path": "contract.py",
+      "sha256": "4689365e80d619a0b34c9a3580c0b2884070c6462962eb931c2a74a310760d27"
+    },
+    {
+      "path": "test_contract.py",
+      "sha256": "da38189dfbcbb4f200530e166e65104f38da6a78e54facb98bc1b2346a5895ae"
+    },
+    {
+      "path": "validate_contract.py",
+      "sha256": "772ea431a8256d86a3d3ce83447ee92c166971366784a506082dadb2c8e5a7b9"
+    },
+    {
+      "path": "verify_phase7.py",
+      "sha256": "cae016f6b62abc81639a96778897e7a14c10234ebb89d485b9c5a9369f6a623a"
+    },
+    {
+      "path": "schemas/case.schema.json",
+      "sha256": "ddf61f7644ad6ba7ed3854fb537f2278db637fb19ecd5e45224b336746fa605c"
+    },
+    {
+      "path": "schemas/plan.schema.json",
+      "sha256": "11a5391500e42999609fe891167d4a3d76276bf181c8a6e3e9138e08b4914408"
+    }
+  ]
+}

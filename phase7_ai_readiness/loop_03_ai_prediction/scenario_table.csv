@@ -1,0 +1,8 @@
+scenario,orders,model,rule_hist,planned
+S0_normal,540,7.79,9.91,10.68
+S1_light_traffic,90,8.26,9.95,10.08
+S2_peak_traffic,120,7.73,9.86,11.42
+S3_site_delay,120,7.08,9.48,12.41
+S4_multi_site_delay,120,7.58,9.24,12.12
+S5_pump_failure,60,10.37,12.36,11.85
+S7_mixed_disruption,150,10.55,14.66,23.29

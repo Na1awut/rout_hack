@@ -1,0 +1,23 @@
+# AI Site Readiness (Phase 7). One company (world_seed) observed over many days.
+world_seed: 42                  # same plant/sites/trucks as the Phase 6 benchmark days
+splits:                         # day seeds; disjoint, and none equals 42 (the Phase 6 evaluation day)
+  train: [1001, 1100]           # 100 days (skill.md section 29)
+  val:   [1101, 1120]           # model and baseline selection only
+  test:  [2001, 2040]           # touched once, for the reported numbers
+  robust_s8: [3001, 3020]       # Loop 4: every day is S8 (surprises that contradict history)
+scenario_weights:               # scenario of each train/val/test day, drawn from the day seed
+  S0_normal: 0.45
+  S1_light_traffic: 0.10
+  S2_peak_traffic: 0.10
+  S3_site_delay: 0.10
+  S4_multi_site_delay: 0.05
+  S5_pump_failure: 0.10
+  S7_mixed_disruption: 0.10     # S6 (demand only) and S8 (held out for Loop 4) excluded
+headline_lead_min: 45           # ~ travel + load: when the first truck of an order is dispatched
+lead_times_min: [90, 60, 45, 30, 15, 0]
+late_threshold_min: 15
+model_seed: 0
+models:
+  random_forest: {n_estimators: 200, min_samples_leaf: 20, max_features: 0.5}
+  gradient_boosting: {max_iter: 300, learning_rate: 0.05, max_leaf_nodes: 31, min_samples_leaf: 40}
+bootstrap: {resamples: 2000, seed: 0}

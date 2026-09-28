@@ -1,0 +1,7 @@
+{
+  "execution_valid": true,
+  "prediction_changes_decisions": true,
+  "rolling_changes_decisions": true,
+  "no_predictor_failures": true,
+  "normal_orders_served": true
+}

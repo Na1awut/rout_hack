@@ -1,0 +1,8 @@
+{
+  "threshold": 0.6,
+  "fallback_candidates": ["rule_hist", "event_history"],
+  "selection": "Min mean normal/stress validation MAE; event_history additionally falls back on observed dry-weather readiness revisions. Mandatory low-confidence and OOD fallback retained.",
+  "splits": {"stress_val": [4001, 4020], "fresh_test": [7001, 7040], "fresh_s8": [8001, 8020]},
+  "gates": {"coverage_min": 0.75, "coverage_max": 0.85, "ece_max": 0.05},
+  "note": "Existing SITE_READY_EARLY/LATE events REPLACE base delay; SITE_DELAY/PUMP_FAILURE ADD delay. No scenario name or truth passed to policy; simulator unchanged. Rain revisions retain history because residual weather delay is unknown. Fresh splits never used for selection."
+}

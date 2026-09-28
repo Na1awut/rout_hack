@@ -1,0 +1,30 @@
+# Loop 0 -- Regression Lock (loop.md)
+loop: 0
+name: regression_lock
+hypothesis: >
+  Benchmark mode of CORE-CVRP v1.1 reproduces the same objective and the
+  same routes on the Mission 2 instances, run after run.
+
+core:
+  version: "1.1"
+  freeze_id: bf63a542f2de
+  engine: pyvrp
+  engine_version: "0.14.0"      # actual algorithm: Iterated Local Search (config text says HGS)
+  config_file: phase5_weakness_fix/algorithm_config.json
+
+instances:                      # fleet sizes and BKS from phase1_freeze/reference_bks.json
+  - A-n32-k5.vrp
+  - B-n31-k5.vrp
+  - P-n40-k5.vrp
+  - P-n19-k2.vrp                # also in Mission 2; cheap to lock
+
+runs_per_instance: 2            # each run must match the snapshot and each other
+
+gate:
+  freeze_id_matches: true
+  engine_version_matches: true
+  validator_pass: true
+  gap_percent: 0.0              # all four BKS are proven optimal
+  objective_equals_snapshot: true
+  routes_equal_snapshot: true   # compared by route_fingerprint and full node lists
+  runtime: record_only          # machine-dependent, never gated

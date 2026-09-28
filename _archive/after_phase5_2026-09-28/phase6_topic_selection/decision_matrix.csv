@@ -1,0 +1,9 @@
+candidate,algorithm_fit,carbon_impact,business_impact,novelty,feasibility,presentation,total,confidence
+PrecastFlow fixed approved sequence and slots,4,3,4,3,4,5,23,medium - bounded prototype tested
+Ready-mix delivery with time windows,4,3,4,2,4,4,21,low to medium - no new feasibility probe
+ZERO-MILE circular backhaul,4,3,4,2,3,5,21,low - return flows unverified
+Construction waste routing,4,3,3,2,4,4,20,low - operational data unverified
+Precast full joint route crane sequence traffic optimization,3,3,4,3,2,5,20,low - scope not proven
+Ready-mix plus pump coordination,2,3,4,3,2,4,18,low - scheduling dependencies
+Ultra bridge girder routing,2,3,4,3,2,4,18,low - oversize and special transport
+Extra base layer routing,3,2,3,3,3,3,17,low - routing pain unverified

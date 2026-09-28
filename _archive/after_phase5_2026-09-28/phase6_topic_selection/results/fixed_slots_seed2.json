@@ -1,0 +1,255 @@
+{
+  "solver": {
+    "status": "FEASIBLE",
+    "routes": [
+      {
+        "jobs": [
+          "S2-B2",
+          "S2-B3"
+        ],
+        "departure_min": 660,
+        "reported_distance_m": 34176
+      },
+      {
+        "jobs": [
+          "S3-B2",
+          "S4-B2"
+        ],
+        "departure_min": 626,
+        "reported_distance_m": 35777
+      },
+      {
+        "jobs": [
+          "S2-B1",
+          "S1-B2"
+        ],
+        "departure_min": 540,
+        "reported_distance_m": 34183
+      },
+      {
+        "jobs": [
+          "S1-B1",
+          "S1-B3"
+        ],
+        "departure_min": 519,
+        "reported_distance_m": 21540
+      },
+      {
+        "jobs": [
+          "S4-B1",
+          "S4-B3"
+        ],
+        "departure_min": 538,
+        "reported_distance_m": 35778
+      },
+      {
+        "jobs": [
+          "S3-B1",
+          "S3-B3"
+        ],
+        "departure_min": 518,
+        "reported_distance_m": 22360
+      }
+    ],
+    "runtime_s": 0.20869579998543486,
+    "iterations": 2000,
+    "objective_distance_m": 183814
+  },
+  "validation": {
+    "valid": true,
+    "violations": [],
+    "routes": [
+      {
+        "jobs": [
+          "S2-B2",
+          "S2-B3"
+        ],
+        "departure_min": 660,
+        "reported_distance_m": 34176,
+        "visits": [
+          {
+            "job_id": "S2-B2",
+            "site": "S2",
+            "sequence": 2,
+            "arrival_min": 712,
+            "start_min": 712,
+            "end_min": 736
+          },
+          {
+            "job_id": "S2-B3",
+            "site": "S2",
+            "sequence": 3,
+            "arrival_min": 736,
+            "start_min": 820,
+            "end_min": 844
+          }
+        ],
+        "distance_m": 34176,
+        "travel_min": 104,
+        "waiting_min": 84,
+        "return_min": 896,
+        "violations": []
+      },
+      {
+        "jobs": [
+          "S3-B2",
+          "S4-B2"
+        ],
+        "departure_min": 626,
+        "reported_distance_m": 35777,
+        "visits": [
+          {
+            "job_id": "S3-B2",
+            "site": "S3",
+            "sequence": 2,
+            "arrival_min": 660,
+            "start_min": 660,
+            "end_min": 684
+          },
+          {
+            "job_id": "S4-B2",
+            "site": "S4",
+            "sequence": 2,
+            "arrival_min": 705,
+            "start_min": 705,
+            "end_min": 729
+          }
+        ],
+        "distance_m": 35777,
+        "travel_min": 109,
+        "waiting_min": 0,
+        "return_min": 783,
+        "violations": []
+      },
+      {
+        "jobs": [
+          "S2-B1",
+          "S1-B2"
+        ],
+        "departure_min": 540,
+        "reported_distance_m": 34183,
+        "visits": [
+          {
+            "job_id": "S2-B1",
+            "site": "S2",
+            "sequence": 1,
+            "arrival_min": 592,
+            "start_min": 592,
+            "end_min": 616
+          },
+          {
+            "job_id": "S1-B2",
+            "site": "S1",
+            "sequence": 2,
+            "arrival_min": 635,
+            "start_min": 660,
+            "end_min": 684
+          }
+        ],
+        "distance_m": 34183,
+        "travel_min": 104,
+        "waiting_min": 25,
+        "return_min": 717,
+        "violations": []
+      },
+      {
+        "jobs": [
+          "S1-B1",
+          "S1-B3"
+        ],
+        "departure_min": 519,
+        "reported_distance_m": 21540,
+        "visits": [
+          {
+            "job_id": "S1-B1",
+            "site": "S1",
+            "sequence": 1,
+            "arrival_min": 552,
+            "start_min": 552,
+            "end_min": 576
+          },
+          {
+            "job_id": "S1-B3",
+            "site": "S1",
+            "sequence": 3,
+            "arrival_min": 576,
+            "start_min": 780,
+            "end_min": 804
+          }
+        ],
+        "distance_m": 21540,
+        "travel_min": 66,
+        "waiting_min": 204,
+        "return_min": 837,
+        "violations": []
+      },
+      {
+        "jobs": [
+          "S4-B1",
+          "S4-B3"
+        ],
+        "departure_min": 538,
+        "reported_distance_m": 35778,
+        "visits": [
+          {
+            "job_id": "S4-B1",
+            "site": "S4",
+            "sequence": 1,
+            "arrival_min": 592,
+            "start_min": 592,
+            "end_min": 616
+          },
+          {
+            "job_id": "S4-B3",
+            "site": "S4",
+            "sequence": 3,
+            "arrival_min": 616,
+            "start_min": 820,
+            "end_min": 844
+          }
+        ],
+        "distance_m": 35778,
+        "travel_min": 108,
+        "waiting_min": 204,
+        "return_min": 898,
+        "violations": []
+      },
+      {
+        "jobs": [
+          "S3-B1",
+          "S3-B3"
+        ],
+        "departure_min": 518,
+        "reported_distance_m": 22360,
+        "visits": [
+          {
+            "job_id": "S3-B1",
+            "site": "S3",
+            "sequence": 1,
+            "arrival_min": 552,
+            "start_min": 552,
+            "end_min": 576
+          },
+          {
+            "job_id": "S3-B3",
+            "site": "S3",
+            "sequence": 3,
+            "arrival_min": 576,
+            "start_min": 780,
+            "end_min": 804
+          }
+        ],
+        "distance_m": 22360,
+        "travel_min": 68,
+        "waiting_min": 204,
+        "return_min": 838,
+        "violations": []
+      }
+    ],
+    "distance_m": 183814,
+    "travel_min": 559,
+    "waiting_min": 721,
+    "vehicles": 6,
+    "jobs_served": 12
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PrecastFlow plan contract 1.0",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "case_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "input_sha256": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "FEASIBLE",
+        "NO_ELIGIBLE_WORK",
+        "NO_FEASIBLE_SOLUTION_FOUND"
+      ]
+    },
+    "served_batch_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "deferred_batch_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "unserved_eligible_batch_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "routes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "vehicle_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "departure_min": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1440
+          },
+          "return_min": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1440
+          },
+          "distance_m": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "batch_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "arrival_min": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1440
+                },
+                "start_min": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1440
+                },
+                "end_min": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 1440
+                }
+              },
+              "required": [
+                "batch_id",
+                "arrival_min",
+                "start_min",
+                "end_min"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "vehicle_id",
+          "departure_min",
+          "return_min",
+          "distance_m",
+          "stops"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "metrics": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "distance_m": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "travel_min": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "waiting_min": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "vehicles_used": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "served_components": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "deferred_components": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "distance_m",
+        "travel_min",
+        "waiting_min",
+        "vehicles_used",
+        "served_components",
+        "deferred_components"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "case_id",
+    "input_sha256",
+    "status",
+    "served_batch_ids",
+    "deferred_batch_ids",
+    "unserved_eligible_batch_ids",
+    "routes",
+    "metrics"
+  ],
+  "additionalProperties": false
+}

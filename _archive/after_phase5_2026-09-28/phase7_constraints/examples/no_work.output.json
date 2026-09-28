@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "case_id": "PrecastFlow-no-eligible-v1",
+  "input_sha256": "60d08443e6b38715c74be0d923145274f366a407a0e81e791af87738aa94ee78",
+  "status": "NO_ELIGIBLE_WORK",
+  "served_batch_ids": [],
+  "deferred_batch_ids": [
+    "S1-B1",
+    "S1-B2",
+    "S1-B3",
+    "S2-B1",
+    "S2-B2",
+    "S2-B3",
+    "S3-B1",
+    "S3-B2",
+    "S3-B3",
+    "S4-B1",
+    "S4-B2",
+    "S4-B3"
+  ],
+  "unserved_eligible_batch_ids": [],
+  "routes": [],
+  "metrics": {
+    "distance_m": 0,
+    "travel_min": 0,
+    "waiting_min": 0,
+    "vehicles_used": 0,
+    "served_components": 0,
+    "deferred_components": 36
+  }
+}
