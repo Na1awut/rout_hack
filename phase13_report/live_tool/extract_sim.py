@@ -27,6 +27,31 @@ LABELS = {"S0_normal": "S0 · วันปกติ", "S1_light_traffic": "S1 ·
           "S4_multi_site_delay": "S4 · หลายไซต์ล่าช้า", "S5_pump_failure": "S5 · ปั๊มเสีย",
           "S6_high_demand": "S6 · งานล้นรถ", "S7_mixed_disruption": "S7 · หลายเหตุการณ์",
           "S8_ai_prediction_error": "S8 · AI ทายผิด"}
+# What each scenario injects (readymix/config/scenarios.yaml) and where to look.
+SCENARIO_INFO = {
+    "S0_normal": ("วันทำงานปกติ ไม่มีเหตุการณ์พิเศษ ไซต์พร้อมเร็วหรือช้ากว่านัดตามนิสัยของแต่ละไซต์",
+                  "ดูว่าแต่ละระบบใช้รถรอที่ไซต์ (สีแดง) มากน้อยแค่ไหนในวันธรรมดา"),
+    "S1_light_traffic": ("รถติดน้อยกว่าปกติครึ่งหนึ่ง รถไปถึงไซต์เร็วขึ้น",
+                         "รถที่ถึงเร็วแต่ไซต์ยังไม่พร้อมจะกลายเป็นสีแดง ดูว่าระบบไหนรอน้อยกว่า"),
+    "S2_peak_traffic": ("รถติดหนักกว่าปกติ 1.8 เท่า และมีช่วงรถติดพุ่ง 2 ครั้ง",
+                        "เวลาเดินทางยาวขึ้น ไซต์เสี่ยงว่างรอรถ ดูวงแหวนไซต์สีเหลือง (พร้อมแต่รถยังไม่ถึง)"),
+    "S3_site_delay": ("ไซต์ 1 แห่งแจ้งล่าช้า 30–60 นาที (ประกาศล่วงหน้าก่อนเวลานัด)",
+                      "ดูไซต์ที่ถูกแจ้งล่าช้าใน Event Log แล้วเทียบว่าฝั่งไหนส่งรถไปรอเก้อ"),
+    "S4_multi_site_delay": ("ไซต์ 3 แห่งแจ้งล่าช้าในวันเดียวกัน",
+                            "หลายไซต์ล่าช้าพร้อมกัน ระบบที่ปรับแผนได้ควรกระจายรถไปไซต์ที่พร้อมก่อน"),
+    "S5_pump_failure": ("ปั๊มคอนกรีตที่ไซต์ 1 แห่งเสีย ล่าช้า 45–90 นาที",
+                        "ดูว่ารถที่ออกไปก่อนปั๊มเสียต้องจอดรอนานแค่ไหน"),
+    "S6_high_demand": ("งานเพิ่ม 40% และมี order เพิ่ม 5 งาน เกินกำลังรถ 15 คัน",
+                       "วันนี้รถไม่พอ ดูจำนวน 'ส่งแล้ว' ตอนจบวัน ระบบ AI ไม่ได้ช่วยในกรณีนี้"),
+    "S7_mixed_disruption": ("ฝนตก รถติด ไซต์ล่าช้า 2 แห่ง ปั๊มเสีย รถเสีย 1 คัน เทช้า และปริมาณงานเปลี่ยน รวมในวันเดียว",
+                            "วันที่วุ่นที่สุด ดู Event Log ประกอบว่าเหตุการณ์ไหนทำให้รถต้องรอ"),
+    "S8_ai_prediction_error": ("ไซต์ที่ปกติตรงเวลา 2 แห่งพร้อมช้ากว่านัดมาก และไซต์ที่ปกติช้า 2 แห่งพร้อมเร็ว — ตั้งใจให้ AI ทายผิด",
+                               "ทดสอบว่าเมื่อประวัติหลอก AI ระบบยังไม่แย่กว่าแผนเดิม"),
+}
+FIELDS = ["trips", "delivered_trips", "unserved_trips", "unserved_volume_m3", "total_waiting_min", "site_idle_min",
+          "on_time_rate", "late_arrivals", "pour_gaps_over_30", "operational_score_min"]
+IMPACT_FIELDS = ["fuel_l", "co2_kg", "cost_proxy_thb"]
+
 POLICY_LABEL = {"A_static_planned": "A · แผนตายตัว", "B_dynamic_buffered": "B · ปรับแผน ไม่มี AI",
                 "C_ai_rolling_buffered": "C · AI + Optimizer"}
 EVENT_TEXT = {
@@ -147,6 +172,41 @@ def build_policy(scenario, policy, trips_meta, orders_meta):
                trip_count=len(trips_meta), delivered=len(trips_meta) - len(unserved))
 
 
+def add_results(bundle):
+    """Day-9101 results (what the replay shows) and 10-day averages (the evidence)."""
+    metrics = _rows(ITER / "metrics.csv")
+    impact = [r for r in _rows(ROOT / "phase10_carbon_business/impact_runs.csv") if r["case"] == "value"]
+    imp = {(r["seed"], r["scenario"], r["policy"]): r for r in impact}
+
+    def row_out(m):
+        i = imp[(m["seed"], m["scenario"], m["policy"])]
+        d = {f: float(m[f]) for f in FIELDS}
+        d.update({f: float(i[f]) for f in IMPACT_FIELDS})
+        return d
+
+    def mean(rows):
+        return {k: round(sum(r[k] for r in rows) / len(rows), 3) for k in rows[0]}
+
+    by = {}
+    for m in metrics:
+        if m["policy"] in POLICIES:
+            by.setdefault((m["scenario"], m["policy"]), []).append((int(m["seed"]), row_out(m)))
+    overall = {}
+    for scenario in SCENARIOS:
+        sc = bundle["scenarios"][scenario]
+        info = SCENARIO_INFO[scenario]
+        sc["about"], sc["watch"] = info
+        for policy in POLICIES:
+            rows = by[(scenario, policy)]
+            day = [r for seed, r in rows if seed == DAY][0]
+            sc["policies"][policy]["day_result"] = {k: round(v, 3) for k, v in day.items()}
+            sc["policies"][policy]["avg10"] = mean([r for _, r in rows])
+            sc["policies"][policy]["days"] = len(rows)
+            overall.setdefault(policy, []).extend(r for _, r in rows)
+    bundle["overall"] = {p: mean(v) for p, v in overall.items()}
+    bundle["overall_runs"] = {p: len(v) for p, v in overall.items()}
+
+
 def main():
     bundle = dict(day=DAY, scenarios={})
     check_rows = {r["scenario"] + "|" + r["policy"]: r for r in _rows(ITER / "metrics.csv") if int(r["seed"]) == DAY}
@@ -165,6 +225,7 @@ def main():
             assert final[3] == int(real["delivered_trips"]), (key, final[3], real["delivered_trips"])
         bundle["scenarios"][scenario] = dict(label=LABELS[scenario], world=world, orders=sc["orders"],
                                              trips=sc["trips"], events=sc["events"], policies=policies_out)
+    add_results(bundle)
     bundle["policy_labels"] = POLICY_LABEL
     bundle["scenario_order"] = SCENARIOS
     out = Path(__file__).resolve().parent / "sim_data.json"

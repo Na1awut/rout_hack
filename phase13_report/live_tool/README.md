@@ -7,12 +7,17 @@
 - เวลาที่รถแต่ละคันอยู่แต่ละช่วง (โหลด/วิ่ง/รอ/เท/ล้างถัง) มาจาก field ใน log ตรง ๆ (`load_start`, `depart`, `arrive`, `unload_start`, `unload_end`, `back`, `free`)
 - ตัวเลข KPI สะสม (รถรอ, ไซต์ว่าง, ส่งแล้ว) คำนวณด้วยสูตรเดียวกับ `readymix/application/kpi.py` เพียงแต่แจกแจงเป็นเหตุการณ์ทีละจุดแทนที่จะสรุปครั้งเดียวตอนจบวัน — ผลรวมปลายวันจึงต้องตรงกับ `metrics.csv` เป๊ะ สคริปต์เช็กด้วย `assert` ทุกค่าก่อนเขียนไฟล์
 
+นอกจากข้อมูลการวิ่งแล้ว ยังใส่ผลลัพธ์ 2 ระดับให้หน้าเว็บใช้เทียบ: `day_result` (ผลของวัน 9101 ที่เล่นย้อนให้ดู) และ `avg10` (ค่าเฉลี่ย 10 วันทดสอบของแต่ละสถานการณ์) จาก `metrics.csv` ของ Phase 9 และต้นทุน/CO₂ จาก `phase10_carbon_business/impact_runs.csv` (กรณี value) ค่าเฉลี่ยรวมตรงกับ Phase 9 (score 1839.0 / 2052.9 / 1834.7)
+
 ## รันใหม่
 
 ```bash
 export OMP_NUM_THREADS=1
-python phase13_report/live_tool/extract_sim.py
+python phase13_report/live_tool/extract_sim.py   # สร้าง sim_data.json
+python phase13_report/live_tool/build_site.py    # สร้าง phase13_report/site/live.html จาก live_template.html
 ```
+
+แก้หน้าตาเว็บที่ `live_template.html` แล้วรัน `build_site.py` อย่าแก้ `site/live.html` ตรง ๆ เพราะจะถูกเขียนทับ
 
 ต้องมี `phase9_baseline_comparison/iteration_02/logs/` และ `.../datasets/*_world42_day9101/` อยู่ครบก่อน (ไม่ได้ commit เข้า git เพราะเป็นไฟล์ผลการรันจำนวนมาก — ดู `phase9_baseline_comparison/iteration_02/notes.md` วิธีรันใหม่)
 
