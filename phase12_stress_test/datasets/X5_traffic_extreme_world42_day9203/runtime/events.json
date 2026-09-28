@@ -1,0 +1,50 @@
+[
+  {
+    "event_id": "E001",
+    "timestamp": "2026-10-01T09:00",
+    "event_type": "TRAFFIC_SPIKE",
+    "site_ids": [
+      "S001",
+      "S005",
+      "S007"
+    ],
+    "extra_multiplier": 0.486,
+    "duration_min": 120
+  },
+  {
+    "event_id": "E002",
+    "timestamp": "2026-10-01T09:00",
+    "event_type": "TRAFFIC_SPIKE",
+    "site_ids": [
+      "S003",
+      "S008",
+      "S009"
+    ],
+    "extra_multiplier": 0.409,
+    "duration_min": 60
+  },
+  {
+    "event_id": "E003",
+    "timestamp": "2026-10-01T11:00",
+    "event_type": "TRAFFIC_SPIKE",
+    "site_ids": [
+      "S003",
+      "S004",
+      "S008"
+    ],
+    "extra_multiplier": 0.415,
+    "duration_min": 120
+  },
+  {
+    "event_id": "E004",
+    "timestamp": "2026-10-01T14:00",
+    "event_type": "TRAFFIC_SPIKE",
+    "site_ids": [
+      "S004",
+      "S008",
+      "S010"
+    ],
+    "extra_multiplier": 0.41,
+    "duration_min": 60
+  }
+]

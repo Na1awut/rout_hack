@@ -1,0 +1,50 @@
+[
+  {
+    "event_id": "E001",
+    "timestamp": "2026-10-01T06:18",
+    "event_type": "SITE_READY_LATE",
+    "site_id": "S006",
+    "order_id": "O024",
+    "delay_min": 43
+  },
+  {
+    "event_id": "E002",
+    "timestamp": "2026-10-01T06:32",
+    "event_type": "SITE_READY_LATE",
+    "site_id": "S007",
+    "order_id": "O007",
+    "delay_min": 57
+  },
+  {
+    "event_id": "E003",
+    "timestamp": "2026-10-01T07:52",
+    "event_type": "SITE_READY_LATE",
+    "site_id": "S004",
+    "order_id": "O005",
+    "delay_min": 52
+  },
+  {
+    "event_id": "E004",
+    "timestamp": "2026-10-01T08:54",
+    "event_type": "SITE_READY_EARLY",
+    "site_id": "S001",
+    "order_id": "O020",
+    "early_min": 16
+  },
+  {
+    "event_id": "E005",
+    "timestamp": "2026-10-01T11:08",
+    "event_type": "SITE_READY_EARLY",
+    "site_id": "S010",
+    "order_id": "O028",
+    "early_min": 19
+  },
+  {
+    "event_id": "E006",
+    "timestamp": "2026-10-01T12:23",
+    "event_type": "SITE_READY_LATE",
+    "site_id": "S009",
+    "order_id": "O014",
+    "delay_min": 44
+  }
+]

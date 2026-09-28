@@ -1,0 +1,98 @@
+[
+  {
+    "event_id": "E001",
+    "timestamp": "2026-10-01T06:12",
+    "event_type": "SITE_DELAY",
+    "site_id": "S010",
+    "order_id": "O022",
+    "delay_min": 43
+  },
+  {
+    "event_id": "E002",
+    "timestamp": "2026-10-01T06:38",
+    "event_type": "PUMP_FAILURE",
+    "site_id": "S010",
+    "order_id": "O022",
+    "delay_min": 86
+  },
+  {
+    "event_id": "E003",
+    "timestamp": "2026-10-01T08:00",
+    "event_type": "SITE_DELAY",
+    "site_id": "S007",
+    "order_id": "O026",
+    "delay_min": 59
+  },
+  {
+    "event_id": "E004",
+    "timestamp": "2026-10-01T08:04",
+    "event_type": "SITE_DELAY",
+    "site_id": "S006",
+    "order_id": "O016",
+    "delay_min": 40
+  },
+  {
+    "event_id": "E005",
+    "timestamp": "2026-10-01T08:18",
+    "event_type": "PUMP_FAILURE",
+    "site_id": "S008",
+    "order_id": "O002",
+    "delay_min": 90
+  },
+  {
+    "event_id": "E006",
+    "timestamp": "2026-10-01T08:28",
+    "event_type": "PUMP_FAILURE",
+    "site_id": "S007",
+    "order_id": "O026",
+    "delay_min": 50
+  },
+  {
+    "event_id": "E007",
+    "timestamp": "2026-10-01T08:39",
+    "event_type": "SITE_DELAY",
+    "site_id": "S003",
+    "order_id": "O018",
+    "delay_min": 51
+  },
+  {
+    "event_id": "E008",
+    "timestamp": "2026-10-01T09:47",
+    "event_type": "SITE_DELAY",
+    "site_id": "S004",
+    "order_id": "O004",
+    "delay_min": 38
+  },
+  {
+    "event_id": "E009",
+    "timestamp": "2026-10-01T10:41",
+    "event_type": "SITE_DELAY",
+    "site_id": "S009",
+    "order_id": "O008",
+    "delay_min": 34
+  },
+  {
+    "event_id": "E010",
+    "timestamp": "2026-10-01T11:15",
+    "event_type": "SERVICE_SLOWDOWN",
+    "site_id": "S001",
+    "order_id": "O005",
+    "factor": 1.215
+  },
+  {
+    "event_id": "E011",
+    "timestamp": "2026-10-01T12:00",
+    "event_type": "SERVICE_SLOWDOWN",
+    "site_id": "S006",
+    "order_id": "O013",
+    "factor": 1.258
+  },
+  {
+    "event_id": "E012",
+    "timestamp": "2026-10-01T13:00",
+    "event_type": "SERVICE_SLOWDOWN",
+    "site_id": "S006",
+    "order_id": "O001",
+    "factor": 1.314
+  }
+]

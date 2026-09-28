@@ -1,0 +1,156 @@
+[
+  {
+    "event_id": "E001",
+    "timestamp": "2026-10-01T05:52",
+    "event_type": "SITE_READY_EARLY",
+    "site_id": "S010",
+    "order_id": "O024",
+    "early_min": 29
+  },
+  {
+    "event_id": "E002",
+    "timestamp": "2026-10-01T06:11",
+    "event_type": "SITE_DELAY",
+    "site_id": "S010",
+    "order_id": "O024",
+    "delay_min": 59
+  },
+  {
+    "event_id": "E003",
+    "timestamp": "2026-10-01T06:15",
+    "event_type": "DEMAND_CHANGE",
+    "site_id": "S005",
+    "order_id": "O004",
+    "factor": 1.045
+  },
+  {
+    "event_id": "E004",
+    "timestamp": "2026-10-01T06:22",
+    "event_type": "PUMP_FAILURE",
+    "site_id": "S010",
+    "order_id": "O024",
+    "delay_min": 68
+  },
+  {
+    "event_id": "E005",
+    "timestamp": "2026-10-01T06:29",
+    "event_type": "SITE_DELAY",
+    "site_id": "S005",
+    "order_id": "O009",
+    "delay_min": 60
+  },
+  {
+    "event_id": "E006",
+    "timestamp": "2026-10-01T06:32",
+    "event_type": "SITE_READY_LATE",
+    "site_id": "S004",
+    "order_id": "O021",
+    "delay_min": 41
+  },
+  {
+    "event_id": "E007",
+    "timestamp": "2026-10-01T07:33",
+    "event_type": "SITE_DELAY",
+    "site_id": "S006",
+    "order_id": "O016",
+    "delay_min": 52
+  },
+  {
+    "event_id": "E008",
+    "timestamp": "2026-10-01T07:48",
+    "event_type": "SITE_READY_LATE",
+    "site_id": "S006",
+    "order_id": "O016",
+    "delay_min": 42
+  },
+  {
+    "event_id": "E009",
+    "timestamp": "2026-10-01T08:05",
+    "event_type": "SITE_READY_LATE",
+    "site_id": "S009",
+    "order_id": "O028",
+    "delay_min": 53
+  },
+  {
+    "event_id": "E010",
+    "timestamp": "2026-10-01T08:28",
+    "event_type": "SITE_DELAY",
+    "site_id": "S009",
+    "order_id": "O028",
+    "delay_min": 57
+  },
+  {
+    "event_id": "E011",
+    "timestamp": "2026-10-01T08:45",
+    "event_type": "SITE_READY_EARLY",
+    "site_id": "S001",
+    "order_id": "O018",
+    "early_min": 28
+  },
+  {
+    "event_id": "E012",
+    "timestamp": "2026-10-01T09:00",
+    "event_type": "TRAFFIC_SPIKE",
+    "site_ids": [
+      "S001",
+      "S005",
+      "S007"
+    ],
+    "extra_multiplier": 0.486,
+    "duration_min": 120
+  },
+  {
+    "event_id": "E013",
+    "timestamp": "2026-10-01T09:00",
+    "event_type": "TRUCK_BREAKDOWN",
+    "vehicle_id": "T005"
+  },
+  {
+    "event_id": "E014",
+    "timestamp": "2026-10-01T11:00",
+    "event_type": "TRAFFIC_SPIKE",
+    "site_ids": [
+      "S003",
+      "S004",
+      "S008"
+    ],
+    "extra_multiplier": 0.415,
+    "duration_min": 120
+  },
+  {
+    "event_id": "E015",
+    "timestamp": "2026-10-01T11:45",
+    "event_type": "DEMAND_CHANGE",
+    "site_id": "S009",
+    "order_id": "O019",
+    "factor": 1.199
+  },
+  {
+    "event_id": "E016",
+    "timestamp": "2026-10-01T12:22",
+    "event_type": "PUMP_FAILURE",
+    "site_id": "S007",
+    "order_id": "O025",
+    "delay_min": 77
+  },
+  {
+    "event_id": "E017",
+    "timestamp": "2026-10-01T13:00",
+    "event_type": "TRUCK_BREAKDOWN",
+    "vehicle_id": "T007"
+  },
+  {
+    "event_id": "E018",
+    "timestamp": "2026-10-01T13:00",
+    "event_type": "TRUCK_BREAKDOWN",
+    "vehicle_id": "T014"
+  },
+  {
+    "event_id": "E019",
+    "timestamp": "2026-10-01T13:45",
+    "event_type": "DEMAND_CHANGE",
+    "site_id": "S007",
+    "order_id": "O014",
+    "factor": 1.25
+  }
+]

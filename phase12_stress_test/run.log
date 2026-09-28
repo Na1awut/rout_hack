@@ -1,0 +1,89 @@
+X1_demand_plus50 9203 INFEASIBLE ['RAN', 'RAN', 'RAN']
+X1_demand_plus50 9204 AT_RISK ['RAN', 'RAN', 'RAN']
+X1_demand_plus50 9201 INFEASIBLE ['RAN', 'RAN', 'RAN']
+X1_demand_plus50 9202 AT_RISK ['RAN', 'RAN', 'RAN']
+X2_many_breakdowns 9202 AT_RISK ['RAN', 'RAN', 'RAN']
+X2_many_breakdowns 9203 AT_RISK ['RAN', 'RAN', 'RAN']
+X2_many_breakdowns 9201 AT_RISK ['RAN', 'RAN', 'RAN']
+X1_demand_plus50 9205 AT_RISK ['RAN', 'RAN', 'RAN']
+X2_many_breakdowns 9204 AT_RISK ['RAN', 'RAN', 'RAN']
+X2_many_breakdowns 9205 AT_RISK ['RAN', 'RAN', 'RAN']
+X3_site_chaos 9201 AT_RISK ['RAN', 'RAN', 'RAN']
+X3_site_chaos 9202 AT_RISK ['RAN', 'RAN', 'RAN']
+X3_site_chaos 9203 AT_RISK ['RAN', 'RAN', 'RAN']
+X4_ai_badly_wrong 9201 AT_RISK ['RAN', 'RAN', 'RAN']
+X3_site_chaos 9204 AT_RISK ['RAN', 'RAN', 'RAN']
+X3_site_chaos 9205 AT_RISK ['RAN', 'RAN', 'RAN']
+X4_ai_badly_wrong 9202 AT_RISK ['RAN', 'RAN', 'RAN']
+X4_ai_badly_wrong 9203 AT_RISK ['RAN', 'RAN', 'RAN']
+X4_ai_badly_wrong 9204 AT_RISK ['RAN', 'RAN', 'RAN']
+X4_ai_badly_wrong 9205 AT_RISK ['RAN', 'RAN', 'RAN']
+X5_traffic_extreme 9202 AT_RISK ['RAN', 'RAN', 'RAN']
+X5_traffic_extreme 9201 AT_RISK ['RAN', 'RAN', 'RAN']
+X5_traffic_extreme 9203 AT_RISK ['RAN', 'RAN', 'RAN']
+X5_traffic_extreme 9204 AT_RISK ['RAN', 'RAN', 'RAN']
+X5_traffic_extreme 9205 AT_RISK ['RAN', 'RAN', 'RAN']
+X6_everything 9203 AT_RISK ['RAN', 'RAN', 'RAN']
+X6_everything 9202 AT_RISK ['RAN', 'RAN', 'RAN']
+X6_everything 9201 AT_RISK ['RAN', 'RAN', 'RAN']
+X6_everything 9204 AT_RISK ['RAN', 'RAN', 'RAN']
+X7_fleet_shortage 9201 INFEASIBLE ['RAN', 'RAN', 'RAN']
+X7_fleet_shortage 9202 INFEASIBLE ['RAN', 'RAN', 'RAN']
+X6_everything 9205 AT_RISK ['RAN', 'RAN', 'RAN']
+X7_fleet_shortage 9203 INFEASIBLE ['RAN', 'RAN', 'RAN']
+X7_fleet_shortage 9204 AT_RISK ['RAN', 'RAN', 'RAN']
+X7_fleet_shortage 9205 AT_RISK ['RAN', 'RAN', 'RAN']
+F01_all_trucks_break DEGRADED True ก่อนเริ่มวัน: ส่งครบ แต่มี 16 เที่ยวที่คาดว่าช้าเพราะรถไม่พอ เพิ่มรถอีก 4 คันจะแก้ได้ | ส่งไม่ได้ 61 เที่ยว (306.0 m³)
+F02_unreachable_site REJECTED_DATA True ข้อมูลไม่ผ่านการตรวจ: traffic.csv: edge P001->S001 does not cover every hour slot | ข้อมูลไม่ผ่านการตรวจ: traffic.csv: e
+F03_missing_site_reports OK True ก่อนเริ่มวัน: ส่งครบ แต่มี 16 เที่ยวที่คาดว่าช้าเพราะรถไม่พอ เพิ่มรถอีก 4 คันจะแก้ได้
+F04_predictor_crash DEGRADED True ก่อนเริ่มวัน: ส่งครบ แต่มี 16 เที่ยวที่คาดว่าช้าเพราะรถไม่พอ เพิ่มรถอีก 4 คันจะแก้ได้ | AI error 212 ครั้ง ใช้เวลาตามแผน
+F05_model_file_missing DEGRADED True ก่อนเริ่มวัน: ส่งครบ แต่มี 16 เที่ยวที่คาดว่าช้าเพราะรถไม่พอ เพิ่มรถอีก 4 คันจะแก้ได้ | AI ใช้ไม่ได้ (FileNotFoundError)
+F06_trip_bigger_than_truck REJECTED_DATA True ข้อมูลไม่ผ่านการตรวจ: trips.csv O001-01: volume 9.0 does not fit capacity 6.0 | ข้อมูลไม่ผ่านการตรวจ: trips.csv: trips o
+F07_tampered_file REJECTED_DATA True ข้อมูลไม่ผ่านการตรวจ: orders/orders.csv: sha256 does not match manifest (file changed after generation)
+F08_no_orders OK True ก่อนเริ่มวัน: ไม่มี order วันนี้
+F09_no_trucks_on_shift DEGRADED True ก่อนเริ่มวัน: คาดว่าส่งไม่ทัน 77 เที่ยว ต้องเพิ่มรถอีก 12 คัน | ส่งไม่ได้ 77 เที่ยว (376.0 m³)
+F10_missing_traffic_hour REJECTED_DATA True ข้อมูลไม่ผ่านการตรวจ: travel_profile.csv: edge P001->S003 does not cover every traffic hour | ข้อมูลไม่ผ่านการตรวจ: trav
+F11_predictor_garbage DEGRADED True ก่อนเริ่มวัน: ส่งครบ แต่มี 16 เที่ยวที่คาดว่าช้าเพราะรถไม่พอ เพิ่มรถอีก 4 คันจะแก้ได้ | AI error 212 ครั้ง ใช้เวลาตามแผน
+                                          operational_score_min  unserved_trips  total_waiting_min  site_idle_min  on_time_rate  fuel_liters
+scenario           policy                                                                                                                   
+X1_demand_plus50   A_static_planned                      5095.0             2.4              326.8         2368.2          0.25      1096.56
+                   B_dynamic_buffered                    5724.8             2.8              259.0         2665.8          0.30      1082.02
+                   C_ai_rolling_buffered                 6135.6             3.2              201.2         2734.4          0.34      1076.12
+X2_many_breakdowns A_static_planned                      1591.0             0.0              400.8         1190.2          0.53       823.94
+                   B_dynamic_buffered                    1774.8             0.0              363.6         1411.2          0.56       820.94
+                   C_ai_rolling_buffered                 1675.6             0.0              284.2         1391.4          0.55       817.08
+X3_site_chaos      A_static_planned                      2060.8             0.0             1167.8          893.0          0.50       859.26
+                   B_dynamic_buffered                    1228.0             0.0              457.6          770.4          0.63       822.42
+                   C_ai_rolling_buffered                 1054.4             0.0              356.0          698.4          0.68       817.86
+X4_ai_badly_wrong  A_static_planned                      1355.8             0.0              750.0          605.8          0.67       837.64
+                   B_dynamic_buffered                    1032.4             0.0              421.6          610.8          0.74       822.62
+                   C_ai_rolling_buffered                  909.6             0.0              375.8          533.8          0.74       820.26
+X5_traffic_extreme A_static_planned                      3698.2             1.4              231.8         2066.4          0.22       801.50
+                   B_dynamic_buffered                    4283.8             1.6              361.0         2322.8          0.38       802.14
+                   C_ai_rolling_buffered                 3907.0             1.4              216.4         2290.6          0.31       796.96
+X6_everything      A_static_planned                     22036.8            18.0              696.4         3340.4          0.23       832.92
+                   B_dynamic_buffered                   22138.0            18.8              427.6         2910.4          0.26       819.84
+                   C_ai_rolling_buffered                21131.4            18.0              247.6         2883.8          0.22       811.66
+X7_fleet_shortage  A_static_planned                      7478.8             4.4              212.6         2866.2          0.19       772.14
+                   B_dynamic_buffered                    7937.2             4.6              164.4         3172.8          0.25       757.22
+                   C_ai_rolling_buffered                 7601.8             4.2              121.2         3280.6          0.23       761.92
+{
+  "gates": {
+    "G1_no_crash": true,
+    "G2_plans_valid": true,
+    "G3_faults_handled": true,
+    "G4_preflight_honest": true
+  },
+  "detail": {
+    "stress_runs": 105,
+    "faults": 11,
+    "infeasible_flags": 5,
+    "infeasible_flags_with_unserved": 5,
+    "static_days_with_unserved": 12,
+    "static_days_with_unserved_flagged_infeasible": 5,
+    "preflight_counts": {
+      "AT_RISK": 30,
+      "INFEASIBLE": 5
+    }
+  }
+}

@@ -331,6 +331,8 @@ $$Savings = Fuel + Labor + Vehicle + Maintenance$$
 
 ## Phase 12 — Stress Test + Failure Cases
 
+สถานะ (2026-09-28): **PASS** · [PHASE12.md](phase12_stress_test/PHASE12.md)
+
 - **Scenario:** Normal / Peak Demand / Vehicle Shortage / High Fuel Price / หลายไซต์ delay พร้อมกัน / AI ทำนายผิด และหลายขนาดโจทย์ เพื่อพิสูจน์ว่าไม่ได้เลือกเคสมาโชว์
 - **ทำให้ระบบพังเอง:** demand เกิน fleet capacity, ไซต์ที่ไปไม่ถึง, รถเสีย, demand พุ่ง +50%, ข้อมูลขาด
 - ระบบต้องตอบว่า "No feasible solution" หรือ "ต้องเพิ่มรถอีก 2 คัน" **ห้าม crash**
@@ -377,6 +379,7 @@ business_simulation.csv
 6. ~~Phase 9 Baseline Comparison (Loop 7)~~ ✅ ([PHASE9.md](phase9_baseline_comparison/PHASE9.md): iteration 02 PASS)
 7. ~~Phase 10 Carbon + Business Impact (Loop 8)~~ ✅ ([PHASE10.md](phase10_carbon_business/PHASE10.md))
 8. ~~Phase 11 Dashboard / Prototype (Loop 10)~~ ✅ ([PHASE11.md](phase11_dashboard/PHASE11.md))
-9. **Phase 12 Stress Test + Failure Cases (Loop 9)** ← ขั้นถัดไป
+9. ~~Phase 12 Stress Test + Failure Cases (Loop 9)~~ ✅ ([PHASE12.md](phase12_stress_test/PHASE12.md))
+10. **Phase 13 Slide / Video (Loop 11–12)** ← ขั้นถัดไป
 
 **ไม่ย้อนกลับไปแก้ Core และไม่รื้อ Phase เก่า**
