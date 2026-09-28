@@ -369,7 +369,7 @@ business_simulation.csv
 2. ~~Loop 0 Regression Lock~~ ✅ ([notes](phase6_readymix_simulation/loop_00_regression_lock/notes.md))
 3. ~~Phase 6 Ready-Mix Problem & Simulation~~ ✅ ([PHASE6.md](phase6_readymix_simulation/PHASE6.md): Loop 1 Simulation, Loop 2 Non-AI Baseline)
 4. ~~Phase 7 AI Site Readiness (Loop 3–4)~~ ✅ ([PHASE7.md](phase7_ai_readiness/PHASE7.md))
-5. ~~Phase 8 Predictive Dynamic Optimizer (Loop 5–6)~~ ✅ ([gates](phase8_dynamic_optimizer/gates.json), ยังไม่มี PHASE8.md)
+5. ~~Phase 8 Predictive Dynamic Optimizer (Loop 5–6)~~ ✅ ([PHASE8.md](phase8_dynamic_optimizer/PHASE8.md))
 6. ~~Phase 9 Baseline Comparison (Loop 7)~~ ✅ ([PHASE9.md](phase9_baseline_comparison/PHASE9.md): iteration 02 PASS)
 7. **Phase 10 Carbon + Business Impact (Loop 8)** ← ขั้นถัดไป
 
