@@ -411,6 +411,21 @@
               <div class="tile"><div class="v">−35%</div><div class="l">รถรอลดลง เทียบแผนตายตัว · on-time +3.4 จุด</div></div>
             </div>
             <p class="src">ที่มา: <code>phase9_baseline_comparison/iteration_02/PHASE9.md</code> · gate ผ่าน 5/5 · รอบแรก (iteration 01) ไม่ผ่านเกณฑ์ เก็บผลไว้ครบ ไม่ได้ลบทิ้ง</p>
+
+            <p class="stop-body" style="margin-top:28px"><strong style="color:var(--ink-1)">ความเสียหายที่ยังไม่ลดลง</strong> — ไม่ใช่ทุกอย่างดีขึ้นพร้อมกัน ของเสียจริงที่วัดได้มี 4 ตัว AI ดีกว่าแค่ตัวเดียว อีก 3 ตัวแย่กว่าแผนตายตัวเล็กน้อย:</p>
+            <div class="table-wrap">
+              <table class="data">
+                <thead><tr><th>ความเสียหาย</th><th style="text-align:right">A แผนตายตัว</th><th style="text-align:right">C AI + Optimizer</th><th>ทิศทาง</th></tr></thead>
+                <tbody>
+                  <tr><td>คอนกรีตที่ส่งไม่ได้ (เที่ยว/วัน-สถานการณ์)</td><td class="num">0.47</td><td class="num">0.63</td><td style="color:var(--critical)">แย่กว่า</td></tr>
+                  <tr><td>ปริมาณที่เสียไป (m³/วัน-สถานการณ์)</td><td class="num">2.40</td><td class="num">3.29</td><td style="color:var(--critical)">แย่กว่า +0.89 m³</td></tr>
+                  <tr><td>เที่ยวมาช้ากว่ากำหนด (ครั้ง/วัน-สถานการณ์)</td><td class="num">23.9</td><td class="num">21.5</td><td style="color:var(--good)">ดีกว่า</td></tr>
+                  <tr><td>ช่องว่างระหว่างเทเกิน 30 นาที (ครั้ง/วัน-สถานการณ์)</td><td class="num">4.24</td><td class="num">4.64</td><td style="color:var(--critical)">แย่กว่า</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="stop-body" style="margin-top:14px">ปริมาณที่ส่งไม่ได้ราว 90% มาจากวัน S6 (งานล้นรถ) ที่เหลือมาจาก S7 (มีรถเสียกลางวัน) ส่วนอีก 7 สถานการณ์ส่งครบทั้งสองระบบ — AI ไม่ได้ช่วยเมื่อรถไม่พอ (ดูสต็อป 09) ช่องว่างระหว่างเทเกิน 30 นาทีเป็นตัวบ่งชี้ความเสี่ยง cold joint <strong style="color:var(--ink-1)">เรายังแปลงเป็นบาทไม่ได้</strong> เพราะไม่มีราคาต่อ order หรือค่าเสียหายจาก cold joint ที่มีแหล่งอ้างอิง จึงรายงานเป็นจำนวนจริงแทนการประเมินเป็นเงิน</p>
+            <p class="src">ที่มา: <code>phase9_baseline_comparison/iteration_02/metrics.csv</code> คอลัมน์ <code>unserved_trips</code>, <code>unserved_volume_m3</code>, <code>late_arrivals</code>, <code>pour_gaps_over_30</code></p>
           </div>
         </div>
       </div>
@@ -484,7 +499,21 @@
                 <span class="val" style="color:var(--critical)">+24.9%</span></div>
             </div>
 
-            <p class="stop-body" style="margin-top:20px"><strong style="color:var(--ink-1)">AI เก่งเมื่อปัญหาอยู่ที่ไซต์ แต่แพ้เมื่อรถไม่พอ</strong> — ระบบตอบด้วยคำเตือนแทนที่จะฝืนแล้วพัง:</p>
+            <p class="stop-body" style="margin-top:20px"><strong style="color:var(--ink-1)">ความเสียหายจริงเมื่อรถไม่พอ</strong> — เที่ยวคอนกรีตที่ส่งไม่ได้ (ค่าเฉลี่ยต่อวัน) ในสถานการณ์ที่มีของเสีย เห็นชัดว่า AI ช่วยไม่ได้เมื่อสาเหตุคือจำนวนรถ ไม่ใช่จังหวะปล่อยรถ:</p>
+            <div class="table-wrap">
+              <table class="data">
+                <thead><tr><th>สถานการณ์</th><th style="text-align:right">A แผนตายตัว</th><th style="text-align:right">C AI + Optimizer</th></tr></thead>
+                <tbody>
+                  <tr><td>X1 งานเพิ่ม 50%</td><td class="num">2.4</td><td class="num" style="color:var(--critical)">3.2</td></tr>
+                  <tr><td>X5 รถติดสุดขีด + ฝน</td><td class="num">1.4</td><td class="num">1.4</td></tr>
+                  <tr><td>X6 ทุกอย่างพร้อมกัน</td><td class="num">18.0</td><td class="num">18.0</td></tr>
+                  <tr><td>X7 รถเหลือ 10 คัน</td><td class="num">4.4</td><td class="num" style="color:var(--good)">4.2</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="src">สถานการณ์อื่นนอกตาราง (X2, X3, X4) ส่งครบ 0 เที่ยวเสียหายทั้งสองระบบ · ที่มา: <code>phase12_stress_test/stress_metrics.csv</code></p>
+
+            <p class="stop-body" style="margin-top:28px"><strong style="color:var(--ink-1)">AI เก่งเมื่อปัญหาอยู่ที่ไซต์ แต่แพ้เมื่อรถไม่พอ</strong> — ระบบตอบด้วยคำเตือนแทนที่จะฝืนแล้วพัง:</p>
             <div class="log">
               <div class="log-line"><span class="tag">[F09]</span> ไม่มีรถเข้ากะเลย       → <span class="ok">DEGRADED</span>  "คาดว่าส่งไม่ทัน 77 เที่ยว ต้องเพิ่มรถอีก 12 คัน"</div>
               <div class="log-line"><span class="tag">[F05]</span> ไฟล์โมเดล AI หาย       → <span class="ok">DEGRADED</span>  "AI ใช้ไม่ได้ ใช้ dispatch แบบไม่มี AI แทน"</div>
