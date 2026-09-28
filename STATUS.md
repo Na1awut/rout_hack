@@ -2,6 +2,8 @@
 
 อัปเดตล่าสุด: 2026-09-28 · แผนเต็มอยู่ที่ [PLAN.md](PLAN.md)
 
+**อ่านภาพรวมทั้งโครงการ:** [phase13_report/REPORT.md](phase13_report/REPORT.md)
+
 **รูปแบบโฟลเดอร์:** แต่ละเฟสอยู่ใน `05_core_development/phaseN_<ชื่อ>/` ข้างในมีโค้ดของเฟสนั้น และไฟล์ `PHASEN.md` สรุปผล
 
 | # | Phase | สถานะ | โฟลเดอร์ / หมายเหตุ |
@@ -20,6 +22,6 @@
 | 10 | Carbon + Business Impact (Loop 8) | ✅ | [phase10_carbon_business/PHASE10.md](phase10_carbon_business/PHASE10.md) · gate 4/4 · AI เทียบแผน static: −24 kgCO₂/วัน (−1.1%, ~7.2 t/ปี), −1,030 THB/วัน (−2.6%, ~309k THB/ปี), รถรอ −35% · คุณค่าหลักคือเวลา ไม่ใช่ CO₂ · ⚠ แหล่งอ้างอิงต้องเปิดยืนยันก่อนขึ้นสไลด์ |
 | 11 | Dashboard / Prototype (Loop 10) | ✅ | [phase11_dashboard/PHASE11.md](phase11_dashboard/PHASE11.md) · `streamlit run readymix/dashboard/app.py` · BEFORE→AFTER, แผนที่, Gantt, decision trace §33, หลักฐาน 10 วัน · รันสดตรงกับ Phase 9 ทุก byte · 112 tests |
 | 12 | Stress Test + Failure Cases (Loop 9) | ✅ | [phase12_stress_test/PHASE12.md](phase12_stress_test/PHASE12.md) · gate 5/5 · 105 stress run + 11 fault ไม่ crash · เจอ/แก้บั๊ก 2 ตัว · fleet check "ต้องเพิ่มรถ N คัน" ถูก 5/5 · **AI แพ้แผน static เมื่องานล้นกำลังรถ** (X1, X7) แต่ชนะชัดเมื่อไซต์วุ่น (−47%) |
-| 13 | Slide / Video | ⬜ ขั้นถัดไป | |
+| 13 | รายงานสรุปโครงการ (แทน Slide/Video ตามที่ทีมขอ) | ✅ | [phase13_report/REPORT.md](phase13_report/REPORT.md) · ปัญหา → วิธีแก้ → ขั้นตอน 1–12 → ผล → ความน่าเชื่อถือ → ข้อจำกัด → งานต่อ · ทุกตัวเลขอ้างไฟล์ผล |
 
 Phase 6–7 รอบก่อน (หัวข้อ PrecastFlow) เก็บไว้ที่ [_archive/after_phase5_2026-09-28/](_archive/after_phase5_2026-09-28/) แผนใหม่มาจาก [idea.md](idea.md) · spec ระบบ [skill.md](skill.md) · วิธีทำงานแบบ loop และ gate [loop.md](loop.md) · โค้ดใหม่อยู่ใน `readymix/`

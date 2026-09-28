@@ -380,6 +380,6 @@ business_simulation.csv
 7. ~~Phase 10 Carbon + Business Impact (Loop 8)~~ ✅ ([PHASE10.md](phase10_carbon_business/PHASE10.md))
 8. ~~Phase 11 Dashboard / Prototype (Loop 10)~~ ✅ ([PHASE11.md](phase11_dashboard/PHASE11.md))
 9. ~~Phase 12 Stress Test + Failure Cases (Loop 9)~~ ✅ ([PHASE12.md](phase12_stress_test/PHASE12.md))
-10. **Phase 13 Slide / Video (Loop 11–12)** ← ขั้นถัดไป
+10. ~~Phase 13 รายงานสรุป (Loop 11)~~ ✅ ([REPORT.md](phase13_report/REPORT.md)) · ทีมเลือกทำรายงานแทน slide/video
 
 **ไม่ย้อนกลับไปแก้ Core และไม่รื้อ Phase เก่า**
