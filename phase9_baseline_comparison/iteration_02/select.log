@@ -29,3 +29,10 @@
 6004 S2_peak_traffic complete
 6004 S1_light_traffic complete
 6004 S3_site_delay complete
+6004 S4_multi_site_delay complete
+6004 S5_pump_failure complete
+6004 S6_high_demand complete
+6004 S7_mixed_disruption complete
+6004 S8_ai_prediction_error complete
+6005 S0_normal complete
+6005 S1_light_traffic complete
