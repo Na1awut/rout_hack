@@ -17,6 +17,7 @@
 | 7 | AI Site Readiness | ✅ Loop 3–4 PASS | [phase7_ai_readiness/PHASE7.md](phase7_ai_readiness/PHASE7.md) · site_ready_v3 · แก้ readiness revision ที่บวก history ซ้ำ · Fresh S8 MAE 10.006 → 9.248 นาที; normal mix 8.268 → 8.539 นาที · 88 tests PASS, runtime checks 46,819 predictions PASS, Core regression PASS |
 | 8 | Predictive Dynamic Optimizer | ✅ | [phase8_dynamic_optimizer/PHASE8.md](phase8_dynamic_optimizer/PHASE8.md) · Loop 5–6 · gate ผ่าน 5/5 · รันซ้ำบน Linux ตรง 36/36 · AI+rolling ลดรถรอ 570→128 นาที แต่ไซต์ว่างเพิ่ม (แก้ใน Phase 9) |
 | 9 | Baseline Comparison (Loop 7) | ✅ | [phase9_baseline_comparison/PHASE9.md](phase9_baseline_comparison/PHASE9.md) · iteration 01 FAIL → เพิ่ม safety buffer → iteration 02 PASS 5/5 บน fresh days 9101–9110 · C(AI) ดีกว่า B(no-AI) 218 นาที/วัน-scenario CI95 [117, 346] · ไม่นับ S6 ดีกว่าแผน static 15.2%; นับ S6 **เสมอ** · 104 tests · ⚠ freeze_id บน Linux ไม่ตรง แต่ route ตรง snapshot ต้องยืนยันบน Windows |
-| 10–13 | Carbon/Business → Dashboard → Stress Test → Slide/Video | ⬜ ขั้นถัดไป: Phase 10 | |
+| 10 | Carbon + Business Impact (Loop 8) | ✅ | [phase10_carbon_business/PHASE10.md](phase10_carbon_business/PHASE10.md) · gate 4/4 · AI เทียบแผน static: −24 kgCO₂/วัน (−1.1%, ~7.2 t/ปี), −1,030 THB/วัน (−2.6%, ~309k THB/ปี), รถรอ −35% · คุณค่าหลักคือเวลา ไม่ใช่ CO₂ · ⚠ แหล่งอ้างอิงต้องเปิดยืนยันก่อนขึ้นสไลด์ |
+| 11–13 | Dashboard → Stress Test → Slide/Video | ⬜ ขั้นถัดไป: Phase 11 | |
 
 Phase 6–7 รอบก่อน (หัวข้อ PrecastFlow) เก็บไว้ที่ [_archive/after_phase5_2026-09-28/](_archive/after_phase5_2026-09-28/) แผนใหม่มาจาก [idea.md](idea.md) · spec ระบบ [skill.md](skill.md) · วิธีทำงานแบบ loop และ gate [loop.md](loop.md) · โค้ดใหม่อยู่ใน `readymix/`

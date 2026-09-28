@@ -1,0 +1,30 @@
+                       distance_km  moving_fuel_l  idle_fuel_l  fuel_l   co2_kg  idle_co2_kg  fuel_l_per_m3  delivered_m3  unserved_trips  co2_kg_low  co2_kg_high  co2_t_per_year  co2_kg_per_m3
+policy                                                                                                                                                                                           
+A_static_planned           2301.73         778.14        21.01  799.15  2138.54        56.22           2.48        324.17            0.47     1989.09      2174.50          641.56           6.60
+B_dynamic                  2292.22         775.11        12.48  787.59  2107.59        33.38           2.45        322.51            0.78     1960.31      2143.03          632.28           6.53
+B_dynamic_buffered         2294.51         775.73        16.41  792.14  2119.77        43.91           2.47        322.84            0.71     1971.64      2155.41          635.93           6.57
+C_ai_rolling               2292.24         774.90         5.15  780.05  2087.41        13.78           2.43        322.49            0.78     1941.54      2122.51          626.22           6.47
+C_ai_rolling_buffered      2297.52         776.36        13.82  790.18  2114.52        36.98           2.46        323.29            0.63     1966.76      2150.08          634.36           6.54
+                   system            baseline    scope          metric  saving_per_day  saving_pct  ci95_low  ci95_high              verdict
+2   C_ai_rolling_buffered    A_static_planned      all          co2_kg           24.02        1.12     19.57      28.61               saving
+3   C_ai_rolling_buffered    A_static_planned      all  cost_proxy_thb         1029.56        2.62    737.94    1326.91               saving
+4   C_ai_rolling_buffered    A_static_planned      all   fuel_l_per_m3            0.02        0.94      0.02       0.03               saving
+7   C_ai_rolling_buffered    A_static_planned      all  unserved_trips           -0.17      -35.71     -0.30      -0.06                worse
+10  C_ai_rolling_buffered    A_static_planned  excl_S6          co2_kg           20.94        1.03     16.37      26.09               saving
+11  C_ai_rolling_buffered    A_static_planned  excl_S6  cost_proxy_thb         1130.85        3.16    890.21    1375.53               saving
+12  C_ai_rolling_buffered    A_static_planned  excl_S6   fuel_l_per_m3            0.03        1.02      0.02       0.03               saving
+15  C_ai_rolling_buffered    A_static_planned  excl_S6  unserved_trips           -0.02      -50.00     -0.08       0.00  no clear difference
+18  C_ai_rolling_buffered  B_dynamic_buffered      all          co2_kg            5.25        0.25     -0.90      11.63  no clear difference
+19  C_ai_rolling_buffered  B_dynamic_buffered      all  cost_proxy_thb          918.82        2.34    463.29    1524.32               saving
+20  C_ai_rolling_buffered  B_dynamic_buffered      all   fuel_l_per_m3            0.01        0.40      0.00       0.02               saving
+23  C_ai_rolling_buffered  B_dynamic_buffered      all  unserved_trips            0.08       10.94      0.02       0.13               saving
+26  C_ai_rolling_buffered  B_dynamic_buffered  excl_S6          co2_kg            6.98        0.35     -0.82      14.59  no clear difference
+27  C_ai_rolling_buffered  B_dynamic_buffered  excl_S6  cost_proxy_thb          863.46        2.43    391.29    1470.40               saving
+28  C_ai_rolling_buffered  B_dynamic_buffered  excl_S6   fuel_l_per_m3            0.01        0.40      0.00       0.02               saving
+31  C_ai_rolling_buffered  B_dynamic_buffered  excl_S6  unserved_trips            0.01       14.29      0.00       0.04  no clear difference
+{
+  "G1_provenance": true,
+  "G2_independent_recompute": true,
+  "G3_chain_closes": true,
+  "G4_placeholder_in_public_range": true
+}

@@ -305,6 +305,8 @@ simulation.py
 
 ## Phase 10 — Carbon + Business Impact
 
+สถานะ (2026-09-28): **PASS** · ผลใน [PHASE10.md](phase10_carbon_business/PHASE10.md) · ค่าอ้างอิงใน `readymix/config/impact.yaml`
+
 $$CO_2 = Distance \times FuelConsumption \times EmissionFactor$$
 
 แบบดีขึ้น: $Fuel = f(Distance, Load, Traffic, Idle)$ (Ready-Mix มีเวลารถรอที่ไซต์ซึ่งกินน้ำมัน)
@@ -371,6 +373,7 @@ business_simulation.csv
 4. ~~Phase 7 AI Site Readiness (Loop 3–4)~~ ✅ ([PHASE7.md](phase7_ai_readiness/PHASE7.md))
 5. ~~Phase 8 Predictive Dynamic Optimizer (Loop 5–6)~~ ✅ ([PHASE8.md](phase8_dynamic_optimizer/PHASE8.md))
 6. ~~Phase 9 Baseline Comparison (Loop 7)~~ ✅ ([PHASE9.md](phase9_baseline_comparison/PHASE9.md): iteration 02 PASS)
-7. **Phase 10 Carbon + Business Impact (Loop 8)** ← ขั้นถัดไป
+7. ~~Phase 10 Carbon + Business Impact (Loop 8)~~ ✅ ([PHASE10.md](phase10_carbon_business/PHASE10.md))
+8. **Phase 11 Dashboard / Prototype (Loop 10)** ← ขั้นถัดไป
 
 **ไม่ย้อนกลับไปแก้ Core และไม่รื้อ Phase เก่า**

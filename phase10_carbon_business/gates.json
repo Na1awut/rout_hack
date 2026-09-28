@@ -1,0 +1,10 @@
+{
+  "gates": {
+    "G1_provenance": true,
+    "G2_independent_recompute": true,
+    "G3_chain_closes": true,
+    "G4_placeholder_in_public_range": true
+  },
+  "mismatches": [],
+  "runs": 450
+}
