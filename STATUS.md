@@ -18,6 +18,7 @@
 | 8 | Predictive Dynamic Optimizer | ✅ | [phase8_dynamic_optimizer/PHASE8.md](phase8_dynamic_optimizer/PHASE8.md) · Loop 5–6 · gate ผ่าน 5/5 · รันซ้ำบน Linux ตรง 36/36 · AI+rolling ลดรถรอ 570→128 นาที แต่ไซต์ว่างเพิ่ม (แก้ใน Phase 9) |
 | 9 | Baseline Comparison (Loop 7) | ✅ | [phase9_baseline_comparison/PHASE9.md](phase9_baseline_comparison/PHASE9.md) · iteration 01 FAIL → เพิ่ม safety buffer → iteration 02 PASS 5/5 บน fresh days 9101–9110 · C(AI) ดีกว่า B(no-AI) 218 นาที/วัน-scenario CI95 [117, 346] · ไม่นับ S6 ดีกว่าแผน static 15.2%; นับ S6 **เสมอ** · 104 tests · ⚠ freeze_id บน Linux ไม่ตรง แต่ route ตรง snapshot ต้องยืนยันบน Windows |
 | 10 | Carbon + Business Impact (Loop 8) | ✅ | [phase10_carbon_business/PHASE10.md](phase10_carbon_business/PHASE10.md) · gate 4/4 · AI เทียบแผน static: −24 kgCO₂/วัน (−1.1%, ~7.2 t/ปี), −1,030 THB/วัน (−2.6%, ~309k THB/ปี), รถรอ −35% · คุณค่าหลักคือเวลา ไม่ใช่ CO₂ · ⚠ แหล่งอ้างอิงต้องเปิดยืนยันก่อนขึ้นสไลด์ |
-| 11–13 | Dashboard → Stress Test → Slide/Video | ⬜ ขั้นถัดไป: Phase 11 | |
+| 11 | Dashboard / Prototype (Loop 10) | ✅ | [phase11_dashboard/PHASE11.md](phase11_dashboard/PHASE11.md) · `streamlit run readymix/dashboard/app.py` · BEFORE→AFTER, แผนที่, Gantt, decision trace §33, หลักฐาน 10 วัน · รันสดตรงกับ Phase 9 ทุก byte · 112 tests |
+| 12–13 | Stress Test → Slide/Video | ⬜ ขั้นถัดไป: Phase 12 | |
 
 Phase 6–7 รอบก่อน (หัวข้อ PrecastFlow) เก็บไว้ที่ [_archive/after_phase5_2026-09-28/](_archive/after_phase5_2026-09-28/) แผนใหม่มาจาก [idea.md](idea.md) · spec ระบบ [skill.md](skill.md) · วิธีทำงานแบบ loop และ gate [loop.md](loop.md) · โค้ดใหม่อยู่ใน `readymix/`

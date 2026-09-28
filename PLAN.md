@@ -322,6 +322,8 @@ $$Savings = Fuel + Labor + Vehicle + Maintenance$$
 
 ## Phase 11 — Dashboard / Prototype
 
+สถานะ (2026-09-28): **PASS** · [PHASE11.md](phase11_dashboard/PHASE11.md) · `streamlit run readymix/dashboard/app.py`
+
 ทำ **Decision Support Dashboard**: BEFORE → กด OPTIMIZE → AFTER
 แสดงแผนที่เส้นทางของรถแต่ละคัน, prediction ของแต่ละไซต์, และ KPI (↓Distance, ↓CO₂, ↓Cost, ↓Waiting, ↑On-time, ↑Utilization)
 
@@ -374,6 +376,7 @@ business_simulation.csv
 5. ~~Phase 8 Predictive Dynamic Optimizer (Loop 5–6)~~ ✅ ([PHASE8.md](phase8_dynamic_optimizer/PHASE8.md))
 6. ~~Phase 9 Baseline Comparison (Loop 7)~~ ✅ ([PHASE9.md](phase9_baseline_comparison/PHASE9.md): iteration 02 PASS)
 7. ~~Phase 10 Carbon + Business Impact (Loop 8)~~ ✅ ([PHASE10.md](phase10_carbon_business/PHASE10.md))
-8. **Phase 11 Dashboard / Prototype (Loop 10)** ← ขั้นถัดไป
+8. ~~Phase 11 Dashboard / Prototype (Loop 10)~~ ✅ ([PHASE11.md](phase11_dashboard/PHASE11.md))
+9. **Phase 12 Stress Test + Failure Cases (Loop 9)** ← ขั้นถัดไป
 
 **ไม่ย้อนกลับไปแก้ Core และไม่รื้อ Phase เก่า**
