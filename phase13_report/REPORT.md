@@ -335,8 +335,8 @@ Dashboard รันระบบจริงทุกครั้ง และแ
 | น้ำมัน / CO₂ / เงิน | [phase10_carbon_business/](../phase10_carbon_business/PHASE10.md) (`carbon_results.csv`, `business_simulation.csv`, `comparisons.csv`) |
 | Dashboard | [readymix/dashboard/app.py](../readymix/dashboard/app.py) · [screenshots](../phase11_dashboard/PHASE11.md) |
 | Stress test | [phase12_stress_test/](../phase12_stress_test/PHASE12.md) |
-| เว็บสรุปโครงการ (เล่าเรื่อง) | [PourReady](https://claude.ai/artifact/EAkmf4z3E4FtLtKFGzvkuT) |
-| เว็บเล่นย้อนรถวิ่งจริง (โต้ตอบได้) | [PourReady Live](https://claude.ai/artifact/9X7TpxptKBL7oB6GvC74pm) · ตัวสร้างข้อมูล [phase13_report/live_tool/](live_tool/README.md) |
+| เว็บสรุปโครงการ (เล่าเรื่อง) | [PourReady](https://claude.ai/artifact/EAkmf4z3E4FtLtKFGzvkuT) · โค้ดต้นฉบับ [phase13_report/site/index.html](site/index.html) |
+| เว็บเล่นย้อนรถวิ่งจริง (โต้ตอบได้) | [PourReady Live](https://claude.ai/artifact/9X7TpxptKBL7oB6GvC74pm) · โค้ดต้นฉบับ [phase13_report/site/live.html](site/live.html) · ตัวสร้างข้อมูล [phase13_report/live_tool/](live_tool/README.md) |
 
 ## ภาคผนวก ค: วิธีรันซ้ำ
 

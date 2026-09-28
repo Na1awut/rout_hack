@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PourReady</title>
+</head>
+<body>
+<style>
+  :root{
+    color-scheme:light;
+    --bg-page:#f2efe8; --bg-surface:#ffffff; --bg-sunken:#e9e4d8;
+    --ink-1:#18140f; --ink-2:#57503f; --ink-muted:#8c8371;
+    --accent:#c9500f; --accent-ink:#ffffff; --accent-2:#1c5cab;
+    --line:rgba(24,20,15,.14); --line-soft:rgba(24,20,15,.08);
+    --good:#0ca30c; --critical:#d03b3b; --warn:#b06a00;
+    --s-a:#2a78d6; --s-b:#eb6834; --s-c:#1baf7a;
+    --shadow:0 1px 2px rgba(24,20,15,.06), 0 8px 24px -12px rgba(24,20,15,.18);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      color-scheme:dark;
+      --bg-page:#0d0d0c; --bg-surface:#181815; --bg-sunken:#131311;
+      --ink-1:#f6f4ee; --ink-2:#c7c1b2; --ink-muted:#8c8371;
+      --accent:#ff7a3d; --accent-ink:#1a0e04; --accent-2:#5a9ae8;
+      --line:rgba(255,255,255,.14); --line-soft:rgba(255,255,255,.08);
+      --good:#0ca30c; --critical:#e66767; --warn:#e0a53e;
+      --s-a:#5a9ae8; --s-b:#f08556; --s-c:#3fcd94;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 28px -12px rgba(0,0,0,.55);
+    }
+  }
+  :root[data-theme="dark"]{
+    color-scheme:dark;
+    --bg-page:#0d0d0c; --bg-surface:#181815; --bg-sunken:#131311;
+    --ink-1:#f6f4ee; --ink-2:#c7c1b2; --ink-muted:#8c8371;
+    --accent:#ff7a3d; --accent-ink:#1a0e04; --accent-2:#5a9ae8;
+    --line:rgba(255,255,255,.14); --line-soft:rgba(255,255,255,.08);
+    --good:#0ca30c; --critical:#e66767; --warn:#e0a53e;
+    --s-a:#5a9ae8; --s-b:#f08556; --s-c:#3fcd94;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 28px -12px rgba(0,0,0,.55);
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  *{box-sizing:border-box}
+  body{
+    background:var(--bg-page); color:var(--ink-1);
+    font-family:"IBM Plex Sans Thai","Noto Sans Thai",system-ui,-apple-system,sans-serif;
+    padding-inline:16px; line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .disp{font-family:"Chakra Petch","IBM Plex Sans Thai",system-ui,sans-serif; font-weight:700; letter-spacing:.002em; text-wrap:balance;}
+  .mono{font-family:"IBM Plex Mono",ui-monospace,monospace; font-variant-numeric:tabular-nums;}
+  h1,h2,h3{margin:0}
+  p{margin:0}
+  a{color:inherit}
+  .wrap{max-width:920px; margin-inline:auto; padding-block:56px 96px;}
+
+  /* ---------- theme toggle ---------- */
+  .theme-row{display:flex; justify-content:flex-end; padding-top:calc(env(safe-area-inset-top,0px) + 20px);}
+  .theme-toggle{
+    display:flex; gap:2px; background:var(--bg-surface); border:1px solid var(--line);
+    border-radius:999px; padding:3px; box-shadow:var(--shadow);
+  }
+  .theme-toggle button{
+    appearance:none; border:0; background:transparent; color:var(--ink-muted);
+    font:600 12px/1 "IBM Plex Sans Thai",sans-serif; padding:7px 11px; border-radius:999px; cursor:pointer;
+  }
+  .theme-toggle button[aria-pressed="true"]{background:var(--accent); color:var(--accent-ink);}
+
+  /* ---------- hero ---------- */
+  .hero{padding-block:64px 40px; border-bottom:1px solid var(--line);}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px; font:600 12px/1 "IBM Plex Mono",monospace;
+    letter-spacing:.09em; text-transform:uppercase; color:var(--accent); margin-bottom:18px;
+  }
+  .eyebrow::before{content:""; width:7px; height:7px; border-radius:50%; background:var(--accent); display:inline-block;}
+  .hero h1{font-size:clamp(2.5rem,7vw,4.4rem); line-height:.98; margin-bottom:20px;}
+  .hero h1 em{font-style:normal; color:var(--accent);}
+  .hero-sub{max-width:56ch; color:var(--ink-2); font-size:1.05rem; margin-bottom:8px;}
+  .hero-flag{
+    margin-top:20px; display:inline-flex; align-items:center; gap:8px; font:500 12.5px/1.4 "IBM Plex Sans Thai",sans-serif;
+    color:var(--ink-muted); background:var(--bg-sunken); border:1px solid var(--line-soft);
+    border-radius:8px; padding:8px 12px;
+  }
+  .cta-live{
+    margin-top:14px; display:inline-flex; align-items:center; gap:8px; text-decoration:none;
+    font:700 13.5px/1 "IBM Plex Sans Thai",sans-serif; color:var(--accent-ink); background:var(--accent);
+    border-radius:10px; padding:11px 16px; box-shadow:var(--shadow);
+  }
+  .cta-live b{font-family:"Chakra Petch","IBM Plex Sans Thai",sans-serif;}
+  .cta-live .arrow{transition:transform .15s;}
+  .cta-live:hover .arrow{transform:translateX(3px);}
+
+  /* ---------- hero demo toggle ---------- */
+  .demo{margin-top:36px; border:1px solid var(--line); border-radius:14px; background:var(--bg-surface); box-shadow:var(--shadow); overflow:hidden;}
+  .demo-head{display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; padding:14px 18px; border-bottom:1px solid var(--line-soft);}
+  .demo-tabs{display:flex; gap:4px; background:var(--bg-sunken); border-radius:9px; padding:3px;}
+  .demo-tabs button{appearance:none; border:0; background:transparent; color:var(--ink-2); font:600 13px/1 "IBM Plex Sans Thai",sans-serif; padding:8px 13px; border-radius:7px; cursor:pointer;}
+  .demo-tabs button[aria-pressed="true"]{background:var(--bg-surface); color:var(--ink-1); box-shadow:0 1px 2px rgba(0,0,0,.12);}
+  .demo-day{font:500 12px/1 "IBM Plex Mono",monospace; color:var(--ink-muted);}
+  .demo-body{padding:18px; display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
+  @media (max-width:640px){.demo-body{grid-template-columns:repeat(2,1fr)}}
+  .dstat{display:flex; flex-direction:column; gap:5px;}
+  .dstat .k{font:600 11px/1 "IBM Plex Sans Thai",sans-serif; color:var(--ink-muted); text-transform:uppercase; letter-spacing:.06em;}
+  .dstat .v{font-family:"Chakra Petch","IBM Plex Sans Thai",sans-serif; font-weight:800; font-size:1.85rem; line-height:1;}
+  .dstat .d{font:600 12.5px/1 "IBM Plex Mono",monospace;}
+  .up{color:var(--critical)} .down{color:var(--good)}
+
+  /* ---------- route / stops ---------- */
+  .route{position:relative; margin-top:8px;}
+  .route::before{
+    content:""; position:absolute; left:19px; top:14px; bottom:14px; width:2px;
+    background:repeating-linear-gradient(var(--line) 0 6px, transparent 6px 12px);
+  }
+  @media (max-width:760px){.route::before{display:none}}
+  .stop{position:relative; padding-block:64px; border-top:1px solid var(--line);}
+  .stop:first-of-type{border-top:0}
+  .stop-head{display:grid; grid-template-columns:40px 1fr; column-gap:20px; align-items:start;}
+  @media (max-width:760px){.stop-head{grid-template-columns:1fr}}
+  .stop-num{
+    width:40px; height:40px; border-radius:50%; background:var(--bg-surface); border:2px solid var(--accent);
+    color:var(--accent); display:flex; align-items:center; justify-content:center;
+    font:700 14px/1 "IBM Plex Mono",monospace; z-index:1; box-shadow:0 0 0 6px var(--bg-page);
+  }
+  @media (max-width:760px){.stop-num{display:none}}
+  .stop-title{font-size:clamp(1.5rem,3.4vw,2.1rem); margin-bottom:14px;}
+  .stop-kicker{display:block; font:600 11.5px/1 "IBM Plex Mono",monospace; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:6px;}
+  .stop-body{max-width:64ch; color:var(--ink-2); font-size:1rem;}
+  .stop-body + .stop-body{margin-top:12px;}
+  .stop-content{grid-column:2; margin-top:8px;}
+  @media (max-width:760px){.stop-content{grid-column:1}}
+
+  /* ---------- generic bits ---------- */
+  .tiles{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:22px;}
+  @media (max-width:640px){.tiles{grid-template-columns:1fr}}
+  .tile{background:var(--bg-surface); border:1px solid var(--line); border-radius:12px; padding:16px 18px; box-shadow:var(--shadow);}
+  .tile .v{font-family:"Chakra Petch","IBM Plex Sans Thai",sans-serif; font-weight:800; font-size:2.1rem; line-height:1; color:var(--ink-1);}
+  .tile .l{margin-top:6px; font-size:13px; color:var(--ink-2);}
+  .tile .foot{margin-top:8px; font-size:11.5px; color:var(--ink-muted);}
+
+  .callouts{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:22px;}
+  @media (max-width:640px){.callouts{grid-template-columns:1fr}}
+  .callout{border:1px solid var(--line); border-radius:12px; padding:16px; background:var(--bg-surface);}
+  .callout .n{font:700 12px/1 "IBM Plex Mono",monospace; color:var(--accent); margin-bottom:8px;}
+  .callout p{font-size:13.5px; color:var(--ink-2);}
+
+  .quote{
+    margin-top:22px; border-left:3px solid var(--accent-2); background:var(--bg-sunken);
+    border-radius:0 10px 10px 0; padding:14px 18px; font:500 13.5px/1.6 "IBM Plex Mono",monospace; color:var(--ink-1);
+  }
+  .quote .tag{display:block; font:600 11px/1 "IBM Plex Sans Thai",sans-serif; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-muted); margin-bottom:6px;}
+
+  table.data{width:100%; border-collapse:collapse; margin-top:18px; font-size:13.5px;}
+  table.data th,table.data td{text-align:left; padding:9px 10px; border-bottom:1px solid var(--line-soft);}
+  table.data th{font:600 11px/1 "IBM Plex Sans Thai",sans-serif; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-muted);}
+  table.data td.num{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums; text-align:right;}
+  table.data tr.hl td{font-weight:700; color:var(--ink-1);}
+  .table-wrap{overflow-x:auto;}
+
+  .src{margin-top:16px; font-size:12px; color:var(--ink-muted);}
+  .src code{font-family:"IBM Plex Mono",monospace; background:var(--bg-sunken); padding:1px 5px; border-radius:4px;}
+
+  /* ---------- bar charts ---------- */
+  .chart{margin-top:22px; background:var(--bg-surface); border:1px solid var(--line); border-radius:14px; padding:20px 22px; box-shadow:var(--shadow);}
+  .chart-title{font:700 13px/1 "IBM Plex Sans Thai",sans-serif; margin-bottom:2px;}
+  .chart-sub{font-size:12px; color:var(--ink-muted); margin-bottom:18px;}
+  .bar-row{display:grid; grid-template-columns:140px 1fr 76px; align-items:center; gap:12px; margin-block:10px;}
+  @media (max-width:560px){.bar-row{grid-template-columns:96px 1fr 60px; gap:8px;}}
+  .bar-row .lbl{font-size:12.5px; color:var(--ink-2); font-weight:600;}
+  .bar-track{height:14px; background:var(--bg-sunken); border-radius:4px; position:relative;}
+  .bar-fill{height:100%; border-radius:4px; min-width:4px;}
+  .bar-row .val{font:600 12.5px/1 "IBM Plex Mono",monospace; text-align:right;}
+  .legend{display:flex; gap:16px; flex-wrap:wrap; margin-top:16px; padding-top:14px; border-top:1px solid var(--line-soft);}
+  .legend span{display:inline-flex; align-items:center; gap:6px; font-size:12px; color:var(--ink-2);}
+  .legend i{width:10px; height:10px; border-radius:3px; display:inline-block;}
+
+  .dv-row{display:grid; grid-template-columns:150px 1fr 60px; align-items:center; gap:10px; margin-block:12px;}
+  @media (max-width:560px){.dv-row{grid-template-columns:104px 1fr 52px; gap:6px;}}
+  .dv-row .lbl{font-size:12.5px; color:var(--ink-2); font-weight:600;}
+  .dv-track{position:relative; height:14px;}
+  .dv-mid{position:absolute; left:50%; top:-4px; bottom:-4px; width:1px; background:var(--line);}
+  .dv-bar{position:absolute; top:0; height:100%; border-radius:4px;}
+  .dv-row .val{font:700 12.5px/1 "IBM Plex Mono",monospace;}
+
+  /* ---------- fault log ---------- */
+  .log{background:#141210; border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin-top:22px; overflow-x:auto;}
+  :root[data-theme="light"] .log, :root:not([data-theme="dark"]) .log{background:#151310;}
+  .log-line{font:400 12.5px/1.9 "IBM Plex Mono",monospace; white-space:pre; color:#d8d2c4;}
+  .log-line .tag{color:#ff9a5c; font-weight:600;}
+  .log-line .ok{color:#5fd67f; font-weight:600;}
+
+  .check-grid{display:grid; grid-template-columns:1fr 1fr; gap:10px 24px; margin-top:20px;}
+  @media (max-width:640px){.check-grid{grid-template-columns:1fr}}
+  .check{display:flex; gap:10px; align-items:flex-start; font-size:13.5px; color:var(--ink-2);}
+  .check .c{flex:0 0 auto; width:18px; height:18px; border-radius:50%; background:var(--good); color:#08240a; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; margin-top:2px;}
+
+  .limits{margin-top:22px; display:grid; gap:10px;}
+  .limit{display:grid; grid-template-columns:22px 1fr; gap:10px; font-size:13.5px; color:var(--ink-2);}
+  .limit .m{color:var(--warn); font-weight:800;}
+
+  footer{margin-top:40px; padding-top:28px; border-top:1px solid var(--line); display:flex; flex-direction:column; gap:14px;}
+  footer .brand{font-family:"Chakra Petch","IBM Plex Sans Thai",sans-serif; font-weight:800; font-size:1.4rem;}
+  footer .cmd{background:var(--bg-sunken); border:1px solid var(--line-soft); border-radius:8px; padding:10px 14px; font:400 12px/1.6 "IBM Plex Mono",monospace; color:var(--ink-2);}
+  footer .fine{font-size:12px; color:var(--ink-muted);}
+
+  [hidden]{display:none!important}
+</style>
+
+<div class="wrap">
+  <div class="theme-row">
+    <div class="theme-toggle" role="group" aria-label="โหมดสี">
+      <button type="button" data-theme-btn="light" aria-pressed="false">Light</button>
+      <button type="button" data-theme-btn="dark" aria-pressed="false">Dark</button>
+      <button type="button" data-theme-btn="system" aria-pressed="true">Auto</button>
+    </div>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <span class="eyebrow">Ready-Mix Dispatch · AI + Optimizer · ข้อมูลจำลอง</span>
+    <h1 class="disp">รถไม่ต้องรอ <em>ไซต์ไม่ต้องรอ</em></h1>
+    <p class="hero-sub">ทำนายว่าไซต์ก่อสร้างจะพร้อมเทคอนกรีตกี่โมง แล้วให้ระบบตัดสินใจว่าจะปล่อยรถโม่คันไหนเมื่อไร ทดสอบบนโลกจำลอง 10 วันใหม่ที่ไม่เคยใช้เทรนหรือจูนค่าใด ๆ มาก่อน</p>
+    <p class="hero-sub" style="margin-top:10px">รถรอเฉลี่ยลดลง <strong style="color:var(--ink-1)">35%</strong> · on-time ดีขึ้น <strong style="color:var(--ink-1)">3.4 จุด</strong> · ต้นทุนที่วัดได้ลดลง <strong style="color:var(--ink-1)">~1,030 บาท/วัน</strong> ต่อ plant</p>
+    <span class="hero-flag">⚠ ข้อมูลปฏิบัติการทั้งหมดเป็น SIMULATED · ตัวคูณเงิน/CO₂ อ้างอิงแหล่งสาธารณะ (ดูสต็อป 08)</span>
+    <div>
+      <a class="cta-live" href="live.html">
+        🚚 <b>เล่นย้อนรถวิ่งจริง</b> — เลือกสถานการณ์ เทียบ 2 ระบบสด ๆ ที่ PourReady Live <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <div class="demo">
+      <div class="demo-head">
+        <div class="demo-tabs" role="tablist" aria-label="เทียบระบบ">
+          <button type="button" data-demo="before" aria-pressed="true">แผนเดิม (Static)</button>
+          <button type="button" data-demo="after" aria-pressed="false">AI + Optimizer</button>
+        </div>
+        <span class="demo-day">ตัวอย่าง 1 วัน · S3 ไซต์ล่าช้า · day 9101</span>
+      </div>
+      <div class="demo-body">
+        <div class="dstat"><span class="k">รถรอที่ไซต์</span><span class="v mono" data-v-before="406" data-v-after="338">406</span><span class="d down" data-d-before="—" data-d-after="↓ 68 นาที">—</span></div>
+        <div class="dstat"><span class="k">ไซต์ว่างรอรถ</span><span class="v mono" data-v-before="311" data-v-after="317">311</span><span class="d up" data-d-before="—" data-d-after="↑ 6 นาที">—</span></div>
+        <div class="dstat"><span class="k">On-time</span><span class="v mono" data-v-before="93.5%" data-v-after="82.3%">93.5%</span><span class="d up" data-d-before="—" data-d-after="↓ 11.2 จุด">—</span></div>
+        <div class="dstat"><span class="k">น้ำมัน</span><span class="v mono" data-v-before="744.6" data-v-after="743.2">744.6</span><span class="d down" data-d-before="—" data-d-after="↓ 1.4 ลิตร">—</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ROUTE ============ -->
+  <div class="route">
+
+    <!-- 01 PROBLEM -->
+    <section class="stop">
+      <div class="stop-head">
+        <div class="stop-num">01</div>
+        <div>
+          <span class="stop-kicker">Problem</span>
+          <h2 class="disp stop-title">คอนกรีตรอไม่ได้ แต่ไซต์ไม่เคยพร้อมตรงเวลา</h2>
+          <p class="stop-body">คอนกรีตผสมเสร็จมีอายุจำกัด ผสมแล้วต้องเทให้ทันเวลา งานเทหนึ่งงานใช้รถหลายเที่ยวต่อกัน ถ้าเที่ยวถัดไปมาช้า การเทจะขาดช่วง เสี่ยงเกิดรอยต่อในเนื้อคอนกรีต (cold joint)</p>
+          <p class="stop-body">ในทางกลับกัน ไซต์ก่อสร้างพร้อมตามนัดไม่บ่อยนัก — แบบหล่อยังไม่เสร็จ ปั๊มเสีย ทีมมาช้า และรถติดก็เปลี่ยนไปตามเวลา <strong style="color:var(--ink-1)">ไม่มีใครในระบบรู้แน่ว่าไซต์จะพร้อมเมื่อไรจริง ๆ</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 WHY ROUTING ALONE ISN'T ENOUGH -->
+    <section class="stop">
+      <div class="stop-head">
+        <div class="stop-num">02</div>
+        <div>
+          <span class="stop-kicker">Why Current Routing Is Not Enough</span>
+          <h2 class="disp stop-title">จัดเส้นทางเก่งแค่ไหนก็ไม่พอ</h2>
+          <div class="stop-content">
+            <p class="stop-body">ก่อนแตะ AI เราสร้างโลกจำลองก่อนแล้วพบ 2 เรื่องที่เปลี่ยนทิศทางทั้งโครงการ:</p>
+            <div class="callouts">
+              <div class="callout">
+                <div class="n">01</div>
+                <p><strong style="color:var(--ink-1)">ระยะทางแทบตายตัว</strong> — รถหนึ่งคันไปได้ไซต์เดียวต่อเที่ยวแล้วต้องกลับ plant เส้นทางจึงมีคำตอบเดียว solver ตอบระยะทางตรงกับ Σ 2·d(plant, site) ที่คำนวณด้วยมือทุกครั้ง</p>
+              </div>
+              <div class="callout">
+                <div class="n">02</div>
+                <p><strong style="color:var(--ink-1)">การตัดสินใจจริงคือ "เมื่อไร" ไม่ใช่ "ทางไหน"</strong> — ปรับแผนตามสถานการณ์ (ไม่มี AI) ลดรถรอได้ 26–61% แต่ไซต์ว่างเพิ่มขึ้น 11–102% ทุกครั้ง</p>
+              </div>
+              <div class="callout">
+                <div class="n">03</div>
+                <p><strong style="color:var(--ink-1)">CO₂ จากการจอดรอมีน้อย</strong> — คิดเป็นแค่ 0.4–4.7% ของน้ำมันทั้งหมด คุณค่าจึงไม่ควรอยู่ที่ carbon เป็นหลัก</p>
+              </div>
+            </div>
+            <p class="src">ที่มา: Phase 6 Ready-Mix Simulation · <code>phase6_readymix_simulation/PHASE6.md</code></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 INSIGHT -->
+    <section class="stop">
+      <div class="stop-head">
+        <div class="stop-num">03</div>
+        <div>
+          <span class="stop-kicker">Our Insight</span>
+          <h2 class="disp stop-title">ถ้าทายเวลาไซต์พร้อมได้แม่น น่าจะลดได้ทั้งสองฝั่งพร้อมกัน</h2>
+          <p class="stop-body">รถรอกับไซต์รอไม่จำเป็นต้องแลกกัน ถ้ารู้เวลาไซต์พร้อม<em style="font-style:normal;color:var(--ink-1)">จริง</em>ล่วงหน้า — ไม่ใช่แค่เวลาที่นัดไว้ — ระบบจะปล่อยรถให้ถึงพอดีก่อนไซต์พร้อมเล็กน้อยได้ นี่คือสมมติฐานหลักที่ทั้งโครงการต้องพิสูจน์ ไม่ใช่แค่ "ทำ AI ให้ทันสมัย"</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 SOLUTION -->
+    <section class="stop">
+      <div class="stop-head">
+        <div class="stop-num">04</div>
+        <div>
+          <span class="stop-kicker">Solution</span>
+          <h2 class="disp stop-title">AI ทำนาย → Optimizer ตัดสินใจ → ปล่อยรถ</h2>
+          <div class="stop-content">
+            <p class="stop-body">ทุก 15 นาที หรือทันทีที่มีข่าวใหม่ (ประกาศล่าช้า, ปั๊มเสีย, รายงานความคืบหน้า) ระบบทำนายเวลาไซต์พร้อมใหม่ แล้วให้ optimizer เลือกเวลาปล่อยรถแต่ละคันเพื่อให้ถึงก่อนไซต์พร้อมเล็กน้อย</p>
+            <div class="callouts">
+              <div class="callout"><div class="n">RULE 01</div><p>Core solver ที่ freeze แล้ว<strong style="color:var(--ink-1)">ห้ามแก้</strong> — ของใหม่อยู่คนละไฟล์ทั้งหมด</p></div>
+              <div class="callout"><div class="n">RULE 02</div><p>ห้ามใช้ข้อมูลอนาคต — ระบบเห็นเฉพาะสิ่งที่เกิดขึ้นแล้ว ณ เวลานั้น</p></div>
+              <div class="callout"><div class="n">RULE 03</div><p>AI ต้องมีทางถอย — มั่นใจต่ำ/ข้อมูลผิดปกติ/พัง → ใช้กฎสำรองทันที</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 HOW ALGORITHM WORKS -->
+    <section class="stop">
+      <div class="stop-head">
+        <div class="stop-num">05</div>
+        <div>
+          <span class="stop-kicker">How Algorithm Works</span>
+          <h2 class="disp stop-title">ทุกคำสั่งปล่อยรถอธิบายได้ ไม่ใช่กล่องดำ</h2>
+          <div class="stop-content">
+            <p class="stop-body">Optimizer คำนวณเวลาปล่อยรถย้อนกลับจากเป้าเวลาถึงไซต์ (คำทำนาย − เวลาเผื่อ − เวลาเดินทางตามจราจรตอนนั้น) แล้วแบ่ง loading bay ให้งานที่เร่งที่สุดก่อน ตัวอย่างจริงจาก log:</p>
+            <div class="quote">
+              <span class="tag">Decision Log · S3 ไซต์ล่าช้า · day 9101</span>
+              07:05  RELEASE  T015 → S008<br>
+              &nbsp;&nbsp;source: site_ready_v3  ·  predicted_ready: 07:47  ·  delay_risk: 28%  ·  confidence: 0.75<br>
+              &nbsp;&nbsp;target_arrival: 07:42  (เผื่อ 5 นาที)
+            </div>
+            <p class="src">ที่มา: <code>phase11_dashboard/</code> — แดชบอร์ดที่รันสดและตรวจแล้วว่า log ตรงกับผลการทดลองทุก byte</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 CVRP BENCHMARK -->
+    <section class="stop">
+      <div class="stop-head">
+        <div class="stop-num">06</div>
+        <div>
+          <span class="stop-kicker">CVRP Benchmark</span>
+          <h2 class="disp stop-title">Solver หลักพิสูจน์แล้วบนโจทย์มาตรฐาน</h2>
+          <div class="stop-content">
+            <p class="stop-body">ก่อนต่อยอดเป็นระบบ AI เรา freeze solver แล้วทดสอบกับ CVRPLIB 24 โจทย์จริง (21–935 จุดส่ง) หาคำตอบได้ครบ 24/24 ห่างจากคำตอบที่ดีที่สุดที่รู้จักเฉลี่ย 0.73%</p>
+            <div class="table-wrap">
+              <table class="data">
+                <thead><tr><th>Instance</th><th style="text-align:right">จุดส่ง</th><th style="text-align:right">Optimal</th><th style="text-align:right">คำตอบของเรา</th><th style="text-align:right">Gap</th></tr></thead>
+                <tbody>
+                  <tr><td>A-n32-k5</td><td class="num">31</td><td class="num">784</td><td class="num">784</td><td class="num" style="color:var(--good)">0.00%</td></tr>
+                  <tr><td>B-n31-k5</td><td class="num">30</td><td class="num">672</td><td class="num">672</td><td class="num" style="color:var(--good)">0.00%</td></tr>
+                  <tr><td>P-n40-k5</td><td class="num">39</td><td class="num">458</td><td class="num">458</td><td class="num" style="color:var(--good)">0.00%</td></tr>
+                  <tr class="hl"><td>รวม 24 โจทย์ CVRPLIB</td><td class="num">21–935</td><td class="num">—</td><td class="num">24/24 feasible</td><td class="num">เฉลี่ย 0.73%</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="src">Engine: PyVRP 0.14.0, freeze_id <code>bf63a542f2de</code> · ที่มา: <code>phase5_weakness_fix/PHASE5.md</code>, <code>phase5_weakness_fix/results/v1_1_vs_v1_0.csv</code></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 REAL WORLD SIMULATION -->
+    <section class="stop">
+      <div class="stop-head">
+        <div class="stop-num">07</div>
+        <div>
+          <span class="stop-kicker">Real-world Simulation</span>
+          <h2 class="disp stop-title">AI ชนะ "ระบบปรับแผนแบบเดียวกันที่ไม่มี AI" จริง</h2>
+          <div class="stop-content">
+            <p class="stop-body">เทียบ 3 ระบบในวันเดียวกัน สถานการณ์เดียวกัน บนวันทดสอบใหม่ 10 วันที่ไม่เคยใช้จูนค่าใด ๆ (450 run) — B และ C ใช้ optimizer ตัวเดียวกันทุกอย่าง ต่างกันแค่ B ไม่มี AI</p>
+
+            <div class="chart">
+              <div class="chart-title">Operational Score — รถรอ + ไซต์ว่าง (ยิ่งต่ำยิ่งดี)</div>
+              <div class="chart-sub">ค่าเฉลี่ยนาที/วัน · 10 วันใหม่ × 9 สถานการณ์</div>
+
+              <div class="bar-row">
+                <span class="lbl">A แผนตายตัว</span>
+                <div class="bar-track"><div class="bar-fill" style="width:89.6%;background:var(--s-a)"></div></div>
+                <span class="val">1,839</span>
+              </div>
+              <div class="bar-row">
+                <span class="lbl">B ไม่มี AI</span>
+                <div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--s-b)"></div></div>
+                <span class="val">2,053</span>
+              </div>
+              <div class="bar-row">
+                <span class="lbl">C AI + Optimizer</span>
+                <div class="bar-track"><div class="bar-fill" style="width:89.4%;background:var(--s-c)"></div></div>
+                <span class="val">1,835</span>
+              </div>
+              <div class="legend">
+                <span><i style="background:var(--s-a)"></i>แผนตายตัว (baseline)</span>
+                <span><i style="background:var(--s-b)"></i>ปรับแผน ไม่มี AI</span>
+                <span><i style="background:var(--s-c)"></i>ปรับแผนด้วย AI</span>
+              </div>
+            </div>
+
+            <div class="tiles">
+              <div class="tile"><div class="v">218 <span style="font-size:1.1rem;color:var(--ink-muted)">นาที/วัน</span></div><div class="l">C ดีกว่า B — CI95 [117, 346] ดีกว่าครบทั้ง 10 วัน</div></div>
+              <div class="tile"><div class="v">15.2%</div><div class="l">C ดีกว่าแผนตายตัว A (ไม่นับวันงานล้น S6)</div><div class="foot">นับทุกสถานการณ์รวม S6 = เสมอกัน</div></div>
+              <div class="tile"><div class="v">−35%</div><div class="l">รถรอลดลง เทียบแผนตายตัว · on-time +3.4 จุด</div></div>
+            </div>
+            <p class="src">ที่มา: <code>phase9_baseline_comparison/iteration_02/PHASE9.md</code> · gate ผ่าน 5/5 · รอบแรก (iteration 01) ไม่ผ่านเกณฑ์ เก็บผลไว้ครบ ไม่ได้ลบทิ้ง</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 BUSINESS + CARBON -->
+    <section class="stop">
+      <div class="stop-head">
+        <div class="stop-num">08</div>
+        <div>
+          <span class="stop-kicker">Business + Carbon Impact</span>
+          <h2 class="disp stop-title">แปลงเวลาที่ประหยัดได้เป็นบาทและ CO₂</h2>
+          <div class="stop-content">
+            <p class="stop-body">คำนวณน้ำมันใหม่จาก log ดิบ (ตรงกับ Phase 9 ครบ 450/450 run) แล้วคูณด้วยค่าจากแหล่งอ้างอิงสาธารณะ — ทุกค่ามี source กำกับ ไม่มีตัวเลขที่พิมพ์ขึ้นเอง</p>
+            <div class="tiles">
+              <div class="tile"><div class="v">−1,030 <span style="font-size:1.1rem;color:var(--ink-muted)">บาท/วัน</span></div><div class="l">ต้นทุนที่วัดได้ (น้ำมัน + คนขับตอนรอ + ทีมไซต์ตอนว่าง)</div><div class="foot">≈ 309,000 บาท/ปี/plant · CI95 [738, 1,327]</div></div>
+              <div class="tile"><div class="v">−24 <span style="font-size:1.1rem;color:var(--ink-muted)">kg CO₂/วัน</span></div><div class="l">ลดลง 1.1% เทียบแผนตายตัว</div><div class="foot">≈ 7.2 ตัน/ปี/plant · CI95 [19.6, 28.6]</div></div>
+              <div class="tile"><div class="v">−2.5 <span style="font-size:1.1rem;color:var(--ink-muted)">ชม./วัน</span></div><div class="l">เวลารถจอดรอที่ไซต์</div><div class="foot">≈ 745 ชม./ปี/plant</div></div>
+            </div>
+            <div class="table-wrap">
+              <table class="data">
+                <thead><tr><th>ตัวคูณ</th><th style="text-align:right">ค่าที่ใช้</th><th>แหล่งที่มา</th></tr></thead>
+                <tbody>
+                  <tr><td>CO₂ ต่อลิตรดีเซล</td><td class="num">2.676 kg</td><td>IPCC 2006 default emission factor</td></tr>
+                  <tr><td>ราคาดีเซล</td><td class="num">39.14 บาท/ล.</td><td>GlobalPetrolPrices, ก.ย. 2026</td></tr>
+                  <tr><td>ค่าจ้างคนขับ</td><td class="num">172 บาท/ชม.</td><td>SalaryExpert, กรุงเทพฯ</td></tr>
+                  <tr><td>ค่าแรงทีมไซต์</td><td class="num">50 บาท/คน-ชม.</td><td>ค่าแรงขั้นต่ำกรุงเทพฯ (ขอบล่าง)</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="src">ที่มา: <code>phase10_carbon_business/PHASE10.md</code>, <code>readymix/config/impact.yaml</code> — ทุกค่าเป็น PUBLIC_SOURCE หรือ DERIVED พร้อมลิงก์ (ต้องเปิดยืนยันก่อนใช้จริง)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 SCALE / IMPLEMENTATION -->
+    <section class="stop">
+      <div class="stop-head">
+        <div class="stop-num">09</div>
+        <div>
+          <span class="stop-kicker">Scale / Implementation</span>
+          <h2 class="disp stop-title">ทดสอบให้พังก่อนใช้จริง</h2>
+          <div class="stop-content">
+            <p class="stop-body">รัน 7 สถานการณ์หนักบนวันใหม่อีก 5 วัน (105 run) และจงใจทำให้ระบบพังอีก 11 แบบ — ไม่มี crash และเจอบั๊กจริง 2 ตัวที่แก้แล้วก่อนส่งผล</p>
+
+            <div class="chart">
+              <div class="chart-title">AI เทียบแผนตายตัว ในสถานการณ์หนัก (% เปลี่ยนแปลง Operational Score)</div>
+              <div class="chart-sub">ลบ = AI ดีกว่า &nbsp;·&nbsp; บวก = AI แย่กว่า</div>
+
+              <div class="dv-row"><span class="lbl">ไซต์วุ่น (delay หลายจุด)</span>
+                <div class="dv-track"><div class="dv-mid"></div><div class="dv-bar" style="right:50%;width:23.65%;background:var(--good)"></div></div>
+                <span class="val" style="color:var(--good)">−47.3%</span></div>
+              <div class="dv-row"><span class="lbl">AI ทายผิด</span>
+                <div class="dv-track"><div class="dv-mid"></div><div class="dv-bar" style="right:50%;width:16.15%;background:var(--good)"></div></div>
+                <span class="val" style="color:var(--good)">−32.3%</span></div>
+              <div class="dv-row"><span class="lbl">ทุกอย่างพร้อมกัน</span>
+                <div class="dv-track"><div class="dv-mid"></div><div class="dv-bar" style="right:50%;width:1.35%;background:var(--good)"></div></div>
+                <span class="val" style="color:var(--good)">−2.7%</span></div>
+              <div class="dv-row"><span class="lbl">รถเสีย 4 คัน</span>
+                <div class="dv-track"><div class="dv-mid"></div><div class="dv-bar" style="left:50%;width:2.5%;background:var(--critical)"></div></div>
+                <span class="val" style="color:var(--critical)">+5.0%</span></div>
+              <div class="dv-row"><span class="lbl">รถติดสุดขีด + ฝน</span>
+                <div class="dv-track"><div class="dv-mid"></div><div class="dv-bar" style="left:50%;width:5.25%;background:var(--critical)"></div></div>
+                <span class="val" style="color:var(--critical)">+10.5%</span></div>
+              <div class="dv-row"><span class="lbl">รถเหลือ 10 คัน</span>
+                <div class="dv-track"><div class="dv-mid"></div><div class="dv-bar" style="left:50%;width:8.2%;background:var(--critical)"></div></div>
+                <span class="val" style="color:var(--critical)">+16.4%</span></div>
+              <div class="dv-row"><span class="lbl">งานเพิ่ม 50%</span>
+                <div class="dv-track"><div class="dv-mid"></div><div class="dv-bar" style="left:50%;width:12.45%;background:var(--critical)"></div></div>
+                <span class="val" style="color:var(--critical)">+24.9%</span></div>
+            </div>
+
+            <p class="stop-body" style="margin-top:20px"><strong style="color:var(--ink-1)">AI เก่งเมื่อปัญหาอยู่ที่ไซต์ แต่แพ้เมื่อรถไม่พอ</strong> — ระบบตอบด้วยคำเตือนแทนที่จะฝืนแล้วพัง:</p>
+            <div class="log">
+              <div class="log-line"><span class="tag">[F09]</span> ไม่มีรถเข้ากะเลย       → <span class="ok">DEGRADED</span>  "คาดว่าส่งไม่ทัน 77 เที่ยว ต้องเพิ่มรถอีก 12 คัน"</div>
+              <div class="log-line"><span class="tag">[F05]</span> ไฟล์โมเดล AI หาย       → <span class="ok">DEGRADED</span>  "AI ใช้ไม่ได้ ใช้ dispatch แบบไม่มี AI แทน"</div>
+              <div class="log-line"><span class="tag">[F04]</span> AI crash ทุกครั้งที่เรียก → <span class="ok">DEGRADED</span>  fallback 212 ครั้ง log ตรงกับไม่มี AI ทุก byte</div>
+              <div class="log-line"><span class="tag">[F07]</span> ไฟล์ถูกแก้หลังสร้าง     → <span class="ok">REJECTED_DATA</span>  "sha256 ไม่ตรง manifest"</div>
+            </div>
+
+            <p class="stop-body" style="margin-top:28px">เชื่อถือได้เพราะ:</p>
+            <div class="check-grid">
+              <div class="check"><span class="c">✓</span>ตั้งเกณฑ์ผ่านและ commit config ก่อนรันทุกครั้ง</div>
+              <div class="check"><span class="c">✓</span>แยกวันเทรน/ทดลอง/ประเมิน ใช้วันประเมินครั้งเดียว</div>
+              <div class="check"><span class="c">✓</span>เก็บผลที่ไม่ผ่านไว้ครบ ไม่เลือกเฉพาะผลดี</div>
+              <div class="check"><span class="c">✓</span>รันซ้ำข้ามเครื่องได้ log ตรงกันทุก byte</div>
+              <div class="check"><span class="c">✓</span>117 automated tests · ตัวตรวจข้อมูล/แผนแยกจากตัวสร้าง</div>
+              <div class="check"><span class="c">✓</span>Core solver ถูก freeze ไม่เคยถูกแก้ตลอดโครงการ</div>
+            </div>
+
+            <p class="stop-body" style="margin-top:28px">สิ่งที่ยังไม่ทำและต้องบอกตรง ๆ:</p>
+            <div class="limits">
+              <div class="limit"><span class="m">!</span>ข้อมูลปฏิบัติการทั้งหมดเป็นข้อมูลจำลอง ยังไม่ทดสอบกับบริษัทจริง</div>
+              <div class="limit"><span class="m">!</span>เมื่องานล้นกำลังรถ ระบบยังทำได้แค่เตือน ยังไม่มีโหมดจัดการเฉพาะ</div>
+              <div class="limit"><span class="m">!</span>โมเดล 1 plant รถเหมือนกันทุกคัน 1 เที่ยวต่อ 1 ไซต์ — ยังไม่รองรับหลาย plant</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="brand disp">PourReady</div>
+    <p class="fine">AI + Optimizer สำหรับจัดส่งคอนกรีตผสมเสร็จ · รายงานฉบับเต็มและไฟล์ผลทุกตัวอยู่ใน repo ของทีม (<code style="font-family:inherit">phase13_report/REPORT.md</code>) · เล่นย้อนรถวิ่งจริงได้ที่ <a href="live.html" style="color:var(--accent-2);font-weight:700;text-decoration:none">PourReady Live →</a> · แดชบอร์ดฉบับผู้ดูแลระบบรันด้วย:</p>
+    <div class="cmd">streamlit run readymix/dashboard/app.py</div>
+    <p class="fine">จัดทำเพื่อการแข่งขัน Hackathon 2026 · ทุกตัวเลขในหน้านี้อ้างอิงไฟล์ผลการทดลองที่ระบุไว้ในแต่ละส่วน</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var root = document.documentElement;
+  var KEY = "pourready-theme";
+  function apply(mode){
+    if(mode === "light" || mode === "dark"){ root.setAttribute("data-theme", mode); }
+    else { root.removeAttribute("data-theme"); }
+    document.querySelectorAll("[data-theme-btn]").forEach(function(b){
+      b.setAttribute("aria-pressed", String(b.getAttribute("data-theme-btn") === mode));
+    });
+  }
+  var saved = "system";
+  try { saved = localStorage.getItem(KEY) || "system"; } catch(e){}
+  apply(saved);
+  document.querySelectorAll("[data-theme-btn]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var mode = btn.getAttribute("data-theme-btn");
+      apply(mode);
+      try { localStorage.setItem(KEY, mode); } catch(e){}
+    });
+  });
+
+  var demoBtns = document.querySelectorAll("[data-demo]");
+  function setDemo(which){
+    demoBtns.forEach(function(b){ b.setAttribute("aria-pressed", String(b.getAttribute("data-demo") === which)); });
+    document.querySelectorAll(".dstat .v").forEach(function(el){
+      el.textContent = el.getAttribute("data-v-" + which);
+    });
+    document.querySelectorAll(".dstat .d").forEach(function(el){
+      el.textContent = el.getAttribute("data-d-" + which);
+      el.style.visibility = which === "before" ? "hidden" : "visible";
+    });
+  }
+  demoBtns.forEach(function(btn){
+    btn.addEventListener("click", function(){ setDemo(btn.getAttribute("data-demo")); });
+  });
+  setDemo("before");
+})();
+</script>
+
+</body>
+</html>
