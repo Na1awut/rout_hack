@@ -8,7 +8,7 @@ import numpy as np
 import pandas as pd
 
 HERE = Path(__file__).resolve().parent
-ROOT = HERE.parent
+ROOT = HERE.parents[1]
 sys.path.insert(0, str(ROOT))
 from readymix.ai.predictor import SiteReadyPredictor
 from readymix.application.dynamic_dispatch import DynamicDispatch
