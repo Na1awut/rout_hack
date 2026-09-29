@@ -1,0 +1,8 @@
+{
+  "readymix/application/buffered_dispatch.py": "3c5ad76d8ad296f42c2a34303e172ce50a4ef924bd96a10c1eadddb6691f046a",
+  "readymix/application/dynamic_dispatch.py": "63de69505f54d2878a3e7b74dbc85618eb902cace595a548de8dde7913bb5756",
+  "readymix/application/extended_solver.py": "ab5bc741cc1dbbd9d5eac38ee20ebb5b4141e567acf43a5438fd7ff72784b283",
+  "readymix/ai/models/site_ready_v3.joblib": "4b3d4b10b6ec8a4878c451f3c8c70942901473d55cf5dc6bed9e2d34fd390dda",
+  "phase9_baseline_comparison/iteration_02/config.json": "cc82f57772f181873a891cde087cce42e9021c9b75d9eb6f42b837d3b7f010f4",
+  "phase9_baseline_comparison/iteration_02/selection.json": "f13a075277ee3e731a5eff5bfbef687270d587233b0898c0fd90e89cf7bb9072"
+}

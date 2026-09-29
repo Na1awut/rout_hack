@@ -1,0 +1,51 @@
+9001 S0_normal complete
+9001 S1_light_traffic complete
+9001 S2_peak_traffic complete
+9001 S3_site_delay complete
+9001 S4_multi_site_delay complete
+9001 S5_pump_failure complete
+9001 S6_high_demand complete
+9001 S7_mixed_disruption complete
+9001 S8_ai_prediction_error complete
+9002 S0_normal complete
+9002 S1_light_traffic complete
+9002 S2_peak_traffic complete
+9002 S3_site_delay complete
+9002 S4_multi_site_delay complete
+9002 S5_pump_failure complete
+9002 S6_high_demand complete
+9002 S7_mixed_disruption complete
+9002 S8_ai_prediction_error complete
+9003 S0_normal complete
+9003 S1_light_traffic complete
+9003 S2_peak_traffic complete
+9003 S3_site_delay complete
+9003 S4_multi_site_delay complete
+9003 S5_pump_failure complete
+9003 S6_high_demand complete
+9003 S7_mixed_disruption complete
+9003 S8_ai_prediction_error complete
+9004 S0_normal complete
+9004 S1_light_traffic complete
+9004 S2_peak_traffic complete
+9004 S3_site_delay complete
+9004 S4_multi_site_delay complete
+9004 S5_pump_failure complete
+9004 S6_high_demand complete
+9004 S7_mixed_disruption complete
+9004 S8_ai_prediction_error complete
+9005 S0_normal complete
+9005 S1_light_traffic complete
+9005 S2_peak_traffic complete
+9005 S3_site_delay complete
+9005 S4_multi_site_delay complete
+9005 S5_pump_failure complete
+9005 S6_high_demand complete
+9005 S7_mixed_disruption complete
+9005 S8_ai_prediction_error complete
+                  total_waiting_min  site_idle_min  operational_score_min  unserved_trips  on_time_rate  fuel_liters  total_distance_km
+policy                                                                                                                                 
+A_static_planned         458.600000    1207.377778            2821.533333        1.155556      0.593600   837.306667        2409.228889
+B_dynamic                251.511111    1552.400000            3426.133333        1.622222      0.554467   824.795556        2401.124444
+C_ai_rolling              99.133333    1603.377778            3346.955556        1.644444      0.521844   817.291111        2401.897778
+{'gates': {'all_execution_valid': True, 'no_predictor_failure': True, 'operational_gain_ci_positive': False, 'no_more_unserved': False, 'on_time_within_tolerance': False}, 'mean_gain_min': 79.17777777777778, 'ci95': [-32.955555555555556, 170.04444444444442], 'paired_day_gains': [135.0, 210.77777777777777, -107.44444444444444, -1.1111111111111112, 158.66666666666666], 'independent_day_seeds': 5, 'runs': 135, 'caveat': 'Only 5 independent day seeds, each with 9 paired scenarios; CI is exploratory.'}

@@ -286,6 +286,8 @@ simulation.py
 
 ## Phase 9 — Baseline Comparison
 
+สถานะ (2026-09-28): **PASS** · ผลและข้อจำกัดใน [PHASE9.md](phase9_baseline_comparison/PHASE9.md) · ใน V1 route ของทุกวิธีเหมือนกัน (Phase 6) จึงเทียบที่เวลาปล่อยรถ A static / B dynamic / C AI
+
 ห้ามโชว์ตัวเลขเดี่ยวๆ ที่ไม่มี context ต้องเทียบกับ baseline อย่างน้อย 3 ตัว:
 
 1. Naive / current planning (planned time, ไม่ re-optimize)
@@ -303,6 +305,8 @@ simulation.py
 
 ## Phase 10 — Carbon + Business Impact
 
+สถานะ (2026-09-28): **PASS** · ผลใน [PHASE10.md](phase10_carbon_business/PHASE10.md) · ค่าอ้างอิงใน `readymix/config/impact.yaml`
+
 $$CO_2 = Distance \times FuelConsumption \times EmissionFactor$$
 
 แบบดีขึ้น: $Fuel = f(Distance, Load, Traffic, Idle)$ (Ready-Mix มีเวลารถรอที่ไซต์ซึ่งกินน้ำมัน)
@@ -318,12 +322,16 @@ $$Savings = Fuel + Labor + Vehicle + Maintenance$$
 
 ## Phase 11 — Dashboard / Prototype
 
+สถานะ (2026-09-28): **PASS** · [PHASE11.md](phase11_dashboard/PHASE11.md) · `streamlit run readymix/dashboard/app.py`
+
 ทำ **Decision Support Dashboard**: BEFORE → กด OPTIMIZE → AFTER
 แสดงแผนที่เส้นทางของรถแต่ละคัน, prediction ของแต่ละไซต์, และ KPI (↓Distance, ↓CO₂, ↓Cost, ↓Waiting, ↑On-time, ↑Utilization)
 
 ---
 
 ## Phase 12 — Stress Test + Failure Cases
+
+สถานะ (2026-09-28): **PASS** · [PHASE12.md](phase12_stress_test/PHASE12.md)
 
 - **Scenario:** Normal / Peak Demand / Vehicle Shortage / High Fuel Price / หลายไซต์ delay พร้อมกัน / AI ทำนายผิด และหลายขนาดโจทย์ เพื่อพิสูจน์ว่าไม่ได้เลือกเคสมาโชว์
 - **ทำให้ระบบพังเอง:** demand เกิน fleet capacity, ไซต์ที่ไปไม่ถึง, รถเสีย, demand พุ่ง +50%, ข้อมูลขาด
@@ -366,7 +374,12 @@ business_simulation.csv
 1. ~~Phase 1–5: Solver Foundation~~ ✅ (CORE-CVRP v1.1, freeze_id `bf63a542f2de`)
 2. ~~Loop 0 Regression Lock~~ ✅ ([notes](phase6_readymix_simulation/loop_00_regression_lock/notes.md))
 3. ~~Phase 6 Ready-Mix Problem & Simulation~~ ✅ ([PHASE6.md](phase6_readymix_simulation/PHASE6.md): Loop 1 Simulation, Loop 2 Non-AI Baseline)
-4. **Phase 7 AI Site Readiness (Loop 3–4)** ← ขั้นถัดไป · ต้องสร้างสัญญาณก่อนเทคอนกรีตที่ไม่ทำให้ข้อมูลรั่ว และข้อมูลหลายวันที่แยก seed train/test ก่อน
-5. Phase 8 Predictive Dynamic Optimizer
+4. ~~Phase 7 AI Site Readiness (Loop 3–4)~~ ✅ ([PHASE7.md](phase7_ai_readiness/PHASE7.md))
+5. ~~Phase 8 Predictive Dynamic Optimizer (Loop 5–6)~~ ✅ ([PHASE8.md](phase8_dynamic_optimizer/PHASE8.md))
+6. ~~Phase 9 Baseline Comparison (Loop 7)~~ ✅ ([PHASE9.md](phase9_baseline_comparison/PHASE9.md): iteration 02 PASS)
+7. ~~Phase 10 Carbon + Business Impact (Loop 8)~~ ✅ ([PHASE10.md](phase10_carbon_business/PHASE10.md))
+8. ~~Phase 11 Dashboard / Prototype (Loop 10)~~ ✅ ([PHASE11.md](phase11_dashboard/PHASE11.md))
+9. ~~Phase 12 Stress Test + Failure Cases (Loop 9)~~ ✅ ([PHASE12.md](phase12_stress_test/PHASE12.md))
+10. ~~Phase 13 รายงานสรุป (Loop 11)~~ ✅ ([REPORT.md](phase13_report/REPORT.md)) · ทีมเลือกทำรายงานแทน slide/video
 
 **ไม่ย้อนกลับไปแก้ Core และไม่รื้อ Phase เก่า**

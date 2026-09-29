@@ -1,0 +1,4 @@
+instance,customers,vehicles_allowed,vehicles_used,status,cost,optimal_reference,gap_percent,validator_pass,iterations,stop_reason,seed,runtime_s,route_fingerprint,matches_phase6_snapshot
+A-n32-k5,31,5,5,FEASIBLE,784,784,0.0,True,5021,no_improvement,1,1.54,2b402097367d,True
+B-n31-k5,30,5,5,FEASIBLE,672,672,0.0,True,5033,no_improvement,1,1.12,5b982d6b66b6,True
+P-n40-k5,39,5,5,FEASIBLE,458,458,0.0,True,5011,no_improvement,1,1.57,a06c3cb461cc,True

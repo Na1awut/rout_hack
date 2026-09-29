@@ -1,0 +1,60 @@
+# Loop 8 impact factors. Every value carries source_type (skill.md section 28)
+# and a source or derivation. Nothing here changes the simulator or its data.
+# "retrieved" = what was checked on 2026-09-28. The sandbox network blocked
+# direct page fetches for these sites, so values were read from search-result
+# excerpts; re-check each URL before quoting on a slide.
+
+carbon:
+  diesel_co2_kg_per_liter:
+    value: 2.676
+    low: 2.489
+    high: 2.721
+    source_type: DERIVED
+    derivation: "IPCC 2006 default CO2 EF for gas/diesel oil 74,100 kg/TJ x default NCV 43.0 TJ/Gg x assumed density 0.84 kg/L"
+    low_derivation: "Thai retail diesel is B7; counting only the 93% fossil share: 0.93 x 2.676"
+    high_derivation: "IPCC upper EF 74,800 kg/TJ x upper NCV 43.3 TJ/Gg x 0.84 kg/L"
+    sources:
+      - "IPCC 2006 Guidelines Vol.2 Ch.1 Tables 1.2 and 1.4: https://www.ipcc-nggip.iges.or.jp/public/2006gl/pdf/2_Volume2/V2_1_Ch1_Introduction.pdf"
+      - "IPCC 2006 Vol.2 Ch.3 Mobile Combustion (uses the Ch.1 defaults): https://www.ipcc-nggip.iges.or.jp/public/2006gl/pdf/2_Volume2/V2_3_Ch3_Mobile_Combustion.pdf"
+    assumed_parts: "density 0.84 kg/L (typical diesel at 15 C, not a Thai measurement)"
+
+fuel:
+  diesel_price_thb_per_liter:
+    value: 39.14
+    low: 33.0
+    high: 41.5
+    source_type: PUBLIC_SOURCE
+    source: "GlobalPetrolPrices, Thailand diesel, 07-Sep-2026: https://www.globalpetrolprices.com/Thailand/diesel_prices/"
+    range_source: "2026 pump-price moves reported by Nation Thailand (diesel above 40 THB from 31-Mar-2026, 41.50 THB peak): https://www.nationthailand.com/news/general/40064460 , https://www.nationthailand.com/news/general/40067011; low 33 THB is ASSUMED pre-increase level"
+  # The simulator samples these per truck. Loop 8 checks the ranges against
+  # public references instead of regenerating any data.
+  simulated_fuel_efficiency_km_l_range: [2.5, 3.5]
+  reference_fuel_efficiency_km_l:
+    value: 3.03
+    source_type: PUBLIC_SOURCE
+    source: "HOWO 6 m3 mixer about 33 L/100 km (manufacturer blog): https://www.howodumptruck.com/fuel-consumption-of-howo-concrete-mixer-trucks/"
+  simulated_idle_fuel_l_h_range: [2.5, 3.5]
+  reference_idle_fuel_l_h:
+    value: 3.03
+    source_type: PUBLIC_SOURCE
+    source: "Argonne National Laboratory: heavy-duty truck idling about 0.8 gal/h (= 3.03 L/h): https://www.anl.gov/esia/idle-reduction-research"
+
+labor:
+  driver_cost_thb_per_hour:
+    value: 172
+    low: 50
+    high: 172
+    source_type: PUBLIC_SOURCE
+    source: "ERI SalaryExpert, truck driver concrete mixing, Bangkok 2026, 357,312 THB/yr or 172 THB/h: https://www.salaryexpert.com/salary/job/truck-driver-concrete-mixing/thailand/bangkok"
+    low_source: "Bangkok minimum wage 400 THB/day / 8 h (PKF Thailand): https://pkfthailand.asia/bangkok-raises-minimum-wage-to-400-baht-what-employers-and-workers-should-know/"
+  crew_cost_thb_per_person_hour:
+    value: 50
+    source_type: DERIVED
+    derivation: "Bangkok minimum wage 400 THB/day / 8 h. LOWER BOUND: excludes pump rental, supervisors and cold-joint risk"
+    source: "https://pkfthailand.asia/bangkok-raises-minimum-wage-to-400-baht-what-employers-and-workers-should-know/"
+
+annualization:
+  operating_days_per_year:
+    value: 300
+    source_type: ASSUMED
+    note: "6 days a week, one plant of the simulated size (15 trucks, about 30 orders/day)"

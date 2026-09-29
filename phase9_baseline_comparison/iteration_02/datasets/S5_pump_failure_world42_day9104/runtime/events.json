@@ -1,0 +1,10 @@
+[
+  {
+    "event_id": "E001",
+    "timestamp": "2026-10-01T11:06",
+    "event_type": "PUMP_FAILURE",
+    "site_id": "S002",
+    "order_id": "O025",
+    "delay_min": 85
+  }
+]

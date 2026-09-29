@@ -1,0 +1,30 @@
+{
+  "compared": "C_ai_rolling_buffered vs B_dynamic_buffered",
+  "gates": {
+    "all_execution_valid": true,
+    "no_predictor_failure": true,
+    "operational_gain_ci_positive": true,
+    "no_more_unserved": true,
+    "on_time_within_tolerance": true
+  },
+  "mean_gain_min": 218.18888888888887,
+  "ci95": [
+    117.2875,
+    346.2336111111111
+  ],
+  "paired_day_gains": [
+    14.333333333333334,
+    11.88888888888889,
+    162.0,
+    171.11111111111111,
+    159.66666666666666,
+    339.77777777777777,
+    287.8888888888889,
+    205.44444444444446,
+    694.5555555555555,
+    135.22222222222223
+  ],
+  "independent_day_seeds": 10,
+  "runs": 450,
+  "caveat": "10 independent day seeds, each with 9 paired scenarios; SIMULATED data; CI is exploratory."
+}

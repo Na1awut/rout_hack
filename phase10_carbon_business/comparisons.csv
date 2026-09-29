@@ -1,0 +1,33 @@
+system,baseline,scope,metric,baseline_mean,system_mean,saving_per_day,saving_pct,ci95_low,ci95_high,verdict,saving_per_year
+C_ai_rolling_buffered,A_static_planned,all,fuel_l,799.154,790.179,8.975,1.1231,7.3123,10.6901,saving,2692.4926
+C_ai_rolling_buffered,A_static_planned,all,idle_fuel_l,21.0107,13.8204,7.1903,34.222,5.3627,9.3074,saving,2157.0844
+C_ai_rolling_buffered,A_static_planned,all,co2_kg,2138.5362,2114.5191,24.017,1.1231,19.5677,28.6067,saving,7205.1103
+C_ai_rolling_buffered,A_static_planned,all,cost_proxy_thb,39316.466,38286.907,1029.5591,2.6186,737.9378,1326.9127,saving,308867.7178
+C_ai_rolling_buffered,A_static_planned,all,fuel_l_per_m3,2.4801,2.4569,0.0233,0.938,0.0168,0.0317,saving,6.9792
+C_ai_rolling_buffered,A_static_planned,all,driver_wait_h,7.1824,4.6996,2.4828,34.5675,1.8876,3.2208,saving,744.8333
+C_ai_rolling_buffered,A_static_planned,all,crew_idle_person_h,136.0441,131.0193,5.0248,3.6935,-0.6228,11.8342,no clear difference,1507.4444
+C_ai_rolling_buffered,A_static_planned,all,unserved_trips,0.4667,0.6333,-0.1667,-35.7143,-0.3,-0.0556,worse,-50.0
+C_ai_rolling_buffered,A_static_planned,excl_S6,fuel_l,758.5487,750.7235,7.8252,1.0316,6.1188,9.7514,saving,2347.5542
+C_ai_rolling_buffered,A_static_planned,excl_S6,idle_fuel_l,22.1428,14.6748,7.468,33.7265,5.5541,9.6483,saving,2240.3975
+C_ai_rolling_buffered,A_static_planned,excl_S6,co2_kg,2029.8762,2008.9361,20.9402,1.0316,16.3739,26.0947,saving,6282.0551
+C_ai_rolling_buffered,A_static_planned,excl_S6,cost_proxy_thb,35751.7236,34620.8732,1130.8505,3.1631,890.2142,1375.5253,saving,339255.1466
+C_ai_rolling_buffered,A_static_planned,excl_S6,fuel_l_per_m3,2.5002,2.4747,0.0256,1.0222,0.0191,0.034,saving,7.6674
+C_ai_rolling_buffered,A_static_planned,excl_S6,driver_wait_h,7.5613,4.9883,2.5729,34.0277,1.9567,3.3088,saving,771.875
+C_ai_rolling_buffered,A_static_planned,excl_S6,crew_idle_person_h,95.2319,87.5912,7.6406,8.0232,3.0693,12.0412,saving,2292.1875
+C_ai_rolling_buffered,A_static_planned,excl_S6,unserved_trips,0.05,0.075,-0.025,-50.0,-0.075,0.0,no clear difference,-7.5
+C_ai_rolling_buffered,B_dynamic_buffered,all,fuel_l,792.1407,790.179,1.9617,0.2476,-0.3351,4.3467,no clear difference,588.5008
+C_ai_rolling_buffered,B_dynamic_buffered,all,idle_fuel_l,16.4102,13.8204,2.5898,15.7819,0.4866,4.7999,saving,776.9533
+C_ai_rolling_buffered,B_dynamic_buffered,all,co2_kg,2119.7685,2114.5191,5.2494,0.2476,-0.8968,11.6318,no clear difference,1574.8281
+C_ai_rolling_buffered,B_dynamic_buffered,all,cost_proxy_thb,39205.7226,38286.907,918.8157,2.3436,463.2879,1524.3246,saving,275644.6983
+C_ai_rolling_buffered,B_dynamic_buffered,all,fuel_l_per_m3,2.4667,2.4569,0.0099,0.4009,0.0018,0.0177,saving,2.9665
+C_ai_rolling_buffered,B_dynamic_buffered,all,driver_wait_h,5.6074,4.6996,0.9078,16.1889,0.1681,1.6721,saving,272.3333
+C_ai_rolling_buffered,B_dynamic_buffered,all,crew_idle_person_h,144.7372,131.0193,13.718,9.4778,5.6909,24.4957,saving,4115.3889
+C_ai_rolling_buffered,B_dynamic_buffered,all,unserved_trips,0.7111,0.6333,0.0778,10.9375,0.0222,0.1333,saving,23.3333
+C_ai_rolling_buffered,B_dynamic_buffered,excl_S6,fuel_l,753.3319,750.7235,2.6084,0.3462,-0.3064,5.4539,no clear difference,782.5106
+C_ai_rolling_buffered,B_dynamic_buffered,excl_S6,idle_fuel_l,17.3148,14.6748,2.64,15.2469,0.3947,5.0322,saving,791.9919
+C_ai_rolling_buffered,B_dynamic_buffered,excl_S6,co2_kg,2015.916,2008.9361,6.98,0.3462,-0.8199,14.5945,no clear difference,2093.9984
+C_ai_rolling_buffered,B_dynamic_buffered,excl_S6,cost_proxy_thb,35484.331,34620.8732,863.4578,2.4333,391.2896,1470.3994,saving,259037.3397
+C_ai_rolling_buffered,B_dynamic_buffered,excl_S6,fuel_l_per_m3,2.4845,2.4747,0.0099,0.3978,0.0007,0.0187,saving,2.9647
+C_ai_rolling_buffered,B_dynamic_buffered,excl_S6,driver_wait_h,5.9183,4.9883,0.93,15.7139,0.1502,1.7625,saving,279.0
+C_ai_rolling_buffered,B_dynamic_buffered,excl_S6,crew_idle_person_h,99.6194,87.5912,12.0281,12.0741,5.8377,21.0995,saving,3608.4375
+C_ai_rolling_buffered,B_dynamic_buffered,excl_S6,unserved_trips,0.0875,0.075,0.0125,14.2857,0.0,0.0375,no clear difference,3.75

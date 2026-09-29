@@ -1,0 +1,17 @@
+{
+  "world_seed": 42,
+  "dev_day_seeds": [6001, 6002, 6003, 6004, 6005, 6006, 6007, 6008, 6009, 6010],
+  "eval_day_seeds": [9101, 9102, 9103, 9104, 9105, 9106, 9107, 9108, 9109, 9110],
+  "step_min": 5,
+  "refresh_min": 15,
+  "waiting_weight": 1,
+  "late_weight": 1,
+  "model": "site_ready_v3.joblib",
+  "buffer_grid_min": {"first": [0, 5, 10, 15, 20], "next": [0, 5, 10, 15, 20]},
+  "selection_rule": "Dev days only. B: (first,next) with lowest mean operational_score_min. C: lowest mean operational_score_min among pairs whose dev on_time_rate >= B_selected - on_time_tolerance and dev unserved_trips <= B_selected. Ties -> smaller first+next, then smaller first.",
+  "gated_policies": {"B": "B_dynamic_buffered", "C": "C_ai_rolling_buffered"},
+  "reference_policies": ["A_static_planned", "B_dynamic", "C_ai_rolling"],
+  "score": {"waiting": 1, "site_idle": 1, "unserved_trip_penalty_min": 1000},
+  "gate": {"paired_day_bootstrap_resamples": 2000, "bootstrap_seed": 0, "minimum_ci95_gain_min": 0, "on_time_tolerance": 0.02},
+  "assumptions": "Iteration 02 after iteration 01 FAIL. Score, penalty, gate thresholds and model are unchanged from iteration 01. Buffers are tuned on dev days 6001-6010 (unused by any earlier phase); eval days 9101-9110 are fresh and opened once after selection.json is written. Seeds already used elsewhere: 1001-1120, 2001-2040, 3001-3020, 4001-4020, 7001-7040, 8001-8020, 9001-9005. All 9 scenarios reported, including overload S6. SIMULATED data only."
+}

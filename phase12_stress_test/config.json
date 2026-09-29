@@ -1,0 +1,32 @@
+{
+  "question": "Under overload, breakdowns, bad data and a failing AI, does the system answer with a clear status (or 'need N more trucks') instead of crashing or producing a plan that breaks a rule?",
+  "world_seed": 42,
+  "day_seeds": [9201, 9202, 9203, 9204, 9205],
+  "scenario_file": "phase12_stress_test/stress_scenarios.yaml",
+  "fleet_shortage_simulation_file": "phase12_stress_test/simulation_fleet10.yaml",
+  "policies": ["A_static_planned", "B_dynamic_buffered", "C_ai_rolling_buffered"],
+  "buffers_from": "phase9_baseline_comparison/iteration_02/selection.json",
+  "fault_base": {"scenario": "X3_site_chaos", "seed": 9201},
+  "faults": {
+    "F01_all_trucks_break":     {"expect": ["DEGRADED"], "what": "TRUCK_BREAKDOWN for every truck at 09:00"},
+    "F02_unreachable_site":     {"expect": ["REJECTED_DATA"], "what": "no traffic/travel rows for one site"},
+    "F03_missing_site_reports": {"expect": ["OK", "DEGRADED"], "what": "site_state.csv has no rows (AI has no pre-pour signal)"},
+    "F04_predictor_crash":      {"expect": ["DEGRADED"], "what": "predictor raises on every call"},
+    "F05_model_file_missing":   {"expect": ["DEGRADED"], "what": "model file does not exist"},
+    "F06_trip_bigger_than_truck": {"expect": ["REJECTED_DATA"], "what": "one trip volume 9 m3 on 6 m3 trucks"},
+    "F07_tampered_file":        {"expect": ["REJECTED_DATA"], "what": "orders.csv edited after generation, manifest not updated"},
+    "F08_no_orders":            {"expect": ["OK", "REJECTED_DATA"], "what": "a day with no orders"},
+    "F09_no_trucks_on_shift":   {"expect": ["DEGRADED"], "what": "every truck available only after plant closes"},
+    "F10_missing_traffic_hour": {"expect": ["REJECTED_DATA"], "what": "traffic rows for 12:00 removed"},
+    "F11_predictor_garbage":    {"expect": ["DEGRADED"], "what": "predictor returns an invalid prediction (NaN, bad time)"}
+  },
+  "gates": {
+    "G1_no_crash": "no ERROR status and no uncaught exception in any stress run or fault",
+    "G2_plans_valid": "every executed day passes execution_validator (no INVALID_PLAN)",
+    "G3_faults_handled": "every fault ends in one of its expected statuses and carries a message",
+    "G4_preflight_honest": "on stress days: every INFEASIBLE flag has unserved trips under the static plan, and every static-plan day with unserved trips is flagged INFEASIBLE or AT_RISK",
+    "G5_core_behaviour": "Loop 0 benchmark routes/costs/iterations still match the snapshot (freeze_id check bypassed, see Phase 9 note)"
+  },
+  "reported_not_gated": "C vs A vs B operational score per stress scenario, including where the AI loses",
+  "note": "fleet_check rule was designed after looking at Phase 9 days (5/5 INFEASIBLE flags correct, AT_RISK on almost all days). Stress days 9201-9205 are new."
+}

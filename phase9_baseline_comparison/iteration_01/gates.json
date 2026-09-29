@@ -1,0 +1,24 @@
+{
+  "gates": {
+    "all_execution_valid": true,
+    "no_predictor_failure": true,
+    "operational_gain_ci_positive": false,
+    "no_more_unserved": false,
+    "on_time_within_tolerance": false
+  },
+  "mean_gain_min": 79.17777777777778,
+  "ci95": [
+    -32.955555555555556,
+    170.04444444444442
+  ],
+  "paired_day_gains": [
+    135.0,
+    210.77777777777777,
+    -107.44444444444444,
+    -1.1111111111111112,
+    158.66666666666666
+  ],
+  "independent_day_seeds": 5,
+  "runs": 135,
+  "caveat": "Only 5 independent day seeds, each with 9 paired scenarios; CI is exploratory."
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "event_id": "E001",
+    "timestamp": "2026-10-01T09:00",
+    "event_type": "TRUCK_BREAKDOWN",
+    "vehicle_id": "T007"
+  },
+  {
+    "event_id": "E002",
+    "timestamp": "2026-10-01T09:30",
+    "event_type": "TRUCK_BREAKDOWN",
+    "vehicle_id": "T003"
+  },
+  {
+    "event_id": "E003",
+    "timestamp": "2026-10-01T11:00",
+    "event_type": "TRUCK_BREAKDOWN",
+    "vehicle_id": "T004"
+  },
+  {
+    "event_id": "E004",
+    "timestamp": "2026-10-01T11:15",
+    "event_type": "TRUCK_BREAKDOWN",
+    "vehicle_id": "T011"
+  }
+]

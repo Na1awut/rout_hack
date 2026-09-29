@@ -1,0 +1,37 @@
+{
+  "B_dynamic_buffered": {
+    "first_buffer_min": 0,
+    "next_buffer_min": 10,
+    "dev_mean": {
+      "operational_score_min": 2629.9667,
+      "on_time_rate": 0.6208,
+      "unserved_trips": 1.0889,
+      "total_waiting_min": 357.3778,
+      "site_idle_min": 1183.7
+    }
+  },
+  "C_ai_rolling_buffered": {
+    "first_buffer_min": 5,
+    "next_buffer_min": 15,
+    "dev_mean": {
+      "operational_score_min": 2474.4333,
+      "on_time_rate": 0.636,
+      "unserved_trips": 1.0889,
+      "total_waiting_min": 297.9111,
+      "site_idle_min": 1087.6333
+    }
+  },
+  "rule": "Dev days only. B: (first,next) with lowest mean operational_score_min. C: lowest mean operational_score_min among pairs whose dev on_time_rate >= B_selected - on_time_tolerance and dev unserved_trips <= B_selected. Ties -> smaller first+next, then smaller first.",
+  "dev_day_seeds": [
+    6001,
+    6002,
+    6003,
+    6004,
+    6005,
+    6006,
+    6007,
+    6008,
+    6009,
+    6010
+  ]
+}

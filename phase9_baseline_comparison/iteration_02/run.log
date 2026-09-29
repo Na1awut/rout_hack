@@ -1,0 +1,127 @@
+9101 S1_light_traffic complete
+9101 S2_peak_traffic complete
+9101 S0_normal complete
+9101 S3_site_delay complete
+9101 S5_pump_failure complete
+9101 S4_multi_site_delay complete
+9101 S7_mixed_disruption complete
+9101 S6_high_demand complete
+9101 S8_ai_prediction_error complete
+9102 S0_normal complete
+9102 S1_light_traffic complete
+9102 S2_peak_traffic complete
+9102 S3_site_delay complete
+9102 S4_multi_site_delay complete
+9102 S5_pump_failure complete
+9102 S6_high_demand complete
+9102 S7_mixed_disruption complete
+9102 S8_ai_prediction_error complete
+9103 S0_normal complete
+9103 S1_light_traffic complete
+9103 S2_peak_traffic complete
+9103 S3_site_delay complete
+9103 S4_multi_site_delay complete
+9103 S5_pump_failure complete
+9103 S6_high_demand complete
+9103 S7_mixed_disruption complete
+9103 S8_ai_prediction_error complete
+9104 S0_normal complete
+9104 S2_peak_traffic complete
+9104 S1_light_traffic complete
+9104 S3_site_delay complete
+9104 S4_multi_site_delay complete
+9104 S5_pump_failure complete
+9104 S7_mixed_disruption complete
+9104 S6_high_demand complete
+9104 S8_ai_prediction_error complete
+9105 S0_normal complete
+9105 S1_light_traffic complete
+9105 S2_peak_traffic complete
+9105 S3_site_delay complete
+9105 S4_multi_site_delay complete
+9105 S5_pump_failure complete
+9105 S7_mixed_disruption complete
+9105 S6_high_demand complete
+9105 S8_ai_prediction_error complete
+9106 S0_normal complete
+9106 S1_light_traffic complete
+9106 S2_peak_traffic complete
+9106 S3_site_delay complete
+9106 S4_multi_site_delay complete
+9106 S5_pump_failure complete
+9106 S6_high_demand complete
+9106 S7_mixed_disruption complete
+9106 S8_ai_prediction_error complete
+9107 S0_normal complete
+9107 S1_light_traffic complete
+9107 S2_peak_traffic complete
+9107 S3_site_delay complete
+9107 S4_multi_site_delay complete
+9107 S5_pump_failure complete
+9107 S7_mixed_disruption complete
+9107 S6_high_demand complete
+9107 S8_ai_prediction_error complete
+9108 S0_normal complete
+9108 S1_light_traffic complete
+9108 S2_peak_traffic complete
+9108 S3_site_delay complete
+9108 S4_multi_site_delay complete
+9108 S5_pump_failure complete
+9108 S7_mixed_disruption complete
+9108 S8_ai_prediction_error complete
+9108 S6_high_demand complete
+9109 S0_normal complete
+9109 S1_light_traffic complete
+9109 S3_site_delay complete
+9109 S2_peak_traffic complete
+9109 S4_multi_site_delay complete
+9109 S5_pump_failure complete
+9109 S6_high_demand complete
+9109 S7_mixed_disruption complete
+9109 S8_ai_prediction_error complete
+9110 S0_normal complete
+9110 S2_peak_traffic complete
+9110 S1_light_traffic complete
+9110 S3_site_delay complete
+9110 S4_multi_site_delay complete
+9110 S5_pump_failure complete
+9110 S6_high_demand complete
+9110 S8_ai_prediction_error complete
+9110 S7_mixed_disruption complete
+                       total_waiting_min  site_idle_min  operational_score_min  unserved_trips  on_time_rate  fuel_liters  total_distance_km  pour_gaps_over_30
+policy                                                                                                                                                         
+A_static_planned              430.944444     941.433333            1839.044444        0.466667      0.676022   799.153333        2301.707778           4.244444
+B_dynamic                     255.266667    1157.300000            2190.344444        0.777778      0.664133   787.585556        2292.198889           8.311111
+B_dynamic_buffered            336.444444    1005.355556            2052.911111        0.711111      0.698156   792.138889        2294.492222           5.433333
+C_ai_rolling                  103.922222    1172.077778            2053.777778        0.777778      0.619444   780.048889        2292.220000           7.588889
+C_ai_rolling_buffered         281.977778     919.411111            1834.722222        0.633333      0.710156   790.171111        2297.503333           4.644444
+{
+  "compared": "C_ai_rolling_buffered vs B_dynamic_buffered",
+  "gates": {
+    "all_execution_valid": true,
+    "no_predictor_failure": true,
+    "operational_gain_ci_positive": true,
+    "no_more_unserved": true,
+    "on_time_within_tolerance": true
+  },
+  "mean_gain_min": 218.18888888888887,
+  "ci95": [
+    117.2875,
+    346.2336111111111
+  ],
+  "paired_day_gains": [
+    14.333333333333334,
+    11.88888888888889,
+    162.0,
+    171.11111111111111,
+    159.66666666666666,
+    339.77777777777777,
+    287.8888888888889,
+    205.44444444444446,
+    694.5555555555555,
+    135.22222222222223
+  ],
+  "independent_day_seeds": 10,
+  "runs": 450,
+  "caveat": "10 independent day seeds, each with 9 paired scenarios; SIMULATED data; CI is exploratory."
+}

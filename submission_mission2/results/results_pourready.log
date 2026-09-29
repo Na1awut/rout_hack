@@ -1,0 +1,40 @@
+world_seed 42 · day 9101 · step 5 min · AI refresh 15 min · buffers B 0/10 C 5/15 min
+
+S0_normal · fleet pre-check: AT_RISK — ส่งครบ แต่มี 7 เที่ยวที่คาดว่าช้าเพราะรถไม่พอ เพิ่มรถอีก 3 คันจะแก้ได้
+   A_static_planned       valid True  delivered 62/62  truck wait  378  site idle  278  on-time 0.968  cost   32,222 THB  phase9 match
+   B_dynamic_buffered     valid True  delivered 62/62  truck wait  308  site idle  357  on-time 0.887  cost   32,373 THB  phase9 match
+   C_ai_rolling_buffered  valid True  delivered 62/62  truck wait  353  site idle  300  on-time 0.839  cost   32,265 THB  phase9 match
+S1_light_traffic · fleet pre-check: AT_RISK — ส่งครบ แต่มี 7 เที่ยวที่คาดว่าช้าเพราะรถไม่พอ เพิ่มรถอีก 3 คันจะแก้ได้
+   A_static_planned       valid True  delivered 62/62  truck wait  564  site idle  173  on-time 1.000  cost   32,437 THB  phase9 match
+   B_dynamic_buffered     valid True  delivered 62/62  truck wait  393  site idle  260  on-time 0.919  cost   32,201 THB  phase9 match
+   C_ai_rolling_buffered  valid True  delivered 62/62  truck wait  401  site idle  214  on-time 0.919  cost   31,952 THB  phase9 match
+S2_peak_traffic · fleet pre-check: AT_RISK — ส่งครบ แต่มี 7 เที่ยวที่คาดว่าช้าเพราะรถไม่พอ เพิ่มรถอีก 3 คันจะแก้ได้
+   A_static_planned       valid True  delivered 62/62  truck wait  153  site idle  702  on-time 0.661  cost   34,352 THB  phase9 match
+   B_dynamic_buffered     valid True  delivered 62/62  truck wait  153  site idle  737  on-time 0.710  cost   34,304 THB  phase9 match
+   C_ai_rolling_buffered  valid True  delivered 62/62  truck wait  143  site idle  756  on-time 0.661  cost   34,592 THB  phase9 match
+S3_site_delay · fleet pre-check: AT_RISK — ส่งครบ แต่มี 7 เที่ยวที่คาดว่าช้าเพราะรถไม่พอ เพิ่มรถอีก 3 คันจะแก้ได้
+   A_static_planned       valid True  delivered 62/62  truck wait  406  site idle  311  on-time 0.935  cost   32,596 THB  phase9 match
+   B_dynamic_buffered     valid True  delivered 62/62  truck wait  293  site idle  350  on-time 0.871  cost   32,379 THB  phase9 match
+   C_ai_rolling_buffered  valid True  delivered 62/62  truck wait  338  site idle  317  on-time 0.823  cost   32,311 THB  phase9 match
+S4_multi_site_delay · fleet pre-check: AT_RISK — ส่งครบ แต่มี 7 เที่ยวที่คาดว่าช้าเพราะรถไม่พอ เพิ่มรถอีก 3 คันจะแก้ได้
+   A_static_planned       valid True  delivered 62/62  truck wait  453  site idle  261  on-time 0.952  cost   32,438 THB  phase9 match
+   B_dynamic_buffered     valid True  delivered 62/62  truck wait  275  site idle  273  on-time 0.952  cost   31,708 THB  phase9 match
+   C_ai_rolling_buffered  valid True  delivered 62/62  truck wait  346  site idle  250  on-time 0.952  cost   31,912 THB  phase9 match
+S5_pump_failure · fleet pre-check: AT_RISK — ส่งครบ แต่มี 7 เที่ยวที่คาดว่าช้าเพราะรถไม่พอ เพิ่มรถอีก 3 คันจะแก้ได้
+   A_static_planned       valid True  delivered 62/62  truck wait  449  site idle  337  on-time 0.887  cost   32,987 THB  phase9 match
+   B_dynamic_buffered     valid True  delivered 62/62  truck wait  312  site idle  348  on-time 0.887  cost   32,446 THB  phase9 match
+   C_ai_rolling_buffered  valid True  delivered 62/62  truck wait  376  site idle  333  on-time 0.790  cost   32,483 THB  phase9 match
+S6_high_demand · fleet pre-check: AT_RISK — ส่งครบ แต่มี 63 เที่ยวที่คาดว่าช้าเพราะรถไม่พอ เพิ่มรถอีก 12 คันจะแก้ได้
+   A_static_planned       valid True  delivered 96/96  truck wait  167  site idle 3591  on-time 0.198  cost   72,206 THB  phase9 match
+   B_dynamic_buffered     valid True  delivered 95/96  truck wait  103  site idle 4110  on-time 0.281  cost   75,138 THB  phase9 match
+   C_ai_rolling_buffered  valid True  delivered 95/96  truck wait   85  site idle 4010  on-time 0.240  cost   73,368 THB  phase9 match
+S7_mixed_disruption · fleet pre-check: AT_RISK — ส่งครบ แต่มี 7 เที่ยวที่คาดว่าช้าเพราะรถไม่พอ เพิ่มรถอีก 3 คันจะแก้ได้
+   A_static_planned       valid True  delivered 62/62  truck wait  461  site idle  783  on-time 0.548  cost   36,582 THB  phase9 match
+   B_dynamic_buffered     valid True  delivered 62/62  truck wait  358  site idle  650  on-time 0.710  cost   34,824 THB  phase9 match
+   C_ai_rolling_buffered  valid True  delivered 62/62  truck wait  222  site idle  760  on-time 0.516  cost   35,274 THB  phase9 match
+S8_ai_prediction_error · fleet pre-check: AT_RISK — ส่งครบ แต่มี 7 เที่ยวที่คาดว่าช้าเพราะรถไม่พอ เพิ่มรถอีก 3 คันจะแก้ได้
+   A_static_planned       valid True  delivered 62/62  truck wait  440  site idle  331  on-time 0.903  cost   32,773 THB  phase9 match
+   B_dynamic_buffered     valid True  delivered 62/62  truck wait  254  site idle  398  on-time 0.855  cost   32,388 THB  phase9 match
+   C_ai_rolling_buffered  valid True  delivered 62/62  truck wait  307  site idle  292  on-time 0.887  cost   31,853 THB  phase9 match
+
+wrote /home/user/rout_hack/submission_mission2/results/pourready/summary.csv, per-policy route tables and logs · all valid and reproduced: True

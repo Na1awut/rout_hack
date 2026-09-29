@@ -1,0 +1,173 @@
+[
+  {
+    "event_id": "E001",
+    "timestamp": "2026-10-01T05:52",
+    "event_type": "PUMP_FAILURE",
+    "site_id": "S006",
+    "order_id": "O024",
+    "delay_min": 74
+  },
+  {
+    "event_id": "E002",
+    "timestamp": "2026-10-01T06:07",
+    "event_type": "SITE_DELAY",
+    "site_id": "S006",
+    "order_id": "O024",
+    "delay_min": 39
+  },
+  {
+    "event_id": "E003",
+    "timestamp": "2026-10-01T06:08",
+    "event_type": "SITE_DELAY",
+    "site_id": "S007",
+    "order_id": "O007",
+    "delay_min": 51
+  },
+  {
+    "event_id": "E004",
+    "timestamp": "2026-10-01T06:34",
+    "event_type": "SITE_DELAY",
+    "site_id": "S005",
+    "order_id": "O010",
+    "delay_min": 46
+  },
+  {
+    "event_id": "E005",
+    "timestamp": "2026-10-01T06:41",
+    "event_type": "PUMP_FAILURE",
+    "site_id": "S007",
+    "order_id": "O007",
+    "delay_min": 82
+  },
+  {
+    "event_id": "E006",
+    "timestamp": "2026-10-01T07:41",
+    "event_type": "PUMP_FAILURE",
+    "site_id": "S008",
+    "order_id": "O001",
+    "delay_min": 88
+  },
+  {
+    "event_id": "E007",
+    "timestamp": "2026-10-01T07:47",
+    "event_type": "SITE_DELAY",
+    "site_id": "S008",
+    "order_id": "O001",
+    "delay_min": 41
+  },
+  {
+    "event_id": "E008",
+    "timestamp": "2026-10-01T09:30",
+    "event_type": "SERVICE_SLOWDOWN",
+    "site_id": "S007",
+    "order_id": "O018",
+    "factor": 1.382
+  },
+  {
+    "event_id": "E009",
+    "timestamp": "2026-10-01T10:14",
+    "event_type": "SITE_DELAY",
+    "site_id": "S002",
+    "order_id": "O015",
+    "delay_min": 60
+  },
+  {
+    "event_id": "E010",
+    "timestamp": "2026-10-01T12:17",
+    "event_type": "SITE_DELAY",
+    "site_id": "S009",
+    "order_id": "O014",
+    "delay_min": 54
+  },
+  {
+    "event_id": "E011",
+    "timestamp": "2026-10-01T12:30",
+    "event_type": "SERVICE_SLOWDOWN",
+    "site_id": "S003",
+    "order_id": "O029",
+    "factor": 1.256
+  },
+  {
+    "event_id": "E012",
+    "timestamp": "2026-10-01T14:30",
+    "event_type": "SERVICE_SLOWDOWN",
+    "site_id": "S006",
+    "order_id": "O023",
+    "factor": 1.372
+  },
+  {
+    "timestamp": "2026-10-01T09:00",
+    "event_type": "TRUCK_BREAKDOWN",
+    "vehicle_id": "T001"
+  },
+  {
+    "timestamp": "2026-10-01T09:00",
+    "event_type": "TRUCK_BREAKDOWN",
+    "vehicle_id": "T002"
+  },
+  {
+    "timestamp": "2026-10-01T09:00",
+    "event_type": "TRUCK_BREAKDOWN",
+    "vehicle_id": "T003"
+  },
+  {
+    "timestamp": "2026-10-01T09:00",
+    "event_type": "TRUCK_BREAKDOWN",
+    "vehicle_id": "T004"
+  },
+  {
+    "timestamp": "2026-10-01T09:00",
+    "event_type": "TRUCK_BREAKDOWN",
+    "vehicle_id": "T005"
+  },
+  {
+    "timestamp": "2026-10-01T09:00",
+    "event_type": "TRUCK_BREAKDOWN",
+    "vehicle_id": "T006"
+  },
+  {
+    "timestamp": "2026-10-01T09:00",
+    "event_type": "TRUCK_BREAKDOWN",
+    "vehicle_id": "T007"
+  },
+  {
+    "timestamp": "2026-10-01T09:00",
+    "event_type": "TRUCK_BREAKDOWN",
+    "vehicle_id": "T008"
+  },
+  {
+    "timestamp": "2026-10-01T09:00",
+    "event_type": "TRUCK_BREAKDOWN",
+    "vehicle_id": "T009"
+  },
+  {
+    "timestamp": "2026-10-01T09:00",
+    "event_type": "TRUCK_BREAKDOWN",
+    "vehicle_id": "T010"
+  },
+  {
+    "timestamp": "2026-10-01T09:00",
+    "event_type": "TRUCK_BREAKDOWN",
+    "vehicle_id": "T011"
+  },
+  {
+    "timestamp": "2026-10-01T09:00",
+    "event_type": "TRUCK_BREAKDOWN",
+    "vehicle_id": "T012"
+  },
+  {
+    "timestamp": "2026-10-01T09:00",
+    "event_type": "TRUCK_BREAKDOWN",
+    "vehicle_id": "T013"
+  },
+  {
+    "timestamp": "2026-10-01T09:00",
+    "event_type": "TRUCK_BREAKDOWN",
+    "vehicle_id": "T014"
+  },
+  {
+    "timestamp": "2026-10-01T09:00",
+    "event_type": "TRUCK_BREAKDOWN",
+    "vehicle_id": "T015"
+  }
+]

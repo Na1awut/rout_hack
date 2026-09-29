@@ -1,0 +1,13 @@
+system,baseline,scope,case,co2_saving_kg_day,cost_saving_thb_day
+C_ai_rolling_buffered,A_static_planned,all,value,24.017,1029.559
+C_ai_rolling_buffered,A_static_planned,all,low,22.339,671.554
+C_ai_rolling_buffered,A_static_planned,all,high,24.421,1050.74
+C_ai_rolling_buffered,A_static_planned,excl_S6,value,20.94,1130.85
+C_ai_rolling_buffered,A_static_planned,excl_S6,low,19.477,768.908
+C_ai_rolling_buffered,A_static_planned,excl_S6,high,21.292,1149.318
+C_ai_rolling_buffered,B_dynamic_buffered,all,value,5.249,918.816
+C_ai_rolling_buffered,B_dynamic_buffered,all,low,4.883,796.022
+C_ai_rolling_buffered,B_dynamic_buffered,all,high,5.338,923.445
+C_ai_rolling_buffered,B_dynamic_buffered,excl_S6,value,6.98,863.458
+C_ai_rolling_buffered,B_dynamic_buffered,excl_S6,low,6.492,733.982
+C_ai_rolling_buffered,B_dynamic_buffered,excl_S6,high,7.097,869.614

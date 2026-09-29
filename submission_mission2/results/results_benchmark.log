@@ -1,0 +1,22 @@
+CORE-CVRP 1.1 · pyvrp 0.14.0 · seed 1 · stop: 5000 no-improvement iters (cap 50000)
+
+A-n32-k5   cost  784  optimal  784  gap   0.00%  vehicles 5/5  valid True  snapshot match  1.5s
+   Route #1: 6 3 2 23 4 11 28 14
+   Route #2: 12 1 16 30
+   Route #3: 20 5 25 10 15 22 9 8 18 29
+   Route #4: 24 27
+   Route #5: 26 7 13 17 19 31 21
+B-n31-k5   cost  672  optimal  672  gap   0.00%  vehicles 5/5  valid True  snapshot match  1.1s
+   Route #1: 3 1 19 24 11 15 14
+   Route #2: 8 23 7 12 28 26
+   Route #3: 20 27 10 2
+   Route #4: 29 4 5 25 18 16 21
+   Route #5: 30 17 13 9 6 22
+P-n40-k5   cost  458  optimal  458  gap   0.00%  vehicles 5/5  valid True  snapshot match  1.6s
+   Route #1: 1 22 28 3 36 35 20 2 32
+   Route #2: 6 24 23 7 26 31 8 27
+   Route #3: 12 17 37 15 33 39 10 5
+   Route #4: 14 25 13 19 4 18
+   Route #5: 38 9 30 34 21 29 16 11
+
+wrote /home/user/rout_hack/submission_mission2/results/benchmark/summary.csv and .sol files · all valid and match snapshot: True

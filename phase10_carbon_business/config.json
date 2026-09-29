@@ -1,0 +1,18 @@
+{
+  "question": "Does the decision change measured in Phase 9 translate into fuel, CO2 and money, and can every number be traced to a run and a sourced factor?",
+  "input_metrics": "phase9_baseline_comparison/iteration_02/metrics.csv",
+  "input_root": "phase9_baseline_comparison/iteration_02",
+  "impact_config": "readymix/config/impact.yaml",
+  "comparisons": [["C_ai_rolling_buffered", "A_static_planned"], ["C_ai_rolling_buffered", "B_dynamic_buffered"]],
+  "scopes": {"all": "all 9 scenarios", "excl_S6": "without S6_high_demand (fleet overload, unserved trips differ)"},
+  "metrics": ["fuel_l", "idle_fuel_l", "co2_kg", "cost_proxy_thb", "fuel_l_per_m3"],
+  "bootstrap": {"resamples": 2000, "seed": 0, "unit": "day seed (paired, mean over scenarios)"},
+  "claim_rule": "A saving is reported as a saving only if the paired day-bootstrap CI95 excludes 0; otherwise it is reported as no clear difference.",
+  "gates": {
+    "G1_provenance": "every factor has source_type and source/derivation; input metrics and config hashes recorded",
+    "G2_independent_recompute": "fuel, distance and site idle recomputed from raw logs match Phase 9 metrics for all runs (fuel/distance within 0.051 because kpi rounds to 0.1)",
+    "G3_chain_closes": "delta fuel = delta moving + delta idle and delta CO2 = delta fuel x factor for every comparison",
+    "G4_placeholder_in_public_range": "public reference values lie inside the simulated km/L and idle L/h ranges"
+  },
+  "unserved_policy": "Unserved trips are not monetised (no sourced penalty). Report them next to every saving; fuel per delivered m3 is shown to control for them."
+}

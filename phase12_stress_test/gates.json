@@ -1,0 +1,22 @@
+{
+  "gates": {
+    "G1_no_crash": true,
+    "G2_plans_valid": true,
+    "G3_faults_handled": true,
+    "G4_preflight_honest": true,
+    "G5_core_behaviour": true
+  },
+  "detail": {
+    "stress_runs": 105,
+    "faults": 11,
+    "infeasible_flags": 5,
+    "infeasible_flags_with_unserved": 5,
+    "static_days_with_unserved": 12,
+    "static_days_with_unserved_flagged_infeasible": 5,
+    "preflight_counts": {
+      "AT_RISK": 30,
+      "INFEASIBLE": 5
+    },
+    "G5_note": "core_regression.log: 8/8 runs match snapshot fingerprint, cost, iterations; freeze_id on this Linux checkout is 91a1a0dbb3bf (locked bf63a542f2de) as reported in Phase 9"
+  }
+}

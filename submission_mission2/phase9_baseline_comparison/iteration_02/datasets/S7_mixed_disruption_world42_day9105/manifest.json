@@ -1,0 +1,61 @@
+{
+  "generator_version": "loop03-v3",
+  "scenario": "S7_mixed_disruption",
+  "seed": 9105,
+  "world_seed": 42,
+  "scenario_params": {
+    "traffic_excess_scale": 1.3,
+    "weather": "RAIN",
+    "demand_scale": 1.0,
+    "extra_orders": 0,
+    "traffic_spikes": 1,
+    "site_delays": 2,
+    "pump_failures": 1,
+    "truck_breakdowns": 1,
+    "service_slowdowns": 1,
+    "demand_changes": 1,
+    "surprise_late_reliable": 0,
+    "surprise_early_poor": 0
+  },
+  "simulation_yaml_sha256": "385067a5871319bee9297c091d70a120b601b33c07ba426fe9501b3c189a5dc8",
+  "scenarios_yaml_sha256": "c87c9172c25420cfa522cb56865b43084eb44ac4c5d4ca19e5c5a82e6d80f8ce",
+  "causality": {
+    "master/*, orders/*": "known before the day starts",
+    "runtime/traffic.csv": "realized travel times: a decision at time t may read only slots starting <= t",
+    "runtime/events.json": "a decision at time t may read only events with timestamp <= t",
+    "runtime/site_state.csv": "a decision at time t may read only rows with timestamp <= t",
+    "ground_truth/*": "labels: never read at decision time"
+  },
+  "decision_time_files": [
+    "data_dictionary.csv",
+    "master/plants.csv",
+    "master/sites.csv",
+    "master/travel_profile.csv",
+    "master/vehicles.csv",
+    "orders/orders.csv",
+    "orders/trips.csv",
+    "runtime/events.json",
+    "runtime/site_state.csv",
+    "runtime/traffic.csv"
+  ],
+  "label_files": [
+    "ground_truth/order_readiness.csv",
+    "ground_truth/site_traits.csv",
+    "ground_truth/trip_service.csv"
+  ],
+  "files": {
+    "data_dictionary.csv": "a5ddbf3ad8d048ea2df157d4a731d887da60cba89fd627e82b83523fd4335898",
+    "ground_truth/order_readiness.csv": "92b788ee4dcfb70bac06ae09fa246873b51f39c956cee61092b5e05ccedb342f",
+    "ground_truth/site_traits.csv": "4f146d069f2680cc867694ea0226102444d910f9e92c4ba3a5b1ad2f216a50f6",
+    "ground_truth/trip_service.csv": "f83b8e523b82d3ce0a4ba0c1c7e534a32f590962d84d553d2898fa9102c980f1",
+    "master/plants.csv": "b3b538623731c5e30d03b130ba1c96e30000ba44c4a61eb7463bd51c72945efd",
+    "master/sites.csv": "64a6a977eabef22f0af9bdc46f41bede7a09b928b288601ee6f6ae02e284d298",
+    "master/travel_profile.csv": "2a06663a16df392e8e70e93bba029b385861040b17fafc432cc7dcb7505166f4",
+    "master/vehicles.csv": "54ae61ede44d31bedd929d51961445c17d71832cc63008b9aa69074c29472467",
+    "orders/orders.csv": "18b0646a63ef463fc86b1671682e045709d046c25d362f9303b09da0ad564e7a",
+    "orders/trips.csv": "41e6f7ccd5db3a4ceb3603e8128bddb47655c6ef3b4cf6659bcf5111bd1d562b",
+    "runtime/events.json": "d35df0bf3f12c17ff36ba73b85c1ef161e4793faebfe0627d0937cdf79053034",
+    "runtime/site_state.csv": "21966059bbf056578f9ceecc3ccf6e76fdac3ab0372527f271cad3cc8901578d",
+    "runtime/traffic.csv": "22e3b6f61326e54a287f263660448e75c518011a6011d50e332f7259f1eeff91"
+  }
+}
