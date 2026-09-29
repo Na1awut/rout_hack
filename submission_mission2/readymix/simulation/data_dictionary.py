@@ -1,0 +1,133 @@
+# data_dictionary.py -- source label for every field (skill.md section 28)
+"""Every column the simulator writes has exactly one entry here. The
+dataset validator fails if a column is missing from this table, so a new
+field cannot slip into a dataset without saying where it came from.
+
+source_type: REAL | PUBLIC_SOURCE | DERIVED | SIMULATED | ASSUMED
+Nothing in Loop 1 is REAL or PUBLIC_SOURCE. ASSUMED values are
+placeholders a later loop must replace with a cited source before they
+are used for a claim (fuel and CO2 in Loop 8).
+"""
+
+SOURCE_TYPES = {"REAL", "PUBLIC_SOURCE", "DERIVED", "SIMULATED", "ASSUMED"}
+
+_SIM = "simulation.yaml"
+FIELDS = [
+    # file, field, source_type, unit, meaning, source / note
+    ("master/plants.csv", "plant_id", "SIMULATED", "", "plant id", _SIM),
+    ("master/plants.csv", "plant_name", "SIMULATED", "", "display name", _SIM),
+    ("master/plants.csv", "latitude", "SIMULATED", "deg", "plant location (neutral Bangkok anchor, not a real plant)", _SIM),
+    ("master/plants.csv", "longitude", "SIMULATED", "deg", "plant location", _SIM),
+    ("master/plants.csv", "loading_bays", "ASSUMED", "count", "trucks that can load at once", "placeholder, no source yet"),
+    ("master/plants.csv", "load_time_min", "ASSUMED", "min", "time to load one truck", "placeholder, no source yet"),
+    ("master/plants.csv", "wash_time_min", "ASSUMED", "min", "drum rinse before the next load", "placeholder, no source yet"),
+    ("master/plants.csv", "operating_start", "ASSUMED", "HH:MM", "plant opens", "placeholder, no source yet"),
+    ("master/plants.csv", "operating_end", "ASSUMED", "HH:MM", "plant closes", "placeholder, no source yet"),
+
+    ("master/sites.csv", "site_id", "SIMULATED", "", "construction site id", _SIM),
+    ("master/sites.csv", "latitude", "SIMULATED", "deg", "site location, uniform over an annulus around the plant", _SIM),
+    ("master/sites.csv", "longitude", "SIMULATED", "deg", "site location", _SIM),
+    ("master/sites.csv", "planned_ready_time", "DERIVED", "datetime", "earliest requested_start of the site's orders", "orders.csv"),
+    ("master/sites.csv", "site_priority", "SIMULATED", "1-5", "business priority", _SIM),
+    ("master/sites.csv", "pump_available", "SIMULATED", "bool", "concrete pump on site (else chute)", _SIM),
+    ("master/sites.csv", "crew_size", "SIMULATED", "people", "pour crew size", _SIM),
+    ("master/sites.csv", "historical_delay_mean", "DERIVED", "min", "mean delay over sampled past pours (noisy view of the hidden trait)", "site_simulator"),
+    ("master/sites.csv", "historical_delay_std", "DERIVED", "min", "std of delay over sampled past pours", "site_simulator"),
+
+    ("master/vehicles.csv", "vehicle_id", "SIMULATED", "", "truck id", _SIM),
+    ("master/vehicles.csv", "capacity_m3", "ASSUMED", "m3", "drum capacity", "placeholder, no source yet"),
+    ("master/vehicles.csv", "plant_id", "SIMULATED", "", "home plant", _SIM),
+    ("master/vehicles.csv", "available_from", "SIMULATED", "datetime", "first time the truck can load", _SIM),
+    ("master/vehicles.csv", "current_lat", "DERIVED", "deg", "start of day = plant location", "plants.csv"),
+    ("master/vehicles.csv", "current_lon", "DERIVED", "deg", "start of day = plant location", "plants.csv"),
+    ("master/vehicles.csv", "status", "SIMULATED", "enum", "truck status at start of day", _SIM),
+    ("master/vehicles.csv", "fuel_type", "ASSUMED", "", "fuel", "placeholder, no source yet"),
+    ("master/vehicles.csv", "fuel_efficiency_km_l", "ASSUMED", "km/L", "moving fuel economy", "placeholder; Loop 8 must cite a source"),
+    ("master/vehicles.csv", "idle_fuel_l_h", "ASSUMED", "L/h", "idle fuel burn", "placeholder; Loop 8 must cite a source"),
+    ("master/vehicles.csv", "max_shift_min", "ASSUMED", "min", "longest shift", "placeholder, no source yet"),
+
+    ("master/travel_profile.csv", "from_node", "SIMULATED", "", "edge origin", _SIM),
+    ("master/travel_profile.csv", "to_node", "SIMULATED", "", "edge destination", _SIM),
+    ("master/travel_profile.csv", "hour", "SIMULATED", "0-23", "hour of departure", _SIM),
+    ("master/travel_profile.csv", "typical_travel_min", "DERIVED", "min", "base x hourly profile; what a planner knows the day before", "traffic_simulator.build_travel_profile"),
+
+    ("orders/orders.csv", "order_id", "SIMULATED", "", "order id", _SIM),
+    ("orders/orders.csv", "site_id", "SIMULATED", "", "delivering site", _SIM),
+    ("orders/orders.csv", "concrete_type", "SIMULATED", "", "mix grade", _SIM),
+    ("orders/orders.csv", "total_volume_m3", "SIMULATED", "m3", "ordered volume (lognormal, clipped)", _SIM),
+    ("orders/orders.csv", "remaining_volume_m3", "DERIVED", "m3", "start of day = total_volume_m3", "orders.csv"),
+    ("orders/orders.csv", "requested_start", "SIMULATED", "datetime", "customer's planned pour start = planned ready time", _SIM),
+    ("orders/orders.csv", "requested_end", "DERIVED", "datetime", "start + (trips-1) x interval + unload + slack", _SIM),
+    ("orders/orders.csv", "target_interval_min", "SIMULATED", "min", "wanted gap between truck arrivals", _SIM),
+    ("orders/orders.csv", "estimated_unload_min", "SIMULATED", "min", "planned unload time per truck (pump vs chute)", _SIM),
+    ("orders/orders.csv", "priority", "SIMULATED", "1-5", "order priority", _SIM),
+    ("orders/orders.csv", "status", "SIMULATED", "enum", "order status at start of day", _SIM),
+
+    ("orders/trips.csv", "trip_id", "DERIVED", "", "order_id-seq", "world.split_trips"),
+    ("orders/trips.csv", "order_id", "DERIVED", "", "parent order", "orders.csv"),
+    ("orders/trips.csv", "site_id", "DERIVED", "", "delivering site", "orders.csv"),
+    ("orders/trips.csv", "seq", "DERIVED", "", "truckload number within the order", "world.split_trips"),
+    ("orders/trips.csv", "volume_m3", "DERIVED", "m3", "equal split of the order in 0.25 m3 steps", "world.split_trips"),
+    ("orders/trips.csv", "planned_arrival", "DERIVED", "datetime", "requested_start + (seq-1) x interval", "orders.csv"),
+
+    ("runtime/traffic.csv", "from_node", "SIMULATED", "", "edge origin", _SIM),
+    ("runtime/traffic.csv", "to_node", "SIMULATED", "", "edge destination", _SIM),
+    ("runtime/traffic.csv", "timestamp", "SIMULATED", "datetime", "start of the hourly slot", _SIM),
+    ("runtime/traffic.csv", "road_km", "DERIVED", "km", "straight-line km x circuity", "common.road_km"),
+    ("runtime/traffic.csv", "base_travel_min", "DERIVED", "min", "road_km / free-flow speed", "simulation.yaml travel"),
+    ("runtime/traffic.csv", "traffic_multiplier", "SIMULATED", "x", "hour profile x scenario x noise x rain x spikes", "traffic_simulator"),
+    ("runtime/traffic.csv", "predicted_travel_min", "DERIVED", "min", "base x multiplier; the travel time trucks experience in the simulator", "traffic_simulator"),
+
+    ("runtime/site_state.csv", "timestamp", "SIMULATED", "datetime", "observation time (5-min grid)", "site_state"),
+    ("runtime/site_state.csv", "site_id", "SIMULATED", "", "site", "site_state"),
+    ("runtime/site_state.csv", "order_id", "SIMULATED", "", "order the site is preparing for", "site_state"),
+    ("runtime/site_state.csv", "planned_ready_time", "DERIVED", "datetime", "= requested_start", "orders.csv"),
+    ("runtime/site_state.csv", "current_status", "SIMULATED", "enum", "NOT_READY / PREPARING / DELAYED", "site_state"),
+    ("runtime/site_state.csv", "crew_status", "SIMULATED", "enum", "crew on site: READY / NOT_READY", "site_state"),
+    ("runtime/site_state.csv", "prep_progress_pct", "SIMULATED", "%", "last foreman report, noisy, rounded to 10, capped 90", "site_state"),
+    ("runtime/site_state.csv", "minutes_since_report", "SIMULATED", "min", "age of that report (empty = no report yet)", "site_state"),
+    ("runtime/site_state.csv", "pump_status", "SIMULATED", "enum", "NONE / READY / DOWN", "site_state"),
+    ("runtime/site_state.csv", "delay_so_far_min", "DERIVED", "min", "max(0, timestamp - planned)", "site_state"),
+    ("runtime/site_state.csv", "weather", "SIMULATED", "enum", "day weather CLEAR / RAIN", "scenarios.yaml"),
+
+    ("ground_truth/order_readiness.csv", "order_id", "SIMULATED", "", "order", "site_simulator"),
+    ("ground_truth/order_readiness.csv", "site_id", "SIMULATED", "", "site", "site_simulator"),
+    ("ground_truth/order_readiness.csv", "planned_ready_time", "DERIVED", "datetime", "= requested_start", "orders.csv"),
+    ("ground_truth/order_readiness.csv", "actual_ready_time", "SIMULATED", "datetime", "when the site is really ready (AI label source)", "site_simulator"),
+    ("ground_truth/order_readiness.csv", "ready_delay_min", "SIMULATED", "min", "actual - planned (AI label, Target A)", "site_simulator"),
+    ("ground_truth/order_readiness.csv", "delay_causes", "SIMULATED", "", "components that built the delay", "site_simulator"),
+    ("ground_truth/order_readiness.csv", "final_volume_m3", "SIMULATED", "m3", "volume after DEMAND_CHANGE events", "site_simulator"),
+
+    ("ground_truth/trip_service.csv", "trip_id", "SIMULATED", "", "trip", "site_simulator"),
+    ("ground_truth/trip_service.csv", "order_id", "SIMULATED", "", "order", "site_simulator"),
+    ("ground_truth/trip_service.csv", "estimated_unload_min", "DERIVED", "min", "copied from the order", "orders.csv"),
+    ("ground_truth/trip_service.csv", "actual_unload_min", "SIMULATED", "min", "real unload time (AI label, Target B)", "site_simulator"),
+
+    ("ground_truth/site_traits.csv", "site_id", "SIMULATED", "", "site", _SIM),
+    ("ground_truth/site_traits.csv", "reliability_class", "SIMULATED", "", "hidden class good/average/poor", _SIM),
+    ("ground_truth/site_traits.csv", "p_late", "SIMULATED", "prob", "chance a pour starts late", _SIM),
+    ("ground_truth/site_traits.csv", "late_mean_min", "SIMULATED", "min", "mean delay when late", _SIM),
+    ("ground_truth/site_traits.csv", "late_sd_min", "SIMULATED", "min", "sd of delay when late", _SIM),
+
+    ("runtime/events.json", "event_id", "SIMULATED", "", "event id", "disruption_generator"),
+    ("runtime/events.json", "timestamp", "SIMULATED", "datetime", "when the event becomes observable", "disruption_generator"),
+    ("runtime/events.json", "event_type", "SIMULATED", "enum", "skill.md section 21 event type", "disruption_generator"),
+    ("runtime/events.json", "site_id", "SIMULATED", "", "affected site", "disruption_generator"),
+    ("runtime/events.json", "site_ids", "SIMULATED", "", "sites whose edges a traffic spike hits", "disruption_generator"),
+    ("runtime/events.json", "order_id", "SIMULATED", "", "affected order", "disruption_generator"),
+    ("runtime/events.json", "vehicle_id", "SIMULATED", "", "affected truck", "disruption_generator"),
+    ("runtime/events.json", "delay_min", "SIMULATED", "min", "added (or surprise) delay", "scenarios.yaml"),
+    ("runtime/events.json", "early_min", "SIMULATED", "min", "minutes ready early", "scenarios.yaml"),
+    ("runtime/events.json", "extra_multiplier", "SIMULATED", "x", "traffic spike on top of normal traffic", "scenarios.yaml"),
+    ("runtime/events.json", "duration_min", "SIMULATED", "min", "traffic spike length", "scenarios.yaml"),
+    ("runtime/events.json", "factor", "SIMULATED", "x", "service slowdown or demand change factor", "scenarios.yaml"),
+]
+
+COLUMNS = {}
+for _f, _c, *_ in FIELDS:
+    COLUMNS.setdefault(_f, []).append(_c)
+
+
+def rows():
+    return [{"file": f, "field": c, "source_type": s, "unit": u, "meaning": m, "source": src}
+            for f, c, s, u, m, src in FIELDS]

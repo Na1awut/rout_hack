@@ -1,0 +1,10 @@
+[
+  {
+    "event_id": "E001",
+    "timestamp": "2026-10-01T06:11",
+    "event_type": "SITE_DELAY",
+    "site_id": "S004",
+    "order_id": "O030",
+    "delay_min": 48
+  }
+]

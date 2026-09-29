@@ -1,0 +1,26 @@
+[
+  {
+    "event_id": "E001",
+    "timestamp": "2026-10-01T07:00",
+    "event_type": "TRAFFIC_SPIKE",
+    "site_ids": [
+      "S006",
+      "S007",
+      "S009"
+    ],
+    "extra_multiplier": 0.315,
+    "duration_min": 120
+  },
+  {
+    "event_id": "E002",
+    "timestamp": "2026-10-01T15:00",
+    "event_type": "TRAFFIC_SPIKE",
+    "site_ids": [
+      "S002",
+      "S003",
+      "S010"
+    ],
+    "extra_multiplier": 0.362,
+    "duration_min": 120
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "event_id": "E001",
+    "timestamp": "2026-10-01T07:23",
+    "event_type": "SITE_DELAY",
+    "site_id": "S003",
+    "order_id": "O020",
+    "delay_min": 39
+  },
+  {
+    "event_id": "E002",
+    "timestamp": "2026-10-01T07:40",
+    "event_type": "SITE_DELAY",
+    "site_id": "S005",
+    "order_id": "O010",
+    "delay_min": 56
+  },
+  {
+    "event_id": "E003",
+    "timestamp": "2026-10-01T07:49",
+    "event_type": "SITE_DELAY",
+    "site_id": "S008",
+    "order_id": "O014",
+    "delay_min": 43
+  }
+]

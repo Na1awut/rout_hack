@@ -1,0 +1,60 @@
+[
+  {
+    "event_id": "E001",
+    "timestamp": "2026-10-01T06:54",
+    "event_type": "SITE_DELAY",
+    "site_id": "S009",
+    "order_id": "O016",
+    "delay_min": 48
+  },
+  {
+    "event_id": "E002",
+    "timestamp": "2026-10-01T07:46",
+    "event_type": "PUMP_FAILURE",
+    "site_id": "S007",
+    "order_id": "O003",
+    "delay_min": 64
+  },
+  {
+    "event_id": "E003",
+    "timestamp": "2026-10-01T08:15",
+    "event_type": "SERVICE_SLOWDOWN",
+    "site_id": "S006",
+    "order_id": "O019",
+    "factor": 1.259
+  },
+  {
+    "event_id": "E004",
+    "timestamp": "2026-10-01T08:50",
+    "event_type": "SITE_DELAY",
+    "site_id": "S003",
+    "order_id": "O028",
+    "delay_min": 57
+  },
+  {
+    "event_id": "E005",
+    "timestamp": "2026-10-01T09:00",
+    "event_type": "TRUCK_BREAKDOWN",
+    "vehicle_id": "T001"
+  },
+  {
+    "event_id": "E006",
+    "timestamp": "2026-10-01T12:15",
+    "event_type": "DEMAND_CHANGE",
+    "site_id": "S001",
+    "order_id": "O026",
+    "factor": 0.84
+  },
+  {
+    "event_id": "E007",
+    "timestamp": "2026-10-01T15:00",
+    "event_type": "TRAFFIC_SPIKE",
+    "site_ids": [
+      "S002",
+      "S003",
+      "S010"
+    ],
+    "extra_multiplier": 0.362,
+    "duration_min": 120
+  }
+]

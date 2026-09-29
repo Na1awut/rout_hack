@@ -1,0 +1,11 @@
+{
+  "policy": "version-frozen",
+  "frozen_on": "2026-09-28",
+  "note": "Reference values are fixed BEFORE running experiments and never updated afterwards. Source: the COMMENT line of each .vrp file (Augerat et al., proven optimal). Fleet size is the value this project chooses to run with; the solver does not read it from the file.",
+  "instances": {
+    "A-n32-k5.vrp": {"bks": 784, "bks_is_proven_optimal": true, "max_vehicles": 5},
+    "B-n31-k5.vrp": {"bks": 672, "bks_is_proven_optimal": true, "max_vehicles": 5},
+    "P-n40-k5.vrp": {"bks": 458, "bks_is_proven_optimal": true, "max_vehicles": 5},
+    "P-n19-k2.vrp": {"bks": 212, "bks_is_proven_optimal": true, "max_vehicles": 2}
+  }
+}

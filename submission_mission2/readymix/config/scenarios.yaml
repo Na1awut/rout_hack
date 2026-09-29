@@ -1,0 +1,50 @@
+# Scenario set from skill.md section 30. A scenario changes traffic,
+# disruptions and demand; it never re-draws the base world. The same seed
+# therefore gives the same plant, sites, trucks and orders in every
+# scenario, so later loops can compare systems on identical demand.
+#
+# Keys left out fall back to `defaults`.
+
+defaults:
+  traffic_excess_scale: 1.0     # scales (multiplier - 1) of the hourly profile
+  weather: CLEAR
+  demand_scale: 1.0
+  extra_orders: 0
+  traffic_spikes: 0
+  site_delays: 0
+  pump_failures: 0
+  truck_breakdowns: 0
+  service_slowdowns: 0
+  demand_changes: 0
+  surprise_late_reliable: 0     # SITE_READY_LATE on a site whose history says "good"
+  surprise_early_poor: 0        # SITE_READY_EARLY on a site whose history says "poor"
+
+magnitudes:
+  traffic_spike: {extra: [0.30, 0.50], hours: [1, 2]}
+  site_delay_min: [30, 60]
+  pump_failure_min: [45, 90]
+  service_slowdown_factor: [1.20, 1.40]
+  demand_change_factor: [0.80, 1.30]
+  surprise_late_min: [40, 70]
+  surprise_early_min: [15, 30]
+  rain: {traffic_factor: 1.10, extra_delay_min: [5, 15]}
+  notice_before_ready_min: [30, 90]   # when a readiness event becomes observable
+
+scenarios:
+  S0_normal: {}
+  S1_light_traffic: {traffic_excess_scale: 0.5}
+  S2_peak_traffic: {traffic_excess_scale: 1.8, traffic_spikes: 2}
+  S3_site_delay: {site_delays: 1}
+  S4_multi_site_delay: {site_delays: 3}
+  S5_pump_failure: {pump_failures: 1}
+  S6_high_demand: {demand_scale: 1.4, extra_orders: 5}
+  S7_mixed_disruption:
+    traffic_excess_scale: 1.3
+    weather: RAIN
+    traffic_spikes: 1
+    site_delays: 2
+    pump_failures: 1
+    truck_breakdowns: 1
+    service_slowdowns: 1
+    demand_changes: 1
+  S8_ai_prediction_error: {surprise_late_reliable: 2, surprise_early_poor: 2}

@@ -1,0 +1,2 @@
+plant_id,plant_name,latitude,longitude,loading_bays,load_time_min,wash_time_min,operating_start,operating_end
+P001,Plant_A,13.7563,100.5018,2,8,10,06:00,18:00

@@ -1,0 +1,299 @@
+{
+  "created_at": "2026-09-28T21:22:21",
+  "freeze_id": "bf63a542f2de",
+  "engine": "pyvrp",
+  "engine_version": "0.14.0",
+  "algorithm_config_sha256": "c28aafa9dea66dc6c2116609a8ebbdbbef8cea15bd9bfc85135137fd091e2c62",
+  "reference_bks_sha256": "83ac0105ddf77d5b9215382bdd91a320a3b11028a83a16996b42ee1bd3555994",
+  "machine": "AMD64 Family 25 Model 117 Stepping 2, AuthenticAMD | 12 threads | Python 3.14.6",
+  "instances": {
+    "A-n32-k5": {
+      "status": "FEASIBLE",
+      "cost": 784,
+      "bks": 784,
+      "vehicles_used": 5,
+      "max_vehicles": 5,
+      "iterations": 5021,
+      "stop_reason": "no_improvement",
+      "fingerprint": "2b402097367d",
+      "routes": [
+        [
+          1,
+          7,
+          4,
+          3,
+          24,
+          5,
+          12,
+          29,
+          15,
+          1
+        ],
+        [
+          1,
+          13,
+          2,
+          17,
+          31,
+          1
+        ],
+        [
+          1,
+          21,
+          6,
+          26,
+          11,
+          16,
+          23,
+          10,
+          9,
+          19,
+          30,
+          1
+        ],
+        [
+          1,
+          25,
+          28,
+          1
+        ],
+        [
+          1,
+          27,
+          8,
+          14,
+          18,
+          20,
+          32,
+          22,
+          1
+        ]
+      ],
+      "route_loads": [
+        98,
+        72,
+        98,
+        44,
+        98
+      ],
+      "route_distances": [
+        230,
+        73,
+        267,
+        59,
+        155
+      ],
+      "runtime_s": 1.239
+    },
+    "B-n31-k5": {
+      "status": "FEASIBLE",
+      "cost": 672,
+      "bks": 672,
+      "vehicles_used": 5,
+      "max_vehicles": 5,
+      "iterations": 5033,
+      "stop_reason": "no_improvement",
+      "fingerprint": "5b982d6b66b6",
+      "routes": [
+        [
+          1,
+          4,
+          2,
+          20,
+          25,
+          12,
+          16,
+          15,
+          1
+        ],
+        [
+          1,
+          9,
+          24,
+          8,
+          13,
+          29,
+          27,
+          1
+        ],
+        [
+          1,
+          21,
+          28,
+          11,
+          3,
+          1
+        ],
+        [
+          1,
+          30,
+          5,
+          6,
+          26,
+          19,
+          17,
+          22,
+          1
+        ],
+        [
+          1,
+          31,
+          18,
+          14,
+          10,
+          7,
+          23,
+          1
+        ]
+      ],
+      "route_loads": [
+        95,
+        100,
+        38,
+        86,
+        93
+      ],
+      "route_distances": [
+        154,
+        107,
+        189,
+        112,
+        110
+      ],
+      "runtime_s": 1.183
+    },
+    "P-n40-k5": {
+      "status": "FEASIBLE",
+      "cost": 458,
+      "bks": 458,
+      "vehicles_used": 5,
+      "max_vehicles": 5,
+      "iterations": 5011,
+      "stop_reason": "no_improvement",
+      "fingerprint": "a06c3cb461cc",
+      "routes": [
+        [
+          1,
+          2,
+          23,
+          29,
+          4,
+          37,
+          36,
+          21,
+          3,
+          33,
+          1
+        ],
+        [
+          1,
+          7,
+          25,
+          24,
+          8,
+          27,
+          32,
+          9,
+          28,
+          1
+        ],
+        [
+          1,
+          13,
+          18,
+          38,
+          16,
+          34,
+          40,
+          11,
+          6,
+          1
+        ],
+        [
+          1,
+          15,
+          26,
+          14,
+          20,
+          5,
+          19,
+          1
+        ],
+        [
+          1,
+          39,
+          10,
+          31,
+          35,
+          22,
+          30,
+          17,
+          12,
+          1
+        ]
+      ],
+      "route_loads": [
+        138,
+        116,
+        114,
+        131,
+        119
+      ],
+      "route_distances": [
+        98,
+        92,
+        94,
+        89,
+        85
+      ],
+      "runtime_s": 1.792
+    },
+    "P-n19-k2": {
+      "status": "FEASIBLE",
+      "cost": 212,
+      "bks": 212,
+      "vehicles_used": 2,
+      "max_vehicles": 2,
+      "iterations": 5005,
+      "stop_reason": "no_improvement",
+      "fingerprint": "53f733cfddcd",
+      "routes": [
+        [
+          1,
+          2,
+          11,
+          3,
+          8,
+          10,
+          16,
+          14,
+          6,
+          19,
+          1
+        ],
+        [
+          1,
+          5,
+          12,
+          15,
+          13,
+          4,
+          18,
+          17,
+          9,
+          7,
+          1
+        ]
+      ],
+      "route_loads": [
+        157,
+        153
+      ],
+      "route_distances": [
+        98,
+        114
+      ],
+      "runtime_s": 0.532
+    }
+  }
+}
