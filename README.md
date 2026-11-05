@@ -1,6 +1,8 @@
 # PourReady: AI and Optimization for Ready-Mix Concrete Dispatch
 
-PourReady predicts when a construction site will really be ready, then decides which truck to release and when. It is built on a benchmarked CVRP solver and was developed for a route optimization hackathon.
+PourReady predicts when a construction site will really be ready, then decides which truck to release and when. It is built on a benchmarked CVRP solver.
+
+🏆 This repository is our team's qualifying-round project for **AI Hackathon Route Optimization 2026** (Bangkok University, SCG and CPAC). The team won **1st runner-up** at the higher-education level.
 
 > **All operating data is simulated.** The results show that the method works in a simulated world. They are not measurements from a real company. Fuel, labor and CO₂ factors come from public references and should be re-verified before external use.
 
